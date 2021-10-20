@@ -36,10 +36,10 @@
 - *Root **index.jsp** : 페이지 메인, include를 통한 3단 구성 ( header.jsp, section.jsp, footer.jsp )
 
 
-- **mainSaction.jsp** :
-   1. saction1 : 캐러셀 
+- **mainSection.jsp** :
+   1. section1 : 캐러셀 
    
-   2. saction2 : 
+   2. section2 : 
      - DB에서 끌어온 베스트 상품 목록
      - 상품 문의 게시판 최근 5개
      - 오른쪽 fixed 채팅창 슬라이드  
