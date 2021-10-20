@@ -112,7 +112,7 @@
 
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
-| 1 |  M_NO           |    NUMBER   | NOT NULL  |   PK    | 회원 고유번호        |
+| 1 |  M_NO           |    NUMBER    | NOT NULL  |   PK    | 회원 고유번호        |
 | 2 |  M_ID           | VARCHAR2(20) | NOT NULL  |         | 회원 아이디     |  
 | 3 |  M_PWD          | VARCHAR2(40) | NOT NULL  |         | 비밀번호        |
 | 4 |  M_NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
@@ -130,7 +130,7 @@
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
 | 1 |  P_NO         |    NUMBER    | NOT NULL  |   PK    | 상품 고유번호    |
-| 2 |  P_NAME       | VARCHAR2(100)| NOT NULL  |         | 회원 아이디     |  
+| 2 |  P_NAME       | VARCHAR2(100)| NOT NULL  |         | 상품 이름     |  
 | 3 |  P_CATEGORY   | CHAR(1)      | NOT NULL  |         | 상품 종류 (1: 기타, 2: 베이스, 3: 미디, 4: 앨범)  |
 | 4 |  P_PRICE      | NUMBER(7)    | NOT NULL  |         | 가격            |
 | 5 |  P_CONTENTS   | CLOB         | NOT NULL  |         | 상품 설명        |
@@ -145,12 +145,12 @@
 | No|   FieldName   |  DataType      |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:--------------:|:---------:|:-------:|:--------------:|
 | 1 |  CON_NO         |    NUMBER    | NOT NULL  |   PK    | 문의 고유번호    |
-| 2 |  CON_TITLE      | VARCHAR2(100)| NOT NULL  |         | 제목 |  
-| 3 |  CON_CONTENTS   | CLOB         | NOT NULL  |         | 문의 내용 |
-| 4 |  M_ID           | NUMBER       | NOT NULL  |   FK    | 문의자 아이디     |
-| 5 |  CON_REPLY      | CLOB         |     NULL  |         | 답변  |
-| 6 |  CON_ANSWER     | CHAR(1)      |     NULL  |         | 답변 여부(Y: 완료, N:미완료) |
-| 7 |  CON_REG_DATE   | DATE         | NOT NULL  |         | 문의 등록일 |
+| 3 |  M_NO           | NUMBER       | NOT NULL  |   FK    | 회원 고유 번호     |
+| 4 |  CON_TITLE      | VARCHAR2(100)| NOT NULL  |         | 제목 |  
+| 5 |  CON_CONTENTS   | CLOB         | NOT NULL  |         | 문의 내용 |
+| 6 |  CON_REPLY      | CLOB         |     NULL  |         | 답변  |
+| 7 |  CON_ANSWER     | CHAR(1)      |     NULL  |         | 답변 여부(Y: 완료, N:미완료) |
+| 8 |  CON_REG_DATE   | DATE         | NOT NULL  |         | 문의 등록일 |
 
 
 - Cart
@@ -158,7 +158,7 @@
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
 | 1 |  CART_NO      |    NUMBER    | NOT NULL  |   PK    | 장바구니 고유번호    |
-| 4 |  M_ID         |    NUMBER    | NOT NULL  |   FK    | 문의자 아이디     |
+| 4 |  M_NO         |    NUMBER    | NOT NULL  |   FK    | 회원 고유번호     |
 | 3 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품 고유번호    |
 | 4 |  CART_QUANTITY|    NUMBER(5) | NOT NULL  |         | 상품 개수         |
 | 5 |  CART_RESULT  | VARCHAR2(7)  | NOT NULL  |         | 주문 우편번호      |
@@ -170,7 +170,7 @@
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
 | 1 |  O_NO         |    NUMBER    | NOT NULL  |   PK    | 주문 고유번호    |
-| 2 |  M_ID         |    NUMBER    | NOT NULL  |   FK    | 주문자 아이디 |  
+| 2 |  M_NO         |    NUMBER    | NOT NULL  |   FK    | 주문자 고유번호 |  
 | 3 |  O_REG_DATE   | DATE         | NOT NULL  |         | 주문 일 |
 
 
@@ -194,7 +194,7 @@
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
 | 1 |  COMM_NO      |    NUMBER    | NOT NULL  |   PK    |  고유번호    |
 | 2 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품평을 남길 상품 고유번호    |
-| 3 |  M_NO         |    NUMBER    | NOT NULL  |   PK    | 회원 고유번호        |
+| 3 |  M_NO         |    NUMBER    | NOT NULL  |   FK    | 회원 고유번호        |
 | 4 |  COMM_CONTENTS|    NUMBER    | NOT NULL  |         | 댓글 내용        |
 | 5 |  COMM_REG_DATE|    DATE      | NOT NULL  |         |  댓글 작성일        |
 | 6 |  COMM_REG_DATE|    DATE      | NOT NULL  |         |  댓글 수정일        |
