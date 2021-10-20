@@ -42,43 +42,49 @@
 
 - 라이브러리
 - WebSocket을 통한 P2P 전체 채팅방
+- 다음주소 API
+- 
  
 ### 기술 아이디어
 - P2P 전체 채팅방
 - 좋아요 표시 및 카운트
+- 
 
 
 ### DB 테이블 구성
 - MEMBER 회원테이블
 - PRODUCT 상품 테이블
 - CONTACT 문의 테이블
+- CART 장바구니 테이블
 - ORDERS 주문 테이블
 - OTDER_DETAIL 주문 정보 테이블
-- CART 장바구니 테이블
 - COMMENTS 상품 댓글 테이블
 - ADDRESS 주소 테이블
+- MEMBER_BOARD 회원 게시판
 
 
 - Member
 
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
-| 1 |  NO           |    Long      | NOT NULL  |   PK    | 회원 고유번호        |
-| 2 |  ID           | VARCHAR2(20) | NOT NULL  |         | 회원 아이디     |  
-| 3 |  PWD          | VARCHAR2(40) | NOT NULL  |         | 비밀번호        |
-| 4 |  NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
-| 5 |  POST_NUM     | VARCHAR2(7)  | NOT NULL  |         | 우편번호        |
-| 6 |  ADDRESS1     | VARCHAR2(100)| NOT NULL  |         | 주소           |
-| 7 |  ADDRESS2     | VARCHAR2(100)| NOT NULL  |         | 상세 주소       |
-| 8 |  PHONE        | VARCHAR2(20) | NOT NULL  |         | 핸드폰 번호     |
-| 9 | USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N: 탈퇴) |
-| 10 |  REG_DATE    | DATE         | NOT NULL  |         | 가입일           |
-| 11 |  AUTHORITY   | NUMBER(1)    | NOT NULL  |         | 관리자 권한(1:사용자, 2:관리자)|
+| 1 |  M_NO           |    NUMBER   | NOT NULL  |   PK    | 회원 고유번호        |
+| 2 |  M_ID           | VARCHAR2(20) | NOT NULL  |         | 회원 아이디     |  
+| 3 |  M_PWD          | VARCHAR2(40) | NOT NULL  |         | 비밀번호        |
+| 4 |  M_NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
+| 5 |  M_POST_NUM     | VARCHAR2(7)  | NOT NULL  |         | 우편번호        |
+| 6 |  M_ADDRESS1     | VARCHAR2(100)| NOT NULL  |         | 주소           |
+| 7 |  M_ADDRESS2     | VARCHAR2(100)| NOT NULL  |         | 상세 주소       |
+| 8 |  M_PHONE        | VARCHAR2(20) | NOT NULL  |         | 핸드폰 번호     |
+| 9 | M_USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N: 탈퇴) |
+| 10 |  M_REG_DATE    | DATE         | NOT NULL  |         | 가입일           |
+| 11 |  M_AUTHORITY   | NUMBER(1)    | NOT NULL  |         | 관리자 권한(1:사용자, 2:관리자)|
+
 
 - Product
+
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
-| 1 |  P_ID         |    Long      | NOT NULL  |   PK    | 상품 고유번호    |
+| 1 |  P_NO         |    NUMBER    | NOT NULL  |   PK    | 상품 고유번호    |
 | 2 |  P_NAME       | VARCHAR2(100)| NOT NULL  |         | 회원 아이디     |  
 | 3 |  P_CATEGORY   | CHAR(1)      | NOT NULL  |         | 상품 종류 (1: 기타, 2: 베이스, 3: 미디, 4: 앨범)  |
 | 4 |  P_PRICE      | NUMBER(7)    | NOT NULL  |         | 가격            |
@@ -87,4 +93,55 @@
 | 7 |  P_ACTIVE     | CHAR(1)      | NOT NULL  |         | 제품 활성 여부(Y: 판매중,  N: 미판매)      |
 | 8 |  P_BEST       | CHAR(1)      | NOT NULL  |         | 베스트 상품 여부Y: 베스트, N: 일반)     |
 | 9 |  p_REG_DATE   | DATE         | NOT NULL  |         | 상품 등록일 |
+
+
+- Contact
+
+| No|   FieldName   |  DataType      |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:--------------:|:---------:|:-------:|:--------------:|
+| 1 |  CON_NO         |    NUMBER    | NOT NULL  |   PK    | 문의 고유번호    |
+| 2 |  CON_TITLE      | VARCHAR2(100)| NOT NULL  |         | 제목 |  
+| 3 |  CON_CONTENTS   | CLOB         | NOT NULL  |         | 문의 내용 |
+| 4 |  M_ID           | NUMBER       | NOT NULL  |   FK    | 문의자 아이디     |
+| 5 |  CON_REPLY      | CLOB         |     NULL  |         | 답변  |
+| 6 |  CON_ANSWER     | CHAR(1)      |     NULL  |         | 답변 여부(Y: 완료, N:미완료) |
+| 7 |  CON_REG_DATE   | DATE         | NOT NULL  |         | 문의 등록일 |
+
+
+- Cart
+
+| No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
+| 1 |  CART_NO      |    NUMBER    | NOT NULL  |   PK    | 장바구니 고유번호    |
+| 4 |  M_ID         |    NUMBER    | NOT NULL  |   FK    | 문의자 아이디     |
+| 3 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품 고유번호    |
+| 4 |  CART_QUANTITY|    NUMBER(5) | NOT NULL  |         | 상품 개수         |
+| 5 |  CART_RESULT  | VARCHAR2(7)  | NOT NULL  |         | 주문 우편번호      |
+| 6 |  CART_REG_DATE| DATE         | NOT NULL  |         | 장바구니 등록 날짜   |
+
+
+- Orders
+
+| No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
+| 1 |  O_NO         |    NUMBER    | NOT NULL  |   PK    | 주문 고유번호    |
+| 2 |  M_ID         |    NUMBER    | NOT NULL  |   FK    | 주문자 아이디 |  
+| 3 |  O_REG_DATE   | DATE         | NOT NULL  |         | 주문 일 |
+
+
+- Order_Detail
+
+| No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
+| 1 |  OD_NO        |    NUMBER    | NOT NULL  |   PK    | 주문상세 고유번호    |
+| 2 |  O_NO         |    NUMBER    | NOT NULL  |   FK    | 주문 고유번호    |
+| 3 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품 고유번호    |
+| 4 |  OD_QUANTITY  |    NUMBER(5) | NOT NULL  |         | 상품 개수         |
+| 5 |  POST_NUM     | VARCHAR2(7)  | NOT NULL  |         | 주문 우편번호      |
+| 6 |  OD_ADDRESS1  |VARCHAR2(100) | NOT NULL  |         | 주문 주소         |
+| 7 |  OD_ADDRESS2  |VARCHAR2(100) | NOT NULL  |         | 주문 상세주소    |
+| 8 |  OD_RESULT    | CHAR(1)      | NOT NULL  |         | 주문 처리 여부(Y: 처리완료, N: 미처리)  |
+
+
+
 
