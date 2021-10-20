@@ -40,38 +40,42 @@
    2. saction2 : 
      - DB에서 끌어온 베스트 상품 목록
      - 상품 문의 게시판 최근 5개
-     - 오른쪽 fixed 채팅창 슬라이드
+     - 오른쪽 fixed 채팅창 슬라이드  
 
-   
+
    *재사용
-- **header.jsp** : 메뉴 구성 ( 시간 - 로고 - 메뉴버튼( nav.jsp ) ) 
+- **header.jsp** : 메뉴 구성 ( 시간 - 로고 - 메뉴버튼( nav.jsp ) )  
 
-   
+  
    *재사용
 - **nav.jsp** : 메뉴 구성                                         
    1. 로그인 | 회원가입 | 장바구니 | 마이페이지
      - 로그인시 로그인, 회원가입 hide -> 회원 아이디 표시
-     - + 관리자 로그인시 관리자 페이지 ( adminPageMain.jsp )
- 
+     - 관리자 로그인시 관리자 페이지 ( adminPageMain.jsp )  
+
+
    2. ABOUT
      - ABOUT #Moon ( about.jsp )
-     - All Brand ( allBrand.jsp )
-     
+     - All Brand ( allBrand.jsp )  
+
+    
    3. SHOP
      - GUITAR ( shopGuitar.jsp )
      - BASS ( shopBass.jsp )
      - MIDI ( shopMidi.jsp )
-     - ALBUM ( shopAlbum.jsp )
+     - ALBUM ( shopAlbum.jsp )    
+
 
    4. COMMUNITY
      - 상품문의 ( contact.jsp ) | all상품문의 뿌리기
-     - 오시는길 ( wayToCome.jsp ) | 카카오맵 api
+     - 오시는길 ( wayToCome.jsp ) | 카카오맵 api  
+
 
    5. CUSTOMER
      - 번호
-     - 상담시간 내용
-     
-   
+     - 상담시간 내용  
+
+
    *재사용
 - **footer.jsp** : 
    1. saction : 사업자정보, 사이트맵, 고객 참여
@@ -83,7 +87,7 @@
 
 ### Back 라이브러리
 - WebSocket을 통한 P2P 전체 채팅방
-- 다음주소 API
+- 다음주소 API ( 우편번호 조회 )
 - 카카오, 구글, 네이버 회원가입 api
  
 ### Back 기술 아이디어
