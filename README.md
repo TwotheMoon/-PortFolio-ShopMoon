@@ -7,36 +7,53 @@
 2. 라이브러리를 사용하지 말자 ( 시간을 생각해 노가다 성이 아닌 적당한 기술은 바닐라 구현 )
 
 ### 참조할 사이트
-- Asus : https://www.asus.com/kr/
+- Asus : https://www.asus.com/kr/  saction 구조 선택 캐러셀 - 베스트 상품
 - 다를 https://darles.co.kr/
+- 사운드 기어 : https://www.ssoundgear.com/  메뉴 슬라이드 및 fade, 하단 상품 최신 게시글
 - 뮤직카로마 : https://www.musicaroma.kr/#0
 
 ### Front-end
 - HTML, CSS, JS
 
 ### 라이브러리
-- HTML - 바닐라
-- CSS - AOS,
-- JS - 바닐라, jQuery, ajax, WebSocket.io
+- AOS
+- WebSocket.io
+- 카카오 맵 API
+- jQuery
+- ajax
 
 ### 기술 아이디어
 - localstorage를 통한 브라우저 메모장 유틸
-- ajax를 통한 상품 페이지 더보기 구현(비동기 구현을 통한 성능 향상) 
-- 메인 페이지 캐러셀(BootStrap 끌어오는건 Plan B)
-- 상품 좋아요 DB에서 1 반환시 하트 색칠
+- ajax를 통한 상품 페이지 더보기 구현( 성능 향상 ) 
+- 메인 페이지 캐러셀( Bootstrap 끌어오기 planB )
+- 상품 좋아요 DB에서 lickHeart = 1 반환시 하트 색칠
 
 ### 정적 페이지 구성 JSP
-- index.jsp : 페이지 메인, include를 통한 3단 구성 (header.jsp, section.jsp, footer.jsp)
+- **index.jsp** : 페이지 메인, include를 통한 3단 구성 ( header.jsp, section.jsp, footer.jsp )
 
-- selction.jsp :
- 1. section1 : 캐러셀 
- 2.  section2 : DB에서 끌어온 일부 상품 목록
+- **saction.jsp** :
+   1. saction1 : 캐러셀 
+   2. saction2 : DB에서 끌어온 베스트 상품 목록
 
-- header.jsp : 메뉴 구성 ( 로고, 홈, ... )
-  DropDown 기능구현,
+- **header.jsp** : 메뉴 구성 ( 시간 - 로고 - 메뉴버튼( nav.jsp ) )
 
-- footer.jsp : 
- 1. section : 사업자정보, 사이트맵, 고객 참여
+- **nav.jsp** : 메뉴 구성 
+   1. 로그인 | 회원가입 | 장바구니 | 마이페이지
+ 
+   2. ABOUT
+     - ABOUT #Moon ( about.jsp )
+     - All Brand ( allBrand.jsp )
+     - 오시는길 ( wayToCome.jsp ) | 카카오맵 api
+   
+   3. SHOP
+     - GUITAR ( shopGuitar.jsp )
+     - BASS ( shopBass.jsp )
+     - MIDI ( shopMidi.jsp )
+     - ALBUM  (shopAlbum.jsp )
+     
+
+- **footer.jsp** : 
+   1. saction : 사업자정보, 사이트맵, 고객 참여
 
 
 
@@ -51,7 +68,7 @@
 ###기술 아이디어
 - P2P 전체 채팅방
 - sns 로그인
-- 상품 좋아요 카운트
+- 상품 좋아요 로직
 
 
 ### DataBase
