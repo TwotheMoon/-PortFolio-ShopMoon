@@ -33,7 +33,10 @@
 
 - **saction.jsp** :
    1. saction1 : 캐러셀 
-   2. saction2 : DB에서 끌어온 베스트 상품 목록
+   
+   2. saction2 : 
+     - DB에서 끌어온 베스트 상품 목록
+     - 상품 문의 게시판 최근 5개
 
 - **header.jsp** : 메뉴 구성 ( 시간 - 로고 - 메뉴버튼( nav.jsp ) )
 
@@ -43,13 +46,20 @@
    2. ABOUT
      - ABOUT #Moon ( about.jsp )
      - All Brand ( allBrand.jsp )
-     - 오시는길 ( wayToCome.jsp ) | 카카오맵 api
-   
+     
    3. SHOP
      - GUITAR ( shopGuitar.jsp )
      - BASS ( shopBass.jsp )
      - MIDI ( shopMidi.jsp )
-     - ALBUM  (shopAlbum.jsp )
+     - ALBUM ( shopAlbum.jsp )
+
+   4. COMMUNITY
+     - 상품문의 ( contact.jsp ) | all상품문의 뿌리기
+     - 오시는길 ( wayToCome.jsp ) | 카카오맵 api
+
+   5. CUSTOMER
+     - 번호
+     - 상담시간 내용
      
 
 - **footer.jsp** : 
