@@ -1,5 +1,5 @@
 # -PortFolio-ShopMoon
-### Moon Shop
+### - #Moon -
 - 컨셉 : 음악 관련 제품 판매 및 블로그 (결제 시스템 구현)
 
 - 개발함에 있어서 2가지 조건
