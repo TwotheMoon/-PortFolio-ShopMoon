@@ -11,7 +11,6 @@
 - 다를 https://darles.co.kr/
 - 뮤직카로마 : https://www.musicaroma.kr/#0
 
-
 ### Front
 - HTML, CSS, JS
 
@@ -45,3 +44,26 @@
 - WebSocket을 통한 P2P 전체 채팅방
  
 ### 기술 아이디어
+- P2P 전체 채팅방
+- 좋아요 표시 및 카운트
+
+
+### DB 테이블 구성
+
+- Member
+
+
+| No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
+| 1 |  NO           |    Long      | NOT NULL  |   PK    | 식별번호        |
+| 2 |  ID           | VARCHAR2(20) | NOT NULL  |         | 회원 아이디     |  
+| 3 |  PWD          | VARCHAR2(40) | NOT NULL  |         | 비밀번호        |
+| 4 |  NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
+| 5 |  POST_NUM     | VARCHAR2(7)  | NOT NULL  |         | 우편번호        |
+| 6 |  ADDRESS1     | VARCHAR2(100)| NOT NULL  |         | 주소           |
+| 7 |  ADDRESS2     | VARCHAR2(100)| NOT NULL  |         | 상세 주소       |
+| 8 |  PHONE        | VARCHAR2(20) | NOT NULL  |         | 핸드폰 번호     |
+| 9 | USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N : 탈퇴) |
+| 10 |  REG_DATE    | DATE         | NOT NULL  |         | 가입일           |
+| 11 |  AUTHORITY   | NUMBER(1)    | NOT NULL  |         | 관리자 권한(1:사용자, 2:관리자)           |
+
