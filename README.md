@@ -37,7 +37,9 @@
 - footer.jsp : 
  1. section : 사업자정보, 사이트맵, 고객 참여
 
-### BACK && DB
+
+
+### Back
 - Spring, JSP, Oracle DB
 
 ### 라이브러리
@@ -50,6 +52,9 @@
 - 좋아요 표시 및 카운트
 - sns 로그인
 
+
+
+### DataBase
 
 ### DB 테이블 구성
 - MEMBER 회원테이블
