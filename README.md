@@ -11,7 +11,7 @@
 - 다를 https://darles.co.kr/
 - 뮤직카로마 : https://www.musicaroma.kr/#0
 
-### Front
+### Front-end
 - HTML, CSS, JS
 
 ### 라이브러리
@@ -39,7 +39,7 @@
 
 
 
-### Back
+### Back-end
 - Spring, JSP, Oracle DB
 
 ### 라이브러리
