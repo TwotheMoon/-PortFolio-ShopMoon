@@ -34,8 +34,8 @@
 
 
 ### 페이지 구성 JSP
-   *Root
-- **index.jsp** : 페이지 메인, include를 통한 3단 구성 ( header.jsp, section.jsp, footer.jsp )
+
+- *Root **index.jsp** : 페이지 메인, include를 통한 3단 구성 ( header.jsp, section.jsp, footer.jsp )
 
 
 - **mainSaction.jsp** :
@@ -47,12 +47,10 @@
      - 오른쪽 fixed 채팅창 슬라이드  
 
 
-   *재사용
-- **header.jsp** : 메뉴 구성 ( 시간 - 로고 - 메뉴버튼( nav.jsp ) )  
+- *재사용 **header.jsp** : 메뉴 구성 ( 시간 - 로고 - 메뉴버튼( nav.jsp ) )  
 
-  
-   *재사용
-- **nav.jsp** : 메뉴 구성                                         
+ 
+- *재사용 **nav.jsp** : 메뉴 구성                                         
    1. 로그인 | 회원가입 | 장바구니 | 마이페이지
      - 로그인시 로그인, 회원가입 hide -> 회원 아이디 표시
      - 관리자 로그인시 관리자 페이지 ( adminPageMain.jsp )  
@@ -80,8 +78,7 @@
      - 상담시간 내용  
 
 
-   *재사용
-- **footer.jsp** : 
+- *재사용 **footer.jsp** : 
    1. saction : 사업자정보, 사이트맵, 고객 참여
 
 
