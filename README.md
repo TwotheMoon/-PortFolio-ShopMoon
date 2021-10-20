@@ -15,20 +15,20 @@
 ### Front-end
 - HTML, CSS, JS
 
-### 라이브러리
+### Front 라이브러리
 - AOS
 - WebSocket.io
 - 카카오 맵 API
 - jQuery
 - ajax
 
-### 기술 아이디어
+### Front 기술 아이디어
 - localstorage를 통한 브라우저 메모장 유틸
 - ajax를 통한 상품 페이지 더보기 구현( 성능 향상 ) 
 - 메인 페이지 캐러셀( Bootstrap 끌어오기 planB )
 - 상품 좋아요 DB에서 lickHeart = 1 반환시 하트 색칠
 
-### 정적 페이지 구성 JSP
+### 페이지 구성 JSP
 - **index.jsp** : 페이지 메인, include를 통한 3단 구성 ( header.jsp, section.jsp, footer.jsp )
 
 - **saction.jsp** :
@@ -70,12 +70,12 @@
 ### Back-end
 - Spring, JSP, Oracle DB
 
-### 라이브러리
+### Back 라이브러리
 - WebSocket을 통한 P2P 전체 채팅방
 - 다음주소 API
 - 카카오, 구글, 네이버 회원가입 api
  
-###기술 아이디어
+### Back 기술 아이디어
 - P2P 전체 채팅방
 - sns 로그인
 - 상품 좋아요 로직
