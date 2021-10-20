@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.headerBox{
+	width: 100%;
+	border: 1px solid wheat;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(245, 222, 179, 0.2);
+}
+
+.headerClock{
+	font-family: 'Noto Serif Display', serif;
+	font-size: 25px;
+	margin-left: 20px;
+}
+.headerLogo{
+	font-weight: bold;
+	padding-right: 20px;
+}
+	.headerLogo div:nth-child(1){
+		font-size: 20px;
+		position: relative;
+		right: 30px;
+	}
+	.headerLogo div:nth-child(2){
+		font-family: 'Noto Serif Display', serif;
+		font-size: 30px;
+		position: relative;
+		top: -10px;	
+		right: 20px;
+	}
+
+.headerMenuBtn{
+	position: fixed;
+	margin-right: 20px;
+	cursor: pointer;
+	right: 20px;
+}
+
+	.menuBox{
+	    position: fixed;
+	    width: 270px;
+	    height: 100%;
+	    right: -272px;
+	    top: 0%;
+	    z-index: 1;
+	    border: 1px solid black;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    background-color: rgba(245, 222, 179, 0.2);
+	    
+	}
+		.menuBox_userBox {
+			font-size: 13px;
+			font-weight: bold;
+			color: rgba(0, 0, 0, 0.5);
+			margin-top: 40px;
+		}
+			.menuBox_userBox_list a{
+				margin-left: 3px;
+				margin-right: 3px;
+			}
+		.menuBox_about{
+			font-size: 15px;
+			margin-top: 45px;
+			color: rgba(0, 0, 0, 1);
+			cursor: pointer;
+		}
+		.menuBox_shop{
+			font-size: 15px;
+			margin-top: 20px;
+			color: rgba(0, 0, 0, 1);
+			cursor: pointer;
+		}
+		.menuBox_community{
+			font-size: 15px;
+			margin-top: 20px;
+			color: rgba(0, 0, 0, 1);
+			cursor: pointer;
+		}
+
+

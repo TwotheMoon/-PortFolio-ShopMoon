@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import "reset.css";
+
+/* Views */
+@import "header.css";
+@import "section.css";
+@import "footer.css";
+
+/* Fonts */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,800&display=swap');
+
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
+.headerBox{
+	width: 100%;
+	height: 90px;
+	position: fixed;
+	z-index: 99;
+}
+
+.sactionBox{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	top: 100px;
+}
+
+.footerBox{
+	width: 100%;
+	height: 200px;
+}
