@@ -108,7 +108,7 @@
 - COMMENTS 상품 댓글 테이블
 
 
-### 
+### 테이블 명세표
 - Member
 
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
