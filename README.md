@@ -18,11 +18,10 @@
 
 
 ### Front 라이브러리
-- AOS
-- WebSocket.io
-- 카카오 맵 API
-- jQuery
-- ajax
+- AOS (태그 요소 애니메이션)
+- 카카오 맵 API ( 회사 위치 표시 )
+- jQuery ( 바닐라와 섞어 사용 )
+- ajax ( 더보기 페이징 전략, 비동기성을 이용해 성능 챙기기)
 
 
 ### Front 기술 아이디어
@@ -87,7 +86,7 @@
 
 
 ### Back 라이브러리
-- WebSocket을 통한 P2P 전체 채팅방
+- WebSocket.io ( P2P 전체 채팅방 )
 - 다음주소 API ( 우편번호 조회 )
 - 카카오, 구글, 네이버 회원가입 api
 
