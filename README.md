@@ -8,13 +8,15 @@
 3. 라이브러리를 사용하지 말자 ( 시간을 생각해 노가다 성이 아닌 적당한 기술은 바닐라 구현 )
 
 ### 참조할 사이트
-- Asus : https://www.asus.com/kr/  saction 구조 선택 캐러셀 - 베스트 상품
-- 다를 https://darles.co.kr/
+- Asus : https://www.asus.com/kr/  saction 구조 선택 캐러셀 - 베스트 상품, 결제
+- 다를 https://darles.co.kr/  상품 상세내용 레이아웃
 - 사운드 기어 : https://www.ssoundgear.com/  메뉴 슬라이드 및 fade, 하단 상품 최신 게시글
-- 뮤직카로마 : https://www.musicaroma.kr/#0
+- 뮤직카로마 : https://www.musicaroma.kr/#0  태그 요소 애니메이션
+
 
 ### Front-end
 - HTML, CSS, JS
+
 
 ### Front 라이브러리
 - AOS
@@ -23,11 +25,13 @@
 - jQuery
 - ajax
 
+
 ### Front 기술 아이디어
 - localstorage를 통한 브라우저 메모장 유틸
 - ajax를 통한 상품 페이지 더보기 구현( 성능 향상 ) 
 - 메인 페이지 캐러셀( Bootstrap 끌어오기 planB )
 - 상품 좋아요 DB에서 lickHeart = 1 반환시 하트 색칠
+
 
 ### 페이지 구성 JSP
    *Root
@@ -85,11 +89,13 @@
 ### Back-end
 - Spring, JSP, Oracle DB
 
+
 ### Back 라이브러리
 - WebSocket을 통한 P2P 전체 채팅방
 - 다음주소 API ( 우편번호 조회 )
 - 카카오, 구글, 네이버 회원가입 api
- 
+
+
 ### Back 기술 아이디어
 - P2P 전체 채팅방
 - sns 로그인
@@ -101,6 +107,7 @@
 - 조인 성능과 개인정보 관리 문제 Meber PK 값을 회원 ID? or MEMEBER_NO 따로 만들기?
 - 장바구니 쿠키? DB? 선택 고민
 - 비회원 로그인 없이 주문 기능 고민
+
 
 ### DB 테이블 구성
 - MEMBER 회원테이블
