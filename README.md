@@ -49,13 +49,21 @@
 
 
 ### DB 테이블 구성
+- MEMBER 회원테이블
+- PRODUCT 상품 테이블
+- CONTACT 문의 테이블
+- ORDERS 주문 테이블
+- OTDER_DETAIL 주문 정보 테이블
+- CART 장바구니 테이블
+- COMMENTS 상품 댓글 테이블
+- ADDRESS 주소 테이블
+
 
 - Member
 
-
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
-| 1 |  NO           |    Long      | NOT NULL  |   PK    | 식별번호        |
+| 1 |  NO           |    Long      | NOT NULL  |   PK    | 회원 고유번호        |
 | 2 |  ID           | VARCHAR2(20) | NOT NULL  |         | 회원 아이디     |  
 | 3 |  PWD          | VARCHAR2(40) | NOT NULL  |         | 비밀번호        |
 | 4 |  NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
@@ -63,7 +71,20 @@
 | 6 |  ADDRESS1     | VARCHAR2(100)| NOT NULL  |         | 주소           |
 | 7 |  ADDRESS2     | VARCHAR2(100)| NOT NULL  |         | 상세 주소       |
 | 8 |  PHONE        | VARCHAR2(20) | NOT NULL  |         | 핸드폰 번호     |
-| 9 | USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N : 탈퇴) |
+| 9 | USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N: 탈퇴) |
 | 10 |  REG_DATE    | DATE         | NOT NULL  |         | 가입일           |
-| 11 |  AUTHORITY   | NUMBER(1)    | NOT NULL  |         | 관리자 권한(1:사용자, 2:관리자)           |
+| 11 |  AUTHORITY   | NUMBER(1)    | NOT NULL  |         | 관리자 권한(1:사용자, 2:관리자)|
+
+- Product
+| No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
+| 1 |  P_ID         |    Long      | NOT NULL  |   PK    | 상품 고유번호    |
+| 2 |  P_NAME       | VARCHAR2(100)| NOT NULL  |         | 회원 아이디     |  
+| 3 |  P_CATEGORY   | CHAR(1)      | NOT NULL  |         | 상품 종류 (1: 기타, 2: 베이스, 3: 미디, 4: 앨범)  |
+| 4 |  P_PRICE      | NUMBER(7)    | NOT NULL  |         | 가격            |
+| 5 |  P_CONTENTS   | CLOB         | NOT NULL  |         | 상품 설명        |
+| 6 |  P_IMAGE      | VARCHAR(50)  | NOT NULL  |         | 상품 사진        |
+| 7 |  P_ACTIVE     | CHAR(1)      | NOT NULL  |         | 제품 활성 여부(Y: 판매중,  N: 미판매)      |
+| 8 |  P_BEST       | CHAR(1)      | NOT NULL  |         | 베스트 상품 여부Y: 베스트, N: 일반)     |
+| 9 |  p_REG_DATE   | DATE         | NOT NULL  |         | 상품 등록일 |
 
