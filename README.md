@@ -43,12 +43,12 @@
 - 라이브러리
 - WebSocket을 통한 P2P 전체 채팅방
 - 다음주소 API
-- 
+- 카카오, 구글, 네이버 회원가입 api
  
-### 기술 아이디어
+###기술 아이디어
 - P2P 전체 채팅방
 - 좋아요 표시 및 카운트
-- 
+- sns 로그인
 
 
 ### DB 테이블 구성
@@ -59,8 +59,6 @@
 - ORDERS 주문 테이블
 - OTDER_DETAIL 주문 정보 테이블
 - COMMENTS 상품 댓글 테이블
-- ADDRESS 주소 테이블
-- MEMBER_BOARD 회원 게시판
 
 
 - Member
@@ -141,6 +139,19 @@
 | 6 |  OD_ADDRESS1  |VARCHAR2(100) | NOT NULL  |         | 주문 주소         |
 | 7 |  OD_ADDRESS2  |VARCHAR2(100) | NOT NULL  |         | 주문 상세주소    |
 | 8 |  OD_RESULT    | CHAR(1)      | NOT NULL  |         | 주문 처리 여부(Y: 처리완료, N: 미처리)  |
+
+
+- Comments
+
+| No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
+| 1 |  COMM_NO      |    NUMBER    | NOT NULL  |   PK    |  고유번호    |
+| 2 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품평을 남길 상품 고유번호    |
+| 3 |  M_NO         |    NUMBER    | NOT NULL  |   PK    | 회원 고유번호        |
+| 4 |  COMM_CONTENTS|    NUMBER    | NOT NULL  |         | 댓글 내용        |
+| 5 |  COMM_REG_DATE|    DATE      | NOT NULL  |         |  댓글 작성일        |
+| 6 |  COMM_REG_DATE|    DATE      | NOT NULL  |         |  댓글 수정일        |
+
 
 
 
