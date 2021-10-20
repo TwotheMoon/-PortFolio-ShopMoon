@@ -14,7 +14,7 @@
 ### Front
 - HTML, CSS, JS
 
-- 라이브러리
+### 라이브러리
 - HTML - 바닐라
 - CSS - AOS,
 - JS - 바닐라, jQuery, ajax, WebSocket.io
@@ -40,7 +40,7 @@
 ### BACK && DB
 - Spring, JSP, Oracle DB
 
-- 라이브러리
+### 라이브러리
 - WebSocket을 통한 P2P 전체 채팅방
 - 다음주소 API
 - 카카오, 구글, 네이버 회원가입 api
