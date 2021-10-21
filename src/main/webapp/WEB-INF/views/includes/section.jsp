@@ -46,6 +46,14 @@ $(document).ready(function(){
 	</section>
 	<section class="boardBox">
 		<h2> 게시판 영역 </h2>
+		<h2> 게시판 영역 </h2>
+		<h2> 게시판 영역 </h2>
+		<h2> 게시판 영역 </h2>
+		<h2> 게시판 영역 </h2>
+		<h2> 게시판 영역 </h2>
+		<h2> 게시판 영역 </h2>
+		<h2> 게시판 영역 </h2>
+		
 	</section>
 
 

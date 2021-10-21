@@ -25,7 +25,7 @@
 	
 	<title>:: #Moon - Welcome to VACUUM ::</title>
 </head>
-<body class="homeBody">
+<body id="homeBody">
     <!-- css AOS 초기화 -->
     <script>
         AOS.init();

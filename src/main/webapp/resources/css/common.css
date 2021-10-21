@@ -24,9 +24,11 @@
 
 /* 변수 */
 :root {
-  --main-bg-color: rgba(248, 248, 255, 0.9);
+  	--main-bg-color: rgba(248, 248, 255, 0.9);
+  	--column-font-color: #013DC4;
 }
 
+/* home.jsp css */
 .headerBox{
 	width: 100%;
 	height: 90px;
@@ -39,6 +41,7 @@
 	width: 100%;
 	height: 500px;
 	top: 100px;
+	
 }
 
 .footerBox{

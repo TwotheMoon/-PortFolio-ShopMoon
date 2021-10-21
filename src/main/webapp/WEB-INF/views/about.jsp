@@ -25,7 +25,7 @@
 	
 	<title> About - #Moon </title>
 </head>
-<body class="aboutBody">
+<body id="aboutBody">
     <!-- css AOS 초기화 -->
     <script>
         AOS.init();
@@ -74,7 +74,7 @@
 	<div class="aboutSectionBox_column3">
 		<img data-aos="fade-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg03.jpg">
 		<p data-aos="fade-up-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
-			다양한 악기, 최신 아티스트 정보 <br>
+			<span>다양한 악기, 최신 아티스트 정보</span> <br><br><br>
 			또 원하는 장비가 있으시다면 <br>
 			언제든 문의 주세요 <br>
 			저희는 고객님들과 함께 만들어갑니다 <br>

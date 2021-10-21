@@ -48,7 +48,7 @@ text-align: center;
 		position: relative;
 		font-family: 'Noto Sans KR', sans-serif;
 		font-weight: 300;
-		font-size: 15px;
+		font-size: 18px;
 		line-height: 20px;
 		position: relative;
 		top: 40px;
@@ -60,9 +60,10 @@ text-align: center;
 		.allBrandSectionBox_column1 p:first-child{
 		position: relative;
 		font-weight: bold;
-		font-size: 30px;
+		font-size: 25px;
 		top: 65px;
 		left: 20px;
+		color: var(--column-font-color)
 	}
 		.allBrandSectionBox_column1 p:last-child{
 		position: relative;
@@ -70,61 +71,104 @@ text-align: center;
 		font-size: 15px;
 		top:85px;
 		left: 20px;
+		color: var(--column-font-color)
 	}
-	
-
 .allBrandSectionBox_column2{
+	margin-top: 200px;
+}
+	.allBrandMiniLogo-title{
+		margin-bottom: 25px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+		font-size: 30px;
+	}
+	.allBrandMiniLogos{
+		border-top: 8px solid var(--main-bg-color);
+		border-bottom: 8px solid var(--main-bg-color);
+	}
+
+.allBrandbigLogo-title{
+	margin-bottom: 80px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
 	margin-top: 300px;
+	border-bottom: 8px solid var(--main-bg-color);
+}
+
+.allBrandSectionBox_column3{
 	width: 1200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;	
 }
-	.allBrandSectionBox_column2 img{
+	.allBrandSectionBox_column3 img{
 		position: relative;
-		right: 80px;
-	}
-	.allBrandSectionBox_column2 p{
-		font-family: 'Noto Sans KR', sans-serif;
-		font-weight: bold;
-		font-size: 30px;
-		line-height: 35px;
-		position: relative;
-		left: -30px;
-		top: 150px;
-		background-color: var(--main-bg-color);
-		width: 400px;
-		height: 180px;
-		padding-left: 20px;
-		padding-top: 60px;
+		right: 500px;
 	}
 	
-.allBrandSectionBox_column3{
-margin-top: 300px;
+.allBrandSectionBox_column4{
+margin-top: 50px;
 width: 1200px;
 display: flex;
 align-items: center;
 justify-content: center;	
-padding-bottom: 300px;
 }
-	.allBrandSectionBox_column3 img{
+	.allBrandSectionBox_column4 img{
 		position: relative;
-		right: -440px;
+		right: -200px;
 	}
-	.allBrandSectionBox_column3 p{
-		font-family: 'Noto Sans KR', sans-serif;
-		font-weight: bold;
-		font-size: 25px;
-		line-height: 35px;
+
+.allBrandSectionBox_column5{
+	margin-top: 50px;
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+	.allBrandSectionBox_column5 img{
 		position: relative;
-		left: -620px;
-		top: 150px;
-		background-color: var(--main-bg-color);
-		width: 400px;
-		height: 180px;
-		padding-left: 20px;
-		padding-top: 40px;
+		right: 500px;
 	}
+	
+.allBrandSectionBox_column6{
+	margin-top: 50px;
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+	.allBrandSectionBox_column6 img{
+		position: relative;
+		right: 0px;
+		top: -130px;
+	}
+	
+.allBrandSectionBox_column7{
+	margin-top: 50px;
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+	.allBrandSectionBox_column7 img{
+		position: relative;
+		left: 500px;
+		top: -250px;
+	}
+.allBrandSectionBox_column8{
+	margin-top: 50px;
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+	.allBrandSectionBox_column8 img{
+		position: relative;
+		right: 0px;
+		top: -130px;
+	}
+	
 	
 	
 	

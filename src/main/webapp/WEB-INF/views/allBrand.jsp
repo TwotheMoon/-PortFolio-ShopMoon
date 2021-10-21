@@ -25,7 +25,7 @@
 	
 	<title> All Brand - #Moon </title>
 </head>
-<body class="allBrandBody">
+<body id="allBrandBody">
     <!-- css AOS 초기화 -->
     <script>
         AOS.init();
@@ -60,22 +60,36 @@
 	</div>
 	
 	<div class="allBrandSectionBox_column2">
-		<img data-aos="fade-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg01.jpg">
-		<p data-aos="fade-up-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
-			안녕하세요. <br>
-			당신의 음악스타일을 위해 <br>
-			항상 노력하는 #Moon입니다. 
-		</p>
+		<div class="allBrandMiniLogo-title" data-aos="fade-right"  data-aos-easing="ease-in-out" data-aos-duration="1000">Main Partners</div>
+		<div class="allBrandMiniLogos" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+			<img src="${path}/resources/img/allBrandImgSmall01.png">
+			<img src="${path}/resources/img/allBrandImgSmall02.png">
+			<img src="${path}/resources/img/allBrandImgSmall03.png">
+			<img src="${path}/resources/img/allBrandImgSmall04.png">
+			<img src="${path}/resources/img/allBrandImgSmall05.png">
+			<img src="${path}/resources/img/allBrandImgSmall06.png">
+		</div>
 	</div>
 	
+	<div class="allBrandbigLogo-title" data-aos="fade-right"  data-aos-easing="ease-in-out" data-aos-duration="1000">Others</div>
+	
 	<div class="allBrandSectionBox_column3">
-		<img data-aos="fade-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg03.jpg">
-		<p data-aos="fade-up-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
-			다양한 악기, 최신 아티스트 정보 <br>
-			또 원하는 장비가 있으시다면 <br>
-			언제든 문의 주세요 <br>
-			저희는 고객님들과 함께 만들어갑니다 <br>
-		</p>
+		<img data-aos="fade-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/allBrandImgBig01.jpg">
+	</div>
+	<div class="allBrandSectionBox_column4">
+		<img data-aos="fade-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/allBrandImgBig02.jpg">
+	</div>
+	<div class="allBrandSectionBox_column5">
+		<img data-aos="zoom-in"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/allBrandImgBig03.jpg">
+	</div>
+	<div class="allBrandSectionBox_column6">
+		<img data-aos="zoom-in"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/allBrandImgBig04.jpg">
+	</div>
+	<div class="allBrandSectionBox_column7">
+		<img data-aos="zoom-in"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/allBrandImgBig05.jpg">
+	</div>
+	<div class="allBrandSectionBox_column8">
+		<img data-aos="zoom-in"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/allBrandImgBig06.jpg">
 	</div>
 	
 </section>
