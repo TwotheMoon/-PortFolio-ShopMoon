@@ -5,6 +5,7 @@
 @import "header.css";
 @import "section.css";
 @import "footer.css";
+@import "about.css";
 
 /* Fonts */
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
@@ -18,6 +19,11 @@
 
 * { font-family: 'Noto Sans KR', sans-serif; }
 
+/* 변수 */
+:root {
+  --main-bg-color: rgba(248, 248, 255, 0.9);
+}
+
 .headerBox{
 	width: 100%;
 	height: 90px;
@@ -25,7 +31,7 @@
 	z-index: 99;
 }
 
-.sactionBox{
+.sectionBox{
 	position: relative;
 	width: 100%;
 	height: 500px;
@@ -33,6 +39,8 @@
 }
 
 .footerBox{
+	position: relative;
+	top: 1100px;
 	width: 100%;
 	height: 200px;
 }

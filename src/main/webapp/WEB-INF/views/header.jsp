@@ -9,21 +9,19 @@
 	if (request.getProtocol().equals("HTTP/1.1"))
         response.setHeader("Cache-Control", "no-cache");
 %>
-
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
 <!-- css -->
-<link href="${pageContext.request.contextPath}/resources/css/home.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="${path}/resources/css/home.css" rel="stylesheet">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-iKbFRxucmOHIcpWdX9NTZ5WETOPm0Goy0WmfyNcl52qSYtc2Buk0NCe6jU1sWWNB" crossorigin="anonymous">
 <link rel="icon" href="img/favicon.png">
 <!-- js -->
-<script src="${pageContext.request.contextPath}/resources/js/header.js" async></script>
+<script src="${path}/resources/js/header.js" async></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>﻿
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-	<title> header </title>
+	<title> Fixed - header </title>
 </head>
 <body id="headerBody">
 	
@@ -31,8 +29,10 @@
 		<div class="headerClock"></div>
 		
 		<div class="headerLogo">
-			<div>#</div>
-			<div>Moon</div>
+			<a href="/">
+				<div>#</div>
+				<div>Moon</div>
+		 	</a>
 		 </div>
 		 
 		 <!-- 간격 맞추기용 빈 box -->
@@ -44,31 +44,34 @@
    	<!-- nav menu-->
     <aside class="menuBox">
         <div class="menuBox_userBox">
+        	<div class="menuBox_greating">
+        		안녕하세요 더문 님
+        	</div>
             <div class="menuBox_userBox_list">
             	<a href="#.jsp"> 로그인 </a> 
             	<a href="#.jsp"> 회원가입 </a>
             	<a href="#.jsp"> 장바구니 </a>
             	<a href="#.jsp"> 마이페이지 </a>
             </div>
-          	<div class="menuBox_about">
+          	<div class="menuBox_about dropBtn">
           		<h3>ABOUT</h3>
-          		<ul class="aboutlist">
-          			<li ><a href="about.jsp">ABOUT #Moon</a></li>
+          		<ul class="aboutlist dropList">
+          			<li ><a href="/about"> ABOUT #Moon </a></li>
           			<li ><a href="allBrand.jsp">ALL Brand</a></li>
           		</ul>
           	</div>
-          	<div class="menuBox_shop">
+          	<div class="menuBox_shop dropBtn">
           		<h3>SHOP</h3>
-         		<ul class="shoplist">
+         		<ul class="shoplist dropList">
           			<li ><a href="shopGuitar.jsp">GUITAR</a></li>
           			<li ><a href="shopBass.jsp">BASS</a></li>
           			<li ><a href="shopMidi.jsp">MIDI</a></li>
           			<li ><a href="shopAlbum.jsp">ALBUM</a></li>
           		</ul>
           	</div>
-          	<div class="menuBox_community">
+          	<div class="menuBox_community dropBtn">
           		<h3>COMMUNITY</h3>
-          		<ul class="communitylist">
+          		<ul class="communitylist dropList">
           			<li ><a href="contact.jsp">CONTACT</a></li>
           			<li ><a href="wayToCome.jsp">WAYTOCOME</a></li>
           		</ul>

@@ -26,8 +26,8 @@ $(function () {
         if ($aside.hasClass("menu-open")) {
 			$button.animate({ right: "272px" }, $duration);
             $aside.stop().animate({ right: "0px"}, $duration);
-			$sactionBox.animate({ opacity: "20%"}, $duration);
-			$footerBox.animate({ opacity: "20%"}, $duration);
+			$sactionBox.animate({ opacity: "70%"}, $duration);
+			$footerBox.animate({ opacity: "70%"}, $duration);
         } else {
 			$button.animate({ right: "20px" }, $duration);
             $aside.stop().animate({ right: "-272px" }, $duration);

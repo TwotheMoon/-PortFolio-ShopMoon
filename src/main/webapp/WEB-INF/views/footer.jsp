@@ -12,11 +12,18 @@
 
 <html>
 <head>
-<link href="${pageContext.request.contextPath}/resources/css/home.css" rel="stylesheet">
-	<title>Home</title>
+<!-- css -->
+<link href="${path}/resources/css/home.css" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-iKbFRxucmOHIcpWdX9NTZ5WETOPm0Goy0WmfyNcl52qSYtc2Buk0NCe6jU1sWWNB" crossorigin="anonymous">
+<link rel="icon" href="img/favicon.png">	
+	
+	<title> Home Footer </title>
 </head>
 <body id="footerBody">
-<h1> footer 영역</h1>
+<div class="footerSectionBox">
+
+</div>
 
 
 
