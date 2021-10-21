@@ -35,10 +35,10 @@ $(document).ready(function(){
 	
 	<section class="carouselBox">
 		<ul class="slider">
-			<li><img src="${path}/resources/img/carouselImg04.jpg"></li>
-			<li><img src="${path}/resources/img/carouselImg01.jpg"></li>
 			<li><img src="${path}/resources/img/carouselImg02.jpg"></li>
+			<li><img src="${path}/resources/img/carouselImg01.jpg"></li>
 			<li><img src="${path}/resources/img/carouselImg03.jpg"></li>
+			<li><img src="${path}/resources/img/carouselImg04.jpg"></li>
 		</ul>
 	</section>
 	<section class="contentsBox">

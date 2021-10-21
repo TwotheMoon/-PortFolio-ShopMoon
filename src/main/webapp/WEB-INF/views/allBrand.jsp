@@ -23,9 +23,9 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	
-	<title> About - #Moon </title>
+	<title> All Brand - #Moon </title>
 </head>
-<body class="aboutBody">
+<body class="allBrandBody">
     <!-- css AOS 초기화 -->
     <script>
         AOS.init();
@@ -35,27 +35,18 @@
 	<jsp:include page="header.jsp" />
 </header>
 
-<section class="aboutSectionBox" >
+<section class="allBrandBox" >
 
-	<div class="aboutSectionBox_title">
-		<h1>ABOUT #Moon</h1>
+	<div class="allBrandSection_title">
+		<h1>All Brand</h1>
 	</div>
 	
-	<div class="aboutSectionBox_nav">
+	<div class="allBrandSection_nav">
 		<a href="/about">ABOUT #Moon</a> |
 		<a href="/allBrand">All Brand</a>
 	</div>
 	
-	<div class="aboutSectionBox_column1">
-		<img data-aos="fade-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg01.jpg">
-		<p data-aos="fade-up-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
-			안녕하세요. <br>
-			당신의 음악스타일을 위해 <br>
-			항상 노력하는 #Moon입니다. 
-		</p>
-	</div>
-	
-	<div class="aboutSectionBox_column2">
+	<div class="allBrandSectionBox_column1">
 		<img data-aos="fade-down"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg02.jpg">
 		<div data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
 			<p>음악과 관련된 사람이라면</p>
@@ -71,15 +62,6 @@
 		</div>
 	</div>
 	
-	<div class="aboutSectionBox_column3">
-		<img data-aos="fade-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg03.jpg">
-		<p data-aos="fade-up-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
-			다양한 악기, 최신 아티스트 정보 <br>
-			또 원하는 장비가 있으시다면 <br>
-			언제든 문의 주세요 <br>
-			저희는 고객님들과 함께 만들어갑니다 <br>
-		</p>
-	</div>
 </section>
 
 <footer class="footerBox" >

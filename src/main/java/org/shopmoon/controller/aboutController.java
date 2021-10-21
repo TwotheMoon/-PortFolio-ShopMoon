@@ -11,4 +11,10 @@ public class aboutController {
 		
 		return "about";
 	}
+	
+	@RequestMapping("/allBrand")
+	public String allBrand() {
+		
+		return "allBrand";
+	}
 }

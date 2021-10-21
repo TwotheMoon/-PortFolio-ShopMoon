@@ -57,7 +57,7 @@
           		<h3>ABOUT</h3>
           		<ul class="aboutlist dropList">
           			<li ><a href="/about"> ABOUT #Moon </a></li>
-          			<li ><a href="allBrand.jsp">ALL Brand</a></li>
+          			<li ><a href="/allBrand">ALL Brand</a></li>
           		</ul>
           	</div>
           	<div class="menuBox_shop dropBtn">

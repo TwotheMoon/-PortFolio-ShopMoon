@@ -3,7 +3,7 @@
 
 .aboutSectionBox{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	position: relative;
 	top: 100px;
 	display: flex;
@@ -104,6 +104,7 @@ width: 1200px;
 display: flex;
 align-items: center;
 justify-content: center;	
+padding-bottom: 300px;
 }
 	.aboutSectionBox_column3 img{
 		position: relative;
@@ -123,3 +124,4 @@ justify-content: center;
 		padding-left: 20px;
 		padding-top: 40px;
 	}
+	
