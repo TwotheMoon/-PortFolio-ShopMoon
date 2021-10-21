@@ -74,8 +74,15 @@
           		</ul>
           	</div>
           		<div class="menuBox_customer">
-          		<h3>CUSTOMER</h3>
-          	</div>
+	          		<h3>CUSTOMER</h3>
+	          		<ul>
+	          			<li>1566-2324</li>
+	          			<li>상담시간 월~금 AM 10:00~PM 06:00</li>
+	          			<li>점심시간 월~금 PM 13:00~PM 14:00</li>
+	          			<li>토요일 일요일 공휴일 휴무</li>
+	          		</ul>
+          		</div>
+          		
         </div>
     </aside>
 
