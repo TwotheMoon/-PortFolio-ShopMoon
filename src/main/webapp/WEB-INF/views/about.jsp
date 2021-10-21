@@ -13,7 +13,7 @@
 <html>
 <head>
 <!-- css -->
-<link href="${path}/resources/css/home.css" rel="stylesheet">
+<link href="${path}/resources/css/common.css" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-iKbFRxucmOHIcpWdX9NTZ5WETOPm0Goy0WmfyNcl52qSYtc2Buk0NCe6jU1sWWNB" crossorigin="anonymous">
@@ -32,7 +32,7 @@
     </script>
     
 <header class="headerBox" >
-	<jsp:include page="header.jsp" />
+	<jsp:include page="includes/header.jsp" />
 </header>
 
 <section class="aboutSectionBox" >
@@ -83,7 +83,7 @@
 </section>
 
 <footer class="footerBox" >
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="includes/footer.jsp" />
 </footer>
 
 

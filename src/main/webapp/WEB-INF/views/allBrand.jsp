@@ -32,7 +32,7 @@
     </script>
     
 <header class="headerBox" >
-	<jsp:include page="header.jsp" />
+	<jsp:include page="includes/header.jsp" />
 </header>
 
 <section class="allBrandBox" >
@@ -47,25 +47,41 @@
 	</div>
 	
 	<div class="allBrandSectionBox_column1">
-		<img data-aos="fade-down"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg02.jpg">
+		<img data-aos="fade-down"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/allBrandImg01.jpg">
 		<div data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
-			<p>음악과 관련된 사람이라면</p>
+			<p>What's your BRAND DNA?</p>
 			<p>
 				<br>
-				당신은 어떤 사람인가요? <br>
-				음악을 만드는 사람, <br>
-				만든 음악을 연주하는 사람, <br>
-				그리고 완성된 음악을 듣는사람, <br><br>
-				혹은 당신이 위에 사람들에 해당 되지 않는다 해도 <br>
-				괜찮습니다. 저희는 언제나 환영합니다.
+				어떤 브랜드가 취향이세요? <br>
+				저희 #Moon과 함께하는 브랜드와 <br>
+				멋진 음악, 행복한 음악 만들어요! <br>
 			</p>
 		</div>
+	</div>
+	
+	<div class="allBrandSectionBox_column2">
+		<img data-aos="fade-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg01.jpg">
+		<p data-aos="fade-up-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
+			안녕하세요. <br>
+			당신의 음악스타일을 위해 <br>
+			항상 노력하는 #Moon입니다. 
+		</p>
+	</div>
+	
+	<div class="allBrandSectionBox_column3">
+		<img data-aos="fade-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/aboutImg03.jpg">
+		<p data-aos="fade-up-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="50">
+			다양한 악기, 최신 아티스트 정보 <br>
+			또 원하는 장비가 있으시다면 <br>
+			언제든 문의 주세요 <br>
+			저희는 고객님들과 함께 만들어갑니다 <br>
+		</p>
 	</div>
 	
 </section>
 
 <footer class="footerBox" >
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="includes/footer.jsp" />
 </footer>
 
 

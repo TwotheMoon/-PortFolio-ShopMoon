@@ -13,7 +13,7 @@
 <html>
 <head>
 <!-- css -->
-<link href="${path}/resources/css/home.css" rel="stylesheet">
+<link href="${path}/resources/css/common.css" rel="stylesheet">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-iKbFRxucmOHIcpWdX9NTZ5WETOPm0Goy0WmfyNcl52qSYtc2Buk0NCe6jU1sWWNB" crossorigin="anonymous">
 <link rel="icon" href="img/favicon.png">	
