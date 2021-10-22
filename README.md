@@ -18,18 +18,18 @@
 
 
 ### Front 라이브러리
-- AOS (태그 요소 애니메이션)
-- 카카오 맵 API ( 회사 위치 표시 )
+- AOS ( 태그 요소 애니메이션 )
+- 다음 맵 API ( 회사 위치 표시 )
 - jQuery ( 바닐라와 섞어 사용 )
-- ajax ( 더보기 페이징 전략, 비동기성을 이용해 성능 챙기기)
-- FontAwesome (여러 아이콘)
+- ajax ( 더보기 페이징 전략 )
+- FontAwesome ( 여러 아이콘 )
 - bxSlider( 캐러셀 )
 
 
 ### Front 기술 아이디어
 - localstorage를 통한 브라우저 메모장 유틸
 - ajax를 통한 상품 페이지 더보기 구현( 성능 향상 ) 
-- 메인 페이지 캐러셀( Bootstrap 끌어오기 planB )
+- 메인 페이지 캐러셀( bxSlider 사용 )
 - 상품 좋아요 DB에서 lickHeart = 1 반환시 하트 색칠
 
 
@@ -70,7 +70,7 @@
 
    4. COMMUNITY
      - 상품문의 ( contact.jsp ) | all상품문의 뿌리기
-     - 오시는길 ( wayToCome.jsp ) | 카카오맵 api  
+     - 오시는길 ( wayToCome.jsp ) | 다음맵 api  
 
 
    5. CUSTOMER
@@ -79,8 +79,9 @@
 
 
 - *재사용 **footer.jsp** : 
-   1. saction : 사업자정보, 사이트맵, 고객 참여
-
+   1. section : 회사소개 | 이용약관 | 개인정보터리방침 | 이용안내 | 제휴문의
+   2. section : CUSTOMER CENTER | ACCOUNT INFO | FAVORITE MENU | RETURN / EXCHANGE
+   3. section : copyright
 
 
 ### Back-end
