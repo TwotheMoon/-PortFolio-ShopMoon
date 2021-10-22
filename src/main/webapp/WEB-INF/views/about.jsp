@@ -82,7 +82,7 @@
 	</div>
 </section>
 
-<footer class="footerBox" >
+<footer class="aboutFooterBox" >
 	<jsp:include page="includes/footer.jsp" />
 </footer>
 

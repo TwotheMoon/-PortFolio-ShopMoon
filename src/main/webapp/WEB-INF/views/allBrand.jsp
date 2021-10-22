@@ -94,7 +94,7 @@
 	
 </section>
 
-<footer class="footerBox" >
+<footer class="allBrandFooterBox" >
 	<jsp:include page="includes/footer.jsp" />
 </footer>
 

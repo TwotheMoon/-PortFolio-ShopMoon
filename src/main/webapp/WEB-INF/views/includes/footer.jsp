@@ -21,6 +21,7 @@
 	<title> Home Footer </title>
 </head>
 <body id="footerBody">
+
 <section class="footerSectionBox">
 	<div class="footerSectionBox_infoList">
 		<a href="/about">회사소개</a> |
