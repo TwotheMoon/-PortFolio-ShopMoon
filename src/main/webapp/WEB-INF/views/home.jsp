@@ -20,8 +20,8 @@
 	  });
 	</script>
    
-	<section class="sectionBox opacityBox" >
-		<section class="carouselBox">
+	<section class="homeBox opacityBox" >
+		<section class="homeCarouselBox">
 			<ul class="slider">
 				<li><img src="${path}/resources/img/carousel/carouselImg02.jpg"></li>
 				<li><img src="${path}/resources/img/carousel/carouselImg01.jpg"></li>
@@ -29,15 +29,30 @@
 				<li><img src="${path}/resources/img/carousel/carouselImg04.jpg"></li>
 			</ul>
 		</section>
-		<section class="contentsBox">
+		<!-- 상품 영역 -->
+		<section class="homeContentsBox">
 			<h1> 상품 영역 </h1>
+			<div class="homeContentsBox_poductBox">
+				<div>상품 img1</div>
+				<div>상품 img2</div>
+				<div>상품 img3</div>
+				<div>상품 img4</div>
+				<div>상품 img5</div>
+				<div>상품 img6</div>
+			</div>
 		</section>
-		<section class="boardBox">
+		
+		<!-- 게시판 영역 -->
+		<section class="homeBoardBox">
 			<h1> 게시판 영역 </h1>
+			<div class="homeBoardBox_boardBox">
+				<div>자유 게시판 / 채팅</div>
+				<div>문의 게시판</div>
+			</div>
 		</section>
 	</section>
 	
-	<footer class="footerBox" >
+	<footer class="homeFooterBox" >
 		<jsp:include page="includes/footer.jsp" />
 	</footer>
 

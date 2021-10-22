@@ -53,10 +53,10 @@
         		안녕하세요 더문 님
         	</div>
             <div class="menuBox_userBox_list">
-            	<a href="/login"> 로그인 </a> 
+            	<a href="/login"> 로그인 </a>
             	<a href="#.jsp"> 회원가입 </a>
             	<a href="#.jsp"> 장바구니 </a>
-            	<a href="#.jsp"> 마이페이지 </a>
+            	<a href="#.jsp"> 마이페이지 </a> 
             </div>
           	<div class="menuBox_about dropBtn">
           		<h3>ABOUT</h3>
@@ -68,17 +68,17 @@
           	<div class="menuBox_shop dropBtn">
           		<h3>SHOP</h3>
          		<ul class="shoplist dropList">
-          			<li ><a href="shopGuitar.jsp">GUITAR</a></li>
-          			<li ><a href="shopBass.jsp">BASS</a></li>
-          			<li ><a href="shopMidi.jsp">MIDI</a></li>
-          			<li ><a href="shopAlbum.jsp">ALBUM</a></li>
+          			<li ><a href="#">GUITAR</a></li>
+          			<li ><a href="#">BASS</a></li>
+          			<li ><a href="#">MIDI</a></li>
+          			<li ><a href="#">ALBUM</a></li>
           		</ul>
           	</div>
           	<div class="menuBox_community dropBtn">
           		<h3>COMMUNITY</h3>
           		<ul class="communitylist dropList">
-          			<li ><a href="contact.jsp">CONTACT</a></li>
-          			<li ><a href="wayToCome.jsp">WAYTOCOME</a></li>
+          			<li ><a href="#">CONTACT</a></li>
+          			<li ><a href="#">WAYTOCOME</a></li>
           		</ul>
           	</div>
           		<div class="menuBox_customer">

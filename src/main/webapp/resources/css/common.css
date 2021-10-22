@@ -3,8 +3,8 @@
 
 /* Views */
 @import "includes/header.css";
-@import "includes/section.css";
 @import "includes/footer.css";
+@import "home.css";
 @import "about.css";
 @import "allBrand.css";
 @import "login.css";
@@ -29,27 +29,3 @@
   	--column-font-color: #013DC4;
 }
 
-/* home.jsp css */
-
-
-.headerBox{
-	width: 100%;
-	height: 90px;
-	position: fixed;
-	z-index: 99;
-}
-
-.sectionBox{
-	position: relative;
-	width: 100%;
-	height: 500px;
-	top: 100px;
-	
-}
-
-.footerBox{
-	position: absolute;
-	bottom: 0%;
-	width: 100%;
-	height: 200px;
-}

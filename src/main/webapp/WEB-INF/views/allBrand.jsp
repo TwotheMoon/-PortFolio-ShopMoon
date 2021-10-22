@@ -77,7 +77,13 @@
 		<div class="allBrandBox_column10">
 			<img data-aos="fade-up-left"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/allBrand/allBrandImgBig08.jpg">
 		</div>
-		
+		<div class="allBrandBox_column11">
+			<div>
+				제휴문의 <br>
+				shopmoon@gmail.com <br> 
+				Tel : 010-1234-4321
+			</div>
+		</div>
 	</section>
 	
 	<footer class="allBrandFooterBox" >

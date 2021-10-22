@@ -12,9 +12,9 @@
 	font-family: 'Open Sans', sans-serif;
 }
 .aboutBox_title{
+	margin-top: 100px;
 	font-weight: bold;
 	font-size: 25px;
-	margin-top: 50px;
 }
 .aboutBox_nav{
 	font-size: 12px;
@@ -34,7 +34,7 @@
 	
 
 .aboutBox_column1{
-	margin-top: 50px;
+	margin-top: 200px;
 	width: 1200px;
 	display: flex;
 	align-items: center;

@@ -1,13 +1,6 @@
 @charset "UTF-8";
 
 
-.headerBox{
-	width: 100%;
-	height: 90px;
-	position: fixed;
-	z-index: 99;
-}
-
 .loginBox{
 	width: 100%;
 	height: auto;
@@ -18,10 +11,14 @@
 	align-items: center;
 	font-family: 'Open Sans', sans-serif;
 }
-
 .loginBox_title{
+	margin-top: 100px;
 	font-weight: bold;
 	font-size: 25px;
-	margin-top: 50px;
 }
 
+.loginFooterBox{
+	width:100%;
+	position: absolute;
+	bottom: 0px;
+}

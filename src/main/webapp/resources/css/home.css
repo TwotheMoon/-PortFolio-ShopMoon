@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+
+.homeBox{
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+/* 캐러셀 영역*/
+.homeCarouselBox{
+	margin-top: 80px;
+	width: 1400px;
+	height: auto;	
+}
+/* 캐러셀 js용 DOM */
+.slider li{
+	background-color: rgba(248, 248, 255, 0.9);	
+}
+.slider img{
+	margin:0 auto;
+	}
+	
+
+/* 상품 영역 */
+.homeContentsBox{
+	width: 1400px;
+	height: 100%;
+	border: 1px solid red;
+	margin-top: 100px;
+}
+	.homeContentsBox_poductBox{
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: space-around;
+	}
+		.homeContentsBox_poductBox div{
+			border: 1px solid black;
+			width: 400px;
+			height: 400px;
+			
+		}
+
+/* 게시판 영역 */
+.homeBoardBox{
+	width: 1400px;
+	height: auto;
+	border: 1px solid red;
+	margin-top: 200px;
+}
+	.homeBoardBox_boardBox{
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content: space-around;
+	}
+		.homeBoardBox_boardBox div{
+			border: 1px solid black;
+			width: 500px;
+			height: 400px;
+			
+		}
+		.homeBoardBox_boardBox div:first-child{
+			border: 1px solid black;
+			width: 500px;
+			height: 400px;
+			margin-left: 100px;
+		}
+		.homeBoardBox_boardBox div:last-child{
+			border: 1px solid black;
+			width: 500px;
+			height: 400px;
+			margin-right: 100px;
+		}
+
+.homeFooterBox{
+	margin-top: 200px;
+}
+
+	
+

@@ -11,7 +11,7 @@
 			<a href="#">이용약관</a> |
 			<a href="#">개인정보처리방침</a> |
 			<a href="#">이용안내</a> |
-			<a href="#">제휴문의</a>
+			<a href="/allBrand">제휴문의</a>
 		</div>
 		<div class="footerSectionBox_middleBox">
 			<div class="footerSectionBox_customer">
@@ -32,7 +32,7 @@
 			<div class="footerSectionBox_FavoriteMenu">
 				<h1 class="middleBox_header">FAVORITE MENU</h1>
 				<div class="middleBox_contents">
-					<a href="#">로그인 / 회원가입</a>
+					<a href="/login">로그인 / 회원가입</a>
 					<a href="#">장바구니</a>
 					<a href="#">주문조회</a>
 					<a href="#">마이페이지</a>

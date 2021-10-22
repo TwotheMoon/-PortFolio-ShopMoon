@@ -14,16 +14,18 @@
         AOS.init();
     </script>
     
-	
 	<!-- login.jsp 컨텐츠 -->
 	<section class="loginBox opacityBox">
 		<div class="loginBox_title">
 			<h1>Login</h1>
-		</div>
+		</div>		
+		<form class="loginBox_form" method="post">
+		
+		</form>
 		
 	</section>
 	
-	<footer class="footerBox" >
+	<footer class="loginFooterBox" >
 		<jsp:include page="includes/footer.jsp" />
 	</footer>
 

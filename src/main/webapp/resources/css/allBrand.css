@@ -12,9 +12,9 @@
 	font-family: 'Open Sans', sans-serif;
 }
 .allBrandBox_title{
+	margin-top: 100px;
 	font-weight: bold;
 	font-size: 25px;
-	margin-top: 50px;
 }
 .allBrandBox_nav{
 	font-size: 12px;
@@ -33,7 +33,7 @@
 	}
 	
 .allBrandBox_column1{
-margin-top: 50px;
+margin-top: 200px;
 width: 1200px;
 display: flex;
 flex-direction: column;
@@ -194,10 +194,24 @@ justify-content: center;
 		top: -130px;
 	}
 	
+	.allBrandBox_column11{
+	background-color: var(--main-bg-color);	
+	width: 250px;
+	height: 70px;
+	text-align: center;
+	border-radius: 20px;
+	
+}
+		.allBrandBox_column11 div{
+			margin-top: 8px;
+			line-height: 18px;
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+		
 	
 .allBrandFooterBox{
-	margin-top: 200px;
+	margin-top: 150px;
 }
-	
+
 	
 	
