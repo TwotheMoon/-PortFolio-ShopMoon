@@ -17,8 +17,7 @@ setInterval(getCLock, 1000);
 $(function () {
     const $aside = $(".menuBox"),
         $button = $(".headerMenuBtn"),
-		$sactionBox = $(".sactionBox").not(this),
-		$footerBox = $(".footerBox").not(this),
+		$sactionBox = $(".opacityBox").not(this),
         $duration = 400;
 
     $button.click(function () {
@@ -26,13 +25,11 @@ $(function () {
         if ($aside.hasClass("menu-open")) {
 			$button.animate({ right: "272px" }, $duration);
             $aside.stop().animate({ right: "0px"}, $duration);
-			$sactionBox.animate({ opacity: "70%"}, $duration);
-			$footerBox.animate({ opacity: "70%"}, $duration);
+			$sactionBox.animate({ opacity: "50%"}, $duration);
         } else {
 			$button.animate({ right: "20px" }, $duration);
             $aside.stop().animate({ right: "-272px" }, $duration);
-			$sactionBox.animate({ opacity: "100%"}, $duration);  
-			$footerBox.animate({ opacity: "100%"}, $duration);		      
+			$sactionBox.animate({ opacity: "100%"}, $duration);  	      
 		}
     });
 });

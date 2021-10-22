@@ -15,7 +15,7 @@
     </script>
     
 	<!-- about.jsp 컨텐츠 -->
-	<section class="aboutBox" >
+	<section class="aboutBox opacityBox" >
 	
 		<div class="aboutBox_title">
 			<h1>ABOUT #Moon</h1>

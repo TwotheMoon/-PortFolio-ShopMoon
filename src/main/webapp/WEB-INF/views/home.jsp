@@ -3,7 +3,6 @@
 <%@ page session="false" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
-
 <header class="headerBox" >
 	<jsp:include page="includes/header.jsp" />
 </header>	
@@ -21,7 +20,7 @@
 	  });
 	</script>
    
-	<section class="sectionBox" >
+	<section class="sectionBox opacityBox" >
 		<section class="carouselBox">
 			<ul class="slider">
 				<li><img src="${path}/resources/img/carousel/carouselImg02.jpg"></li>

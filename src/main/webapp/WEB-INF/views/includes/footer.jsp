@@ -5,7 +5,7 @@
 
 <body id="footerBody">
 
-	<section class="footerSectionBox">
+	<section class="footerSectionBox opacityBox">
 		<div class="footerSectionBox_infoList">
 			<a href="/about">회사소개</a> |
 			<a href="#">이용약관</a> |

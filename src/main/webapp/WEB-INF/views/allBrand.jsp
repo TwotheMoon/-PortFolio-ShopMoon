@@ -15,7 +15,7 @@
     </script>
     
 	<!-- allBrand.jsp 컨텐츠 -->
-	<section class="allBrandBox" >
+	<section class="allBrandBox opacityBox" >
 	
 		<div class="allBrandBox_title">
 			<h1>All Brand</h1>

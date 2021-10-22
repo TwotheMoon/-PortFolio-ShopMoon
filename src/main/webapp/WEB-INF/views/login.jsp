@@ -16,7 +16,7 @@
     
 	
 	<!-- login.jsp 컨텐츠 -->
-	<section class="loginBox">
+	<section class="loginBox opacityBox">
 		<div class="loginBox_title">
 			<h1>Login</h1>
 		</div>
