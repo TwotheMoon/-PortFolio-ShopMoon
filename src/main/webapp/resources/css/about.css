@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-.aboutSectionBox{
+.aboutBox{
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -11,40 +11,40 @@
 	align-items: center;
 	font-family: 'Open Sans', sans-serif;
 }
-.aboutSectionBox_title{
+.aboutBox_title{
 	font-weight: bold;
 	font-size: 25px;
 	margin-top: 50px;
 }
-.aboutSectionBox_nav{
+.aboutBox_nav{
 	font-size: 12px;
 	margin-top: 50px;
 	cursor: pointer;
 }
-	.aboutSectionBox_nav a:first-child{
+	.aboutBox_nav a:first-child{
 		color: rgba(0, 0, 0, 1);
 		border-bottom: 1px solid rgba(0, 0, 0, 1);
 	}
-	.aboutSectionBox_nav a:last-child{
+	.aboutBox a:last-child{
 		color: rgba(0, 0, 0, 0.3);
 	}
-	.aboutSectionBox_nav a:last-child:hover{
+	.aboutBox a:last-child:hover{
 		color: rgba(0, 0, 0, 0.8);
 	}
 	
 
-.aboutSectionBox_column1{
+.aboutBox_column1{
 	margin-top: 50px;
 	width: 1200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;	
 }
-	.aboutSectionBox_column1 img{
+	.aboutBox_column1 img{
 		position: relative;
 		right: 80px;
 	}
-	.aboutSectionBox_column1 p{
+	.aboutBox_column1 p{
 		font-family: 'Noto Sans KR', sans-serif;
 		font-weight: bold;
 		font-size: 25px;
@@ -63,7 +63,7 @@
 		border-bottom-right-radius: 20px; 
 	}
 	
-.aboutSectionBox_column2{
+.aboutBox_column2{
 	margin-top: 300px;
 	width: 1200px;
 	display: flex;
@@ -71,10 +71,10 @@
 	align-items: center;
 	justify-content: center;
 }
-	.aboutSectionBox_column2 img{
+	.aboutBox_column2 img{
 		position: relative;
 	}
-	.aboutSectionBox_column2 div{
+	.aboutBox_column2 div{
 		position: relative;
 		font-family: 'Noto Sans KR', sans-serif;
 		font-weight: 300;
@@ -90,7 +90,7 @@
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px; 
 	}
-		.aboutSectionBox_column2 p:first-child{
+		.aboutBox_column2 p:first-child{
 		position: relative;
 		font-weight: bold;
 		font-size: 30px;
@@ -98,7 +98,7 @@
 		left: 20px;
 		color: var(--column-font-color);
 	}
-		.aboutSectionBox_column2 p:last-child{
+		.aboutBox_column2 p:last-child{
 		position: relative;
 		font-weight: bold;
 		font-size: 15px;
@@ -107,7 +107,7 @@
 		color: var(--column-font-color);
 	}
 	
-.aboutSectionBox_column3{
+.aboutBox_column3{
 margin-top: 300px;
 width: 1200px;
 display: flex;
@@ -115,12 +115,12 @@ align-items: center;
 justify-content: center;	
 padding-bottom: 300px;
 }
-	.aboutSectionBox_column3 img{
+	.aboutBox_column3 img{
 		position: relative;
 		right: -440px;
 	}
 	
-	.aboutSectionBox_column3 p{
+	.aboutBox_column3 p{
 		font-family: 'Noto Sans KR', sans-serif;
 		font-weight: bold;
 		font-size: 15px;
@@ -138,7 +138,7 @@ padding-bottom: 300px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px; 
 	}
-	.aboutSectionBox_column3 p span{
+	.aboutBox_column3 p span{
 		font-size: 25px;
 	}
 	

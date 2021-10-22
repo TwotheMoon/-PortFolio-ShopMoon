@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!-- jsp 캐시 사용 안함 설정 -->
 <%
 	response.setHeader("Cache-Control","no-store");
@@ -9,20 +10,24 @@
 	if (request.getProtocol().equals("HTTP/1.1"))
         response.setHeader("Cache-Control", "no-cache");
 %>
-<c:set var="path" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
 <!-- css -->
 <link href="${path}/resources/css/common.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-iKbFRxucmOHIcpWdX9NTZ5WETOPm0Goy0WmfyNcl52qSYtc2Buk0NCe6jU1sWWNB" crossorigin="anonymous">
 <link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <!-- js -->
-<script src="${path}/resources/js/header.js" async></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>﻿
-
-	<title> Fixed - header </title>
+<script src="${path}/resources/js/common.js" async></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>﻿
 </head>
+
+
+<html>
 <body id="headerBody">
 	
 	<div class="headerBox">
@@ -48,7 +53,7 @@
         		안녕하세요 더문 님
         	</div>
             <div class="menuBox_userBox_list">
-            	<a href="#.jsp"> 로그인 </a> 
+            	<a href="/login"> 로그인 </a> 
             	<a href="#.jsp"> 회원가입 </a>
             	<a href="#.jsp"> 장바구니 </a>
             	<a href="#.jsp"> 마이페이지 </a>
@@ -85,10 +90,8 @@
 	          			<li>토요일 일요일 공휴일 휴무</li>
 	          		</ul>
           		</div>
-          		
         </div>
     </aside>
 
-
 </body>
-</html>
+

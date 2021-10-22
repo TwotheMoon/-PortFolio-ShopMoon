@@ -17,4 +17,10 @@ public class aboutController {
 		
 		return "allBrand";
 	}
+	
+	@RequestMapping("/login")
+	public String login() {
+		
+		return "login";
+	}
 }
