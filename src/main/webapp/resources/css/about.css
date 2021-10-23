@@ -17,8 +17,8 @@
 	font-size: 25px;
 }
 .aboutBox_nav{
-	font-size: 12px;
 	margin-top: 50px;
+	font-size: 12px;
 	cursor: pointer;
 }
 	.aboutBox_nav a:first-child{
@@ -34,8 +34,8 @@
 	
 
 .aboutBox_column1{
-	margin-top: 200px;
 	width: 1200px;
+	margin-top: 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;	
@@ -45,20 +45,20 @@
 		right: 80px;
 	}
 	.aboutBox_column1 p{
+		width: 400px;
+		height: 180px;
+		position: relative;
+		left: -30px;
+		top: 150px;
+		padding-left: 20px;
+		padding-top: 60px;
+		background-color: var(--main-bg-color);
+		color: var(--column-font-color);
+		border-radius: 30px 0px 30px 30px;
 		font-family: 'Noto Sans KR', sans-serif;
 		font-weight: bold;
 		font-size: 25px;
 		line-height: 35px;
-		position: relative;
-		left: -30px;
-		top: 150px;
-		background-color: var(--main-bg-color);
-		width: 400px;
-		height: 180px;
-		padding-left: 20px;
-		padding-top: 60px;
-		color: var(--column-font-color);
-		border-radius: 30px 0px 30px 30px;
 	}
 	
 .aboutBox_column2{
