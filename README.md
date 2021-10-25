@@ -126,7 +126,7 @@
 | 2 |  M_ID           | VARCHAR2(20) | NOT NULL  |         | 회원 아이디     |  
 | 3 |  M_PWD          | VARCHAR2(40) | NOT NULL  |         | 비밀번호        |
 | 4 |  M_NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
-| 5 |  M_EMAIL        | VARCHAR2(50)| NOT NULL   |         | 이메일           |
+| 5 |  M_EMAIL        | VARCHAR2(50) | NULL      |         | 이메일           |
 | 6 |  M_POST_NUM     | VARCHAR2(7)  | NOT NULL  |         | 우편번호        |
 | 7 |  M_ADDRESS      | VARCHAR2(100)| NOT NULL  |         | 주소       |
 | 8 |  M_PHONE        | VARCHAR2(20) | NOT NULL  |         | 핸드폰 번호     |
