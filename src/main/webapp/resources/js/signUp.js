@@ -34,8 +34,16 @@ function handleSignUpSubmit(event){
 	} else if (confirmPhoneNum(userPhone2, userPhone3) == false){
 		alert("전화번호 숫자만 입력해주세요.");
 		event.preventDefault();
-	} else {		
-		signUpBox_form.submit();
+	} else {			
+
+	//회원가입 버튼(회원가입 기능 작동)
+	$(document).ready(function(){
+	$(".loginBox_signUp").click(function(){
+		$("#loginBox_form").attr("action", "/signUp");
+		$("#loginBox_form").submit();
+	});
+});
+
 	}
 }
 
@@ -111,6 +119,8 @@ $(function(){
 });
 
 
+
+
 // 다음맵 api
    //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
 const signUpAddressBtn = document.querySelector(".signUpAddressBtn");
@@ -169,6 +179,7 @@ const signUpAddressBtn = document.querySelector(".signUpAddressBtn");
             }
         }).open();
     }
+
 
 
 signUpBox_form.addEventListener("submit", handleSignUpSubmit);

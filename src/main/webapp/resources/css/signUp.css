@@ -44,6 +44,24 @@
 	border: none;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
 	}
+	.signUpPhone{
+	width: 430px;
+	height: 60px;
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.signUpEmail{
+	width: 430px;
+	height: 60px;
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	
+	
+	
+	
+	
+	
 	.signUpBtn{
 		margin-top: 50px;
 		width: 430px;
@@ -72,33 +90,8 @@
 		opacity: 0.6;
 		cursor: pointer;
 	}
-	
-	.signUpEmail1{
-	margin-top: 30px;
-	width: 200px;
-	height: 30px;
-	border: none;
-	}
-
-	.signUpEmail2{
-	width: 200px;
-	height: 30px;
-	border: none;
-	}
 	.signUpAddressBox{
 		margin-top: 30px;
-	}
-	
-	.signUpPhoneBox{
-		margin-top: 30px;
-	}
-	.signUpPhoneBox label{
-		font-size: 13px;
-		color: rgba(0, 0, 0, 0.5);
-	}
-	.signUpPhoneBox input{
-		margin-top:20px;
-		width: 60px;
 	}
 	
 	.snsSignUpImgs{

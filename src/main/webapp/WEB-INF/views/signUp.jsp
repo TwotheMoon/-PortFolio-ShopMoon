@@ -23,47 +23,28 @@
 		<div class="signUpBox_title">
 			<h1>Sign Up</h1>
 		</div>		
-		<form class="signUpBox_form" action="/login" method="post">
+		<form class="signUpBox_form" method="post">
 	
-			<input class="signUpId" name="signUpId" placeholder="아이디" > <br>
+			<input class="signUpId" name="memberId" placeholder="아이디" > <br>
 			
-			<input class="signUpPw" name="signUpPw" placeholder="비밀번호"> <br>
+			<input type="password" class="signUpPw" name="memberPw" placeholder="비밀번호"> <br>
 			
-			<input class="signUpPwConfirm" name="signUpPwConfirm" placeholder="비밀번호 확인" > <br>
+			<input type="password" class="signUpPwConfirm" placeholder="비밀번호 확인" > <br>
 			
-			<input class="signUpName" name="signUpName" placeholder="이름" > <br>
+			<input class="signUpName" name="memberName" placeholder="이름" > <br>
 			
-			<div class="signUpPhoneBox">
-				<label>휴대전화</label> <br>
-				<select class="signUpPhone1" name="signUpPhone1"> 
-					<option value="010">010</option>
-					<option value="011">011</option>
-					<option value="016">016</option>
-					<option value="017">017</option>
-					<option value="018">018</option>
-					<option value="01">019</option>
-				</select> - 
-				<input class="signUpPhone2" type="text" maxlength="4" name="signUpPhone2" size="4"> - 
-				<input class="signUpPhone3" type="text" maxlength="4" name="signUpPhone3" size="4">
-			</div>
+			<input class="signUpPhone" name="memberPhone" placeholder="전화번호 (-없이 입력)" > <br>
 			
-			<div>	
-    			<input class="signUpEmail1" type="text" name="signUpEmail1" placeholder="이메일">@ 				
-    			<input type="text" class="selBoxDirect" name="selBoxDirect">
-    			<select class="signUpEmail2" name="signUpEmail2">
-    				<option value="naver.com">naver.com</option>
-    				<option value="gmail.com">gmail.com</option>
-    				<option value="daum.net">daum.net</option>
-    				<option value="direct">직접입력</option>
-    			</select>
-    		</div>
+			<input class="signUpEmail" name="memberEmail" placeholder="이메일" > <br>
     		
     		<div class="signUpAddressBox">	
    				<input class="signUpAddressBtn" type="button" value="주소검색"> <br><br>
-   				<input type="text" id="postcode" placeholder="우편번호" name="postcode" size="6">
-   				<input type="text" id="roadAddress" placeholder="도로명주소" name="roadAddress"> 
-   				<input type="text" id="detailAddress" placeholder="상세주소" name="detailAddress"><br><br>
+   				<input type="text" id="postcode" placeholder="우편번호" name="memberPostNum" size="6">
+   				<input type="text" id="roadAddress" placeholder="도로명주소" name="memberAddr1"> 
+   				<input type="text" id="detailAddress" placeholder="상세주소" name="memberAddr2"><br><br>
      		</div>
+     		
+    		
      		<div>
      			<input class="signUpAddress2" type="text" id="jibunAddress" placeholder="지번주소" name="jibunAddress">
 				<input type="text" id="extraAddress" placeholder="참고항목" name="extraAddress">

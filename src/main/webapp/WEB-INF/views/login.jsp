@@ -19,7 +19,7 @@
 		<div class="loginBox_title">
 			<h1>Login</h1>
 		</div>		
-		<form class="loginBox_form" action="/login" method="post">
+		<form class="loginBox_form"  method="post">
 			<input class="loginId" name="loginId" placeholder="아이디" required> <br>
 			<input class="loginPw" name="loginPw" placeholder="비밀번호" required> <br>
 			<button class="loginBtn" type="submit">로그인</button> <br>
