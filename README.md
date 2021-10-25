@@ -132,7 +132,7 @@
 | 8 |  M_PHONE        | VARCHAR2(20) | NOT NULL  |         | 핸드폰 번호     |
 | 9 | M_USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N: 탈퇴) |
 | 10 |  M_REG_DATE    | DATE         | NOT NULL  |         | 가입일           |
-| 11 |  M_AUTHORITY   | NUMBER(1)    | NOT NULL  |         | 관리자 권한(1:사용자, 2:관리자)|
+| 11 |  M_AUTHORITY   | VARCHAR2(1)    | NOT NULL  |         | 관리자 권한(M:사용자, A:관리자)|
 
 
 - Product
