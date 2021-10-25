@@ -54,7 +54,7 @@
         	</div>
             <div class="menuBox_userBox_list">
             	<a href="/login"> 로그인 </a>
-            	<a href="#.jsp"> 회원가입 </a>
+            	<a href="/signUp"> 회원가입 </a>
             	<a href="#.jsp"> 장바구니 </a>
             	<a href="#.jsp"> 마이페이지 </a> 
             </div>

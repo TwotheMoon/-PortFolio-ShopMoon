@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-.loginBox{
+.signUpBox{
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -10,29 +10,41 @@
 	align-items: center;
 	font-family: 'Open Sans', sans-serif;
 }
-.loginBox_title{
+.signUpBox_title{
 	margin-top: 200px;
 	font-weight: bold;
 	font-size: 25px;
 }
 
 
-.loginBox_form{
+.signUpBox_form{
 	margin-top: 50px;
 }
-	.loginId{
+	.signUpId{
 		width: 430px;
 		height: 60px;
 		border: none;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 	}
-	.loginPw{
+	.signUpPw{
 		width: 430px;
 		height: 60px;
 		border: none;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
 	}
-	.loginBtn{
+	.signUpPwConfirm{
+	width: 430px;
+	height: 60px;
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.signUpName{
+	width: 430px;
+	height: 60px;
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.signUpBtn{
 		margin-top: 50px;
 		width: 430px;
 		height: 50px;
@@ -41,13 +53,13 @@
 		cursor: pointer;
 		font-weight: bold;
 	}
-		.loginBtn:hover{
+		.signUpBtn:hover{
 		background-color: var(--main-bg-color);
 		opacity: 0.6;
 		cursor: pointer;
 	}
 	
-	.snsLoginImgs{
+	.snsSignUpImgs{
 		margin-top: 30px;
 		width: 430px;
 		display: flex;
@@ -56,33 +68,45 @@
 		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 		padding: 10px 0px 10px 0px;
 	}
-	.snsLoginImgs img:hover{
+	.snsSignUpImgs img:hover{
 		opacity: 0.6;
 		cursor: pointer;
 	}
-	.loginBox_find{
-		margin-top: 30px;
-		display: flex;
-		justify-content: space-between;
+	
+	.signUpEmail1{
+	margin-top: 30px;
+	width: 200px;
+	height: 30px;
+	border: none;
 	}
-	.loginBox_find button{
-		width: 200px;
-		height: 40px;
-		border-top: 1px solid rgba(0, 0, 0, 0.3);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-		border: none;
-		cursor: pointer;
-		margin-left: 5px;
-		margin-right: 5px;
-		font-weight: bold;
+
+	.signUpEmail2{
+	width: 200px;
+	height: 30px;
+	border: none;
 	}
-	.loginBox_signUp{
+	.signUpAddressBox{
 		margin-top: 30px;
-		width: 430px;
-		height: 50px;
-		background-color: var(--main-bg-color);
-		border: none;
-		cursor: pointer;
-		font-weight: bold;
+	}
+	
+	.signUpPhoneBox{
+		margin-top: 30px;
+	}
+	.signUpPhoneBox label{
+		font-size: 13px;
+		color: rgba(0, 0, 0, 0.5);
+	}
+	.signUpPhoneBox input{
+		margin-top:20px;
+		width: 60px;
+	}
+	
+	.snsSignUpImgs{
+		margin-top: 50px;
 		margin-bottom: 100px;
+	}
+	.snsSignUpImgs div{
+		margin-top: 20px;
+		font-size: 13px;
+		color: rgba(0, 0, 0, 0.5);
 	}
