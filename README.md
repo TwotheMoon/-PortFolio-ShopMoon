@@ -134,7 +134,7 @@
 | 9 | M_USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N: 탈퇴) |
 | 10 |  M_REG_DATE    | DATE         | NOT NULL  |         | 가입일           |
 | 11 |  M_AUTHORITY   | VARCHAR2(1)    | NOT NULL  |         | 관리자 권한(M:사용자, A:관리자)|
-
+*M_ID 중복검사를 통해 PK처럼 활용
 
 - Product
 
