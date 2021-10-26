@@ -133,7 +133,7 @@
 | 8 |  M_PHONE        | VARCHAR2(20) |  NULL  |         | 핸드폰 번호     |
 | 9 | M_USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N: 탈퇴) |
 | 10 |  M_REG_DATE    | DATE         | NOT NULL  |         | 가입일           |
-| 11 |  M_AUTHORITY   | VARCHAR2(1)    | NOT NULL  |         | 관리자 권한(M:사용자, A:관리자)|
+| 11 |  M_AUTHORITY   | NUMBER       | NOT NULL  |         | 관리자 권한(0:사용자, 1:관리자)|
 *M_ID 중복검사를 통해 PK처럼 활용
 *M_PW 암호화를 위해 데이터 크기 100지정
 
