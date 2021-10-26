@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@ page isELIgnored="false" %>
+<%@ page session="true" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
 
@@ -13,6 +14,7 @@
     <script>
         AOS.init();
     </script>
+   	<!-- 회원가입 js -->
 <script src="${path}/resources/js/signUp.js" async></script>
     <!-- 다음 맵 api 임포트 -->
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -26,6 +28,8 @@
 		<form class="signUpBox_form" method="post">
 	
 			<input class="signUpId" name="memberId" placeholder="아이디" > <br>
+			<span class="idOverlapCheckOK">사용 가능한 아이디에요.</span> 
+			<span class="idOverlapCheckNo">아이디가 이미 존재해요.</span> <br>
 			
 			<input type="password" class="signUpPw" name="memberPw" placeholder="비밀번호"> <br>
 			

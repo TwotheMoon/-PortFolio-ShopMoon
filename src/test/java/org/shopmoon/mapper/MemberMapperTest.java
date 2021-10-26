@@ -16,7 +16,7 @@ public class MemberMapperTest {
 		@Autowired
 		private MemberMapper membermapper; // MemberMapper.java 의존성 주입
 		
-		@Test
+		@Test // 회원 등록 테스트
 		public void memberJoin() throws Exception{
 			MemberVO member = new MemberVO();
 			
@@ -31,5 +31,25 @@ public class MemberMapperTest {
 			
 			
 			membermapper.memberJoin(member);
+		}
+		
+		@Test // 아이디 중복 검사 테스트
+		public void memberIdChk() throws Exception{
+			String id1 = "admin";
+			String id2 = "dfjsl";
+			membermapper.idCheck(id1);
+			membermapper.idCheck(id2);
+		}
+		
+		@Test // 로그인 테스트
+		public void memberLogin() throws Exception{
+			
+			MemberVO member = new MemberVO();
+			
+			member.setMemberId("2theMoon");
+			member.setMemberPw("Rjqnrdl94!@");
+			
+			membermapper.memberLogin(member);
+			System.out.println("결과 : " + membermapper.memberLogin(member));
 		}
 }

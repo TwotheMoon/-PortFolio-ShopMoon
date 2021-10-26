@@ -4,8 +4,6 @@ const signUpId = document.querySelector(".signUpId");
 const signUpPw = document.querySelector(".signUpPw");
 const signUpPwConfirm = document.querySelector(".signUpPwConfirm");
 const signUpName = document.querySelector(".signUpName");
-const signUpPhone2 = document.querySelector(".signUpPhone2");
-const signUpPhone3 = document.querySelector(".signUpPhone3");
 
 // 회원가입 submit 핸들러
 function handleSignUpSubmit(event){
@@ -13,11 +11,9 @@ function handleSignUpSubmit(event){
 	const userPw = signUpPw.value;
 	const userPwConfirm = signUpPwConfirm.value;
 	const userName = signUpName.value;
-	const userPhone2 = signUpPhone2.value;
-	const userPhone3 = signUpPhone3.value;
 	
 	if(validateId(userId) == false){
-		alert("영문/숫자 조합만 가능합니다.");
+		alert("아이디는 영문/숫자 조합만 가능합니다.");
 		event.preventDefault();
 	} else if(confirmValueLengthId(userId) == false){
 		alert("아이디를 4~16자 사이로 입력해주세요");
@@ -36,14 +32,9 @@ function handleSignUpSubmit(event){
 		event.preventDefault();
 	} else {			
 
-	//회원가입 버튼(회원가입 기능 작동)
-	$(document).ready(function(){
-	$(".loginBox_signUp").click(function(){
-		$("#loginBox_form").attr("action", "/signUp");
-		$("#loginBox_form").submit();
-	});
-});
-
+	//회원가입 기능 작동
+		$(signUpBox_form).attr("action", "/member/signUp");
+		$(signUpBox_form).submit();
 	}
 }
 
@@ -118,6 +109,27 @@ $(function(){
 	}) 
 });
 
+// id 중복검사
+$(".signUpId").on("propertychange change keyup paste input", function(){
+	const userId = signUpId.value;
+	let data = {memberId : userId}
+	
+	$.ajax({
+		type: "post",
+		url : "/member/memberIdChk",
+		data : data,
+		success : function(result){
+			//console.log("성공여부 " + result);
+			if(result != "fail"){
+				$(".idOverlapCheckOk").css("display","inline-block");
+				$(".idOverlapCheckNo").css("display","none");
+			} else {
+				$(".idOverlapCheckNo").css("display","inline-block");
+				$(".idOverlapCheckOk").css("display","none");
+			}
+		}
+	});
+});
 
 
 

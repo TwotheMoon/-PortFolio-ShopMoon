@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+.errorPageBox{
+	width: 100%;
+	height: 1000px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+	.errorPageBox div{
+		font-size: 15px;
+		text-align: center;
+		margin-bottom: 50px;
+		font-size: 20px;
+	}
+	.errorPageBox img{
+		width: 500px;
+		height: 500px;
+	}
+	.errorPageBox a{
+		margin-top: 50px;
+		font-size: 15px;
+		text-align: center;
+	}
+
+
+	

@@ -32,7 +32,7 @@
 			<div class="footerSectionBox_FavoriteMenu">
 				<h1 class="middleBox_header">FAVORITE MENU</h1>
 				<div class="middleBox_contents">
-					<a href="/login">로그인 / 회원가입</a>
+					<a href="/member/login">로그인 / 회원가입</a>
 					<a href="#">장바구니</a>
 					<a href="#">주문조회</a>
 					<a href="#">마이페이지</a>

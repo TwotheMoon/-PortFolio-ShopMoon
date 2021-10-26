@@ -20,7 +20,10 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+			<param-value>
+				/WEB-INF/spring/appServlet/servlet-context.xml
+				/WEB-INF/spring/appServlet/security-context.xml
+			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -29,6 +32,28 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	<!-- 에러페이지 -->
+	<error-page>
+          <error-code>400</error-code>
+          <location>/WEB-INF/views/errorPage.jsp</location>
+ 	</error-page>
+	<error-page>
+          <error-code>404</error-code>
+          <location>/WEB-INF/views/errorPage.jsp</location>
+ 	</error-page> 
+ 	<error-page>
+          <error-code>405</error-code>
+          <location>/WEB-INF/views/errorPage.jsp</location>
+ 	</error-page>
+ 	<error-page>
+          <error-code>500</error-code>
+          <location>/WEB-INF/views/errorPage.jsp</location>
+ 	</error-page>
+ 	<error-page>
+          <error-code>503</error-code>
+          <location>/WEB-INF/views/errorPage.jsp</location>
+ 	</error-page>
 	
 	<!-- 한글깨짐 방지 --> <!-- filter와 filter-mapping을 만들어 준다. --> 
 	<filter> 

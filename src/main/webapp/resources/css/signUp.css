@@ -26,6 +26,18 @@
 		border: none;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 	}
+		.idOverlapCheckOK{
+			margin-top:10px;
+			display: none;
+			color: green;
+			font-size: 13px;
+		}
+		.idOverlapCheckNo{
+			margin-top:10px;
+			display: none;
+			color: red;
+			font-size: 13px;
+		}
 	.signUpPw{
 		width: 430px;
 		height: 60px;

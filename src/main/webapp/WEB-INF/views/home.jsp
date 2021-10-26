@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page isELIgnored="false" %>
+<%@ page session="true" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
 <header class="headerBox" >
@@ -29,6 +30,7 @@
 				<li><img src="${path}/resources/img/carousel/carouselImg04.jpg"></li>
 			</ul>
 		</section>
+		
 		<!-- 상품 영역 -->
 		<section class="homeContentsBox">
 			<h1> 상품 영역 </h1>
