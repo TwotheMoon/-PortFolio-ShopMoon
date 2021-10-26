@@ -5,7 +5,7 @@
 
 
 <header class="headerBox" >
-	<jsp:include page="includes/header.jsp" />
+	<jsp:include page="${path }../includes/header.jsp" />
 </header>
 
 <body id="allBrandBody">
@@ -87,7 +87,7 @@
 	</section>
 	
 	<footer class="allBrandFooterBox" >
-		<jsp:include page="includes/footer.jsp" />
+		<jsp:include page="${path }../includes/footer.jsp" />
 	</footer>
 
 </body>

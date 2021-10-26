@@ -6,7 +6,7 @@
 
 
 <header class="headerBox" >
-	<jsp:include page="includes/header.jsp" />
+	<jsp:include page="${path }../includes/header.jsp" />
 </header>
 
 <body id="loginBody">
@@ -25,7 +25,7 @@
 	</section>
 	
 	<footer class="loginFooterBox" >
-		<jsp:include page="includes/footer.jsp" />
+		<jsp:include page="${path }../includes/footer.jsp" />
 	</footer>
 
 </body>

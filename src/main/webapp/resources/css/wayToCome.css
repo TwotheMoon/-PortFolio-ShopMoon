@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+.wayToComeBox{
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.wayToComeBox_title{
+	margin-top: 100px;
+	font-weight: bold;
+	font-size: 25px;
+}
+.wayToComeBox_nav{
+	margin-top: 50px;
+	font-size: 13px;
+	cursor: pointer;
+}
+	.wayToComeBox_nav a:first-child{
+		color: rgba(0, 0, 0, 1);
+		border-bottom: 1px solid rgba(0, 0, 0, 1);
+	}
+	.wayToComeBox a:last-child{
+		color: rgba(0, 0, 0, 0.3);
+	}
+	.wayToComeBox a:last-child:hover{
+		color: rgba(0, 0, 0, 0.8);
+	}
+	
+#map_ma {
+	width: 100%; 
+	height: 500px; 
+	border: solid 1px red;
+	color: black;
+	font-size: 20px;
+	position: relative;
+	margin-bottom: 100px;
+	margin-top: 50px;
+}
+	

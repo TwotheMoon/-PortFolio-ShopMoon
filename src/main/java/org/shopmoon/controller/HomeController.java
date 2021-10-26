@@ -2,6 +2,7 @@ package org.shopmoon.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import lombok.extern.log4j.Log4j;
 
@@ -15,20 +16,25 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping("/about")
+	@RequestMapping(value="/about", method=RequestMethod.GET)
 	public String about() {
 		
 		log.info("about 페이지 진입");
-		return "about";
+		return "./about/about";
 	}
 	
-	@RequestMapping("/allBrand")
+	@RequestMapping(value="/allBrand", method=RequestMethod.GET)
 	public String allBrand() {
 		
 		log.info("allBrand 페이지 진입");
-		return "allBrand";
+		return "./about/allBrand";
 	}
 	
-
+	@RequestMapping(value="//wayToCome", method=RequestMethod.GET)
+	public String wayToCome() {
+		
+		log.info("wayToCome 페이지 진입");
+		return "./community//wayToCome";
+	}
 	
 }

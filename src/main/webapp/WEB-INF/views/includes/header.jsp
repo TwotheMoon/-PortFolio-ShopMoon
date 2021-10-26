@@ -65,7 +65,7 @@
             	 <!-- 로그인한 상태 -->
             	<c:if test="${member != null }">
 	            	<c:if test="${member.memberAuthority == 1 }">
-	            		<a href="/admin/adminMain">관리자 페이지</a>
+	            		<a href="/admin/adinMain">관리자 페이지</a>
 		            	<a href="/member/logout"> 로그아웃 </a>
 	            	</c:if>
 	            	<c:if test="${member.memberAuthority == 0 }">
@@ -95,7 +95,7 @@
           		<h3>COMMUNITY</h3>
           		<ul class="communitylist dropList">
           			<li ><a href="#">CONTACT</a></li>
-          			<li ><a href="#">WAYTOCOME</a></li>
+          			<li ><a href="/wayToCome">WAYTOCOME</a></li>
           		</ul>
           	</div>
           		<div class="menuBox_customer">

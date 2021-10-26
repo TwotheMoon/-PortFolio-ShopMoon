@@ -32,7 +32,7 @@ public class MemberController {
 	public String login() {
 		
 		log.info("로그인 페이지 진입");
-		return "login";
+		return "./member/login";
 	}
 	
 	// 회원 로그인 메소드
@@ -88,7 +88,7 @@ public class MemberController {
 	public String signUp() {
 		
 		log.info("회원가입 페이지 진입");
-		return "signUp";
+		return "./member/signUp";
 	}
 	
 	// 회원가입 메소드 (+ pw암호화)
