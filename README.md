@@ -128,8 +128,9 @@
 | 4 |  M_NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
 | 5 |  M_EMAIL        | VARCHAR2(50) | NULL      |         | 이메일           |
 | 6 |  M_POST_NUM     | VARCHAR2(7)  | NOT NULL  |         | 우편번호        |
-| 7 |  M_ADDRESS      | VARCHAR2(100)| NOT NULL  |         | 주소       |
-| 8 |  M_PHONE        | VARCHAR2(20) | NOT NULL  |         | 핸드폰 번호     |
+| 7 |  M_ADDRESS1      | VARCHAR2(100)| NOT NULL  |         | 주소       |
+| 7 |  M_ADDRESS2      | VARCHAR2(100)| NOT NULL  |         | 상세 주소       |
+| 8 |  M_PHONE        | VARCHAR2(20) |  NULL  |         | 핸드폰 번호     |
 | 9 | M_USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N: 탈퇴) |
 | 10 |  M_REG_DATE    | DATE         | NOT NULL  |         | 가입일           |
 | 11 |  M_AUTHORITY   | VARCHAR2(1)    | NOT NULL  |         | 관리자 권한(M:사용자, A:관리자)|
