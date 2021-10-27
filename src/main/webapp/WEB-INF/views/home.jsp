@@ -48,7 +48,7 @@
 		<section class="homeBoardBox">
 			<h1> 게시판 영역 </h1>
 			<div class="homeBoardBox_boardBox">
-				<div>자유 게시판 / 채팅</div>
+				<div></div>
 				<div>문의 게시판</div>
 			</div>
 		</section>

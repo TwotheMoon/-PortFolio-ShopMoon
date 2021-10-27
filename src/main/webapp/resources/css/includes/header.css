@@ -65,6 +65,9 @@
 		}
 		.menuBox_userBox_list{
 			margin-top: 50px;
+			padding: 10px 0px 10px 0px;
+			border-top: 1px solid rgba(0, 0, 0, 1);
+			border-bottom: 1px solid rgba(0, 0, 0, 1);
 		}
 		.menuBox_userBox_list a{
 			margin-left: 3px;

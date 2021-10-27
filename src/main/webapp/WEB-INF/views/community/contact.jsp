@@ -21,11 +21,15 @@
 			<h1>Contact - 1 대 1 문의</h1>
 		</div>
 		
+		
 		<div class="contactBox_nav">
 			<a href="/contact">Contact</a> |
 			<a href="/wayToCome">Way To Come</a>
 		</div>
 		
+		<div class="contactBox_board">
+			<h1>문의 게시판</h1>
+		</div>
 		
 		
 	</section>

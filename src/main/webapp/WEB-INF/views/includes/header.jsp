@@ -59,8 +59,6 @@
             	<c:if test="${member == null }">
 	            	<a href="/member/login"> 로그인 </a>
 	            	<a href="/member/signUp"> 회원가입 </a>
-	            	<a href="#"> 장바구니 </a>
-	            	<a href="#"> 마이페이지 </a> 
             	</c:if>
             	 <!-- 로그인한 상태 -->
             	<c:if test="${member != null }">

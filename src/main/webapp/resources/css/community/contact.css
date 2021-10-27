@@ -2,7 +2,7 @@
 
 
 .contactBox{
-	width: 1600px;
+	width: 100%;
 	height: auto;
 	margin: 0 auto;
 	position: relative;
@@ -33,6 +33,13 @@
 		color: rgba(0, 0, 0, 0.8);
 	}
 	
+.contactBox_board{
+	margin-top: 100px;
+	width: 800px;
+	height: 1000px;
+	border: 1px solid black;
+	margin-bottom: 100px;
+	}
 
 
 .wayToComeFooterBox{
