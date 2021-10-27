@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+
+.myPageBox{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.myPageBox_title{
+	margin-top: 200px;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+
+.myPageBox_form{
+	margin-top: 50px;
+}
+	.myPageId{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+
+	.myPagePw{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	
+	.myPageName{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.myPagePhone{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.myPageEmail{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.myPageAddress{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.myPageRegDate{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	
+	.labelId,
+	.labelEmail,
+	.labelRegDate{
+		margin-right: 40px;
+	}
+	.labelName,
+	.labelAddress{
+		margin-right: 56px;
+	}
+	.labelPhone{
+		margin-right: 23px;
+	}
+	
+.myPageBtnBox{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+	.modifyMemberBtn,
+	.deleteMemberBtn{
+		margin-top: 50px;
+		margin-bottom: 100px;
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 200px;
+		height: 50px;
+		background-color: var(--main-bg-color);
+		border: none;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	.modifyMemberBtn:hover,
+	.deleteMemberBtn:hover{
+		background-color: var(--main-bg-color);
+		opacity: 0.6;
+		cursor: pointer;
+	}
+	

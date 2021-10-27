@@ -14,8 +14,7 @@
     <script>
         AOS.init();
     </script>
-       	<!-- 회원가입 js -->
-<script src="${path}/resources/js/login.js" async></script>
+
     
 	<!-- login.jsp 컨텐츠 -->
 	<section class="loginBox opacityBox">
@@ -28,6 +27,9 @@
 			<input class="loginPw" name="memberPw" type="password" placeholder="비밀번호" required> <br>
 			<c:if test="${result == 0}">
 				<div class="LoginFail">아이디 또는 비밀번호를 잘못 입력했어요.</div>
+			</c:if>
+			<c:if test="${result == -1}">
+				<div class="LoginFail">탈퇴한 회원입니다.</div>
 			</c:if>
 			<button class="loginBtn">로그인</button> <br>
 
@@ -50,5 +52,7 @@
 	<footer class="loginFooterBox" >
 		<jsp:include page="${path }../includes/footer.jsp" />
 	</footer>
-
+	
+       	<!-- 로그인 js -->
+<script src="${path}/resources/js/login.js"></script>
 </body>

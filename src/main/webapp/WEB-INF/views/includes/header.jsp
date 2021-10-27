@@ -71,7 +71,7 @@
 	            	<c:if test="${member.memberAuthority == 0 }">
 		            	<a href="/member/logout"> 로그아웃 </a>
 		            	<a href="#"> 장바구니 </a>
-		            	<a href="#"> 마이페이지 </a>             	
+		            	<a href="/member/myPage"> 마이페이지 </a>             	
 	            	</c:if>
             	</c:if>
             </div>

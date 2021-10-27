@@ -16,25 +16,31 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value="/about", method=RequestMethod.GET)
+	@RequestMapping(value="/about", method = RequestMethod.GET)
 	public String about() {
 		
 		log.info("about 페이지 진입");
 		return "./about/about";
 	}
 	
-	@RequestMapping(value="/allBrand", method=RequestMethod.GET)
+	@RequestMapping(value="/allBrand", method = RequestMethod.GET)
 	public String allBrand() {
 		
 		log.info("allBrand 페이지 진입");
 		return "./about/allBrand";
 	}
 	
-	@RequestMapping(value="//wayToCome", method=RequestMethod.GET)
+	@RequestMapping(value="/wayToCome", method = RequestMethod.GET)
 	public String wayToCome() {
 		
 		log.info("wayToCome 페이지 진입");
-		return "./community//wayToCome";
+		return "./community/wayToCome";
 	}
 	
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String contact() {
+		
+		log.info("contact 페이지 진입");
+		return "./community/contact";
+	}
 }

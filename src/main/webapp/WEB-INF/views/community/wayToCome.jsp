@@ -66,8 +66,24 @@
 			<a href="/wayToCome">Way To Come</a>
 		</div>
 		
+		<!-- 구글 맵 -->
 		<div id="map_ma"></div>
 		
+		<div class="wayToComeBox_contentsBox">
+			<div class="wayToComeBox_contents_title"> 주식회사 샾문 </div>
+			<div class="wayToComeBox_contents">
+				<div class="wayToComeBox_contents_text-title">
+					<div>주소</div>
+					<div>연락처</div>
+					<div>오시는길</div>
+				</div>
+				<div class="wayToComeBox_contents_text-contents">
+					<div>08880 서울시 관악구 문성로 16가길 31</div>
+					<div>02)1500-1501</div>
+					<div>(2호선) 신림역 4번출구 10분거리</div>
+				</div>
+			</div>
+		</div>
 		
 	</section>
 	

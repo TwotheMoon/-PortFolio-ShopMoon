@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+
+.deleteMemberViewBox{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.deleteMemberView_title{
+	margin-top: 200px;
+	font-weight: bold;
+	font-size: 25px;
+}
+.deleteMemberView_subTitle{
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+
+.deleteMemberView_form{
+	margin-top: 50px;
+}
+	.loginId{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	.loginPw{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.LoginFail{
+		margin-top: 20px;
+		width:100%;
+		text-align: center;
+		font-size: 13px;
+		color: red;
+	}
+	.deleteMemberViewBtn{
+		margin-top: 50px;
+		margin-bottom: 100px;
+		width: 430px;
+		height: 50px;
+		background-color: var(--main-bg-color);
+		border: none;
+		cursor: pointer;
+		font-weight: bold;
+	}
+		.deleteMemberViewBtn:hover{
+		background-color: var(--main-bg-color);
+		opacity: 0.6;
+		cursor: pointer;
+	}
+	

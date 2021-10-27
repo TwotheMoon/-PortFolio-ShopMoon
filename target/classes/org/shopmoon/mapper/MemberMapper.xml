@@ -7,7 +7,17 @@
 	<!-- 회원가입 -->
 	<insert id="memberJoin">
 		insert into member values (
-		SEQ_MEMBER.NEXTVAL, #{memberId}, #{memberPw}, #{memberName}, #{memberPhone}, #{memberEmail}, #{memberPostNum}, #{memberAddr1}, #{memberAddr2}, 'Y', sysdate, '0'
+		SEQ_MEMBER.NEXTVAL
+		, #{memberId}
+		, #{memberPw}
+		, #{memberName}
+		, #{memberPhone}
+		, #{memberEmail}
+		, #{memberPostNum}
+		, #{memberAddr1}
+		, #{memberAddr2}
+		, 'Y'
+		, sysdate, '0'
 		)	
 	</insert>
 	
@@ -16,8 +26,38 @@
 		select count(*) from member where M_ID = #{memberId}
 	</select>
 	
-	<!-- 회원 로그인 -->
+	<!-- 회원 로그인 & 회원정보 가져오기 -->
 	<select id="memberLogin" resultType="org.shopmoon.domain.MemberVO">
-		select M_ID as memberId, M_PW as memberPw, M_NAME as memberName, M_AUTHORITY as memberAuthority from member where M_ID = #{memberId}
+		select M_ID as memberId
+		, M_PW as memberPw
+		, M_NAME as memberName
+		, M_PHONE as memberPhone
+		, M_EMAIL as memberEmail
+		, M_POST_NUM as memberPostNum
+		, M_ADDRESS1 as memberAddr1
+		, M_ADDRESS2 as memberAddr2
+		, M_REG_DATE as memberRegDate
+		, M_AUTHORITY as memberAuthority
+		, M_USER_ACTIVE as memberActive from member where M_ID = #{memberId}
 	</select>
+	
+	<!-- 회원 수정 -->
+	<update id="memberUpdate">
+		update member set 
+		  M_NAME = #{memberName}
+		, M_PHONE = #{memberPhone}
+		, M_EMAIL = #{memberEmail}
+		, M_POST_NUM = #{memberPostNum}
+		, M_ADDRESS1 = #{memberAddr1}
+		, M_ADDRESS2 = #{memberAddr2}
+		where M_ID = #{memberId}
+	</update>
+	
+	<!-- 회원 탈퇴 DB삭제X -->
+	<update id="memberDelete">
+		update member set 
+			M_USER_ACTIVE = 'N'
+			where M_ID = #{memberId}
+	</update>
+	
 </mapper>

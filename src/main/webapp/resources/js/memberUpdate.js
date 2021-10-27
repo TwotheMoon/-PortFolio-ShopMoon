@@ -1,32 +1,14 @@
-// 회원가입 유효성
-const signUpBox_form = document.querySelector(".signUpBox_form");
-const signUpId = document.querySelector(".signUpId");
-const signUpPw = document.querySelector(".signUpPw");
-const signUpPwConfirm = document.querySelector(".signUpPwConfirm");
-const signUpName = document.querySelector(".signUpName");
-const signUpPhone = document.querySelector(".signUpPhone");
+// 회원수정 유효성
+const memberUpdateViewBox_form = document.querySelector(".memberUpdateViewBox_form");
+const memberUpdateViewName = document.querySelector(".memberUpdateViewName");
+const memberUpdateViewPhone = document.querySelector(".memberUpdateViewPhone");
 
-// 회원가입 submit 핸들러
-function handleSignUpSubmit(event){
-	const memberId = signUpId.value;
-	const memberPw = signUpPw.value;
-	const memberPwConfirm = signUpPwConfirm.value;
-	const memberName = signUpName.value;
-	const memberPhone = signUpPhone.value;
+// 회원수정 submit 핸들러
+function handleUpdateSubmit(event){
+	const memberName = memberUpdateViewName.value;
+	const memberPhone = memberUpdateViewPhone.value;
 	
-	if(validateId(memberId) == false){
-		alert("아이디는 영문/숫자 조합만 가능합니다.");
-		event.preventDefault();
-	} else if(confirmValueLengthId(memberId) == false){
-		alert("아이디를 4~16자 사이로 입력해주세요");
-		event.preventDefault();
-	} else if (confirmValueLengthPw(memberPw) == false) {
-		alert("비밀번호를 8자 이상 입력해주세요");
-		event.preventDefault();
-	} else if (confirmPw(memberPw, memberPwConfirm) == false){
-		alert("비밀번호가 달라요.");
-		event.preventDefault();
-	} else if(confirmName(memberName) == false) {
+	if(confirmName(memberName) == false) {
 		alert("이름을 한글자 이상 입력해주세요");
 		event.preventDefault();
 	} else if (confirmPhoneNum(memberPhone) == false){
@@ -34,48 +16,12 @@ function handleSignUpSubmit(event){
 		event.preventDefault();
 	} else {			
 
-	//회원가입 기능 작동
-		$(signUpBox_form).attr("action", "/member/signUp");
-		$(signUpBox_form).submit();
+	//회원수정 기능 작동
+		$(memberUpdateViewBox_form).attr("action", "/member/memberUpdate");
+		$(memberUpdateViewBox_form).submit();
 	}
 }
 
-// 아이디 특수문자 검사
-function validateId (memberId){
-	const regx = /^[a-zA-Z0-9]*$/;	
-		if( !regx.test(memberId) ){
-			return false;
-		} else {
-			return true;
-		}		
-}
-
-// 아이디 길이 검사
-function confirmValueLengthId(memberId){
-	if(memberId.length < 4 || memberId.length > 16){
-		return false;
-	} else {
-		return true;
-	}
-}
-
-// 비밀번호 길이 검사
-function confirmValueLengthPw(memberPw){
-	if(memberPw.length < 8){
-		return false;
-	} else {
-		return true;
-	}
-}
-
-// 비밀번호 동일 검사
-function confirmPw (memberPw, memberPwConfirm){
-	if(memberPw !== memberPwConfirm){
-		return false;
-	} else {
-		return true;
-	}
-}
 
 // 이름 길이 검사
 function confirmName (memberName){
@@ -97,47 +43,10 @@ function confirmPhoneNum(memberPhone){
 	}		
 }
 
-// 이메일 입력방식 선택
-$(function(){
-
-	$(".selBoxDirect").hide();
-	$(".signUpEmail2").change(function() {
-                //직접입력을 누를 때 나타남
-		if($(".signUpEmail2").val() == "direct") {
-			$(".selBoxDirect").show();
-		}  else {
-			$(".selBoxDirect").hide();
-		}
-	}) 
-});
-
-// id 중복검사
-$(".signUpId").on("propertychange change keyup paste input", function(){
-	const userId = signUpId.value;
-	let data = {memberId : userId}
-	
-	$.ajax({
-		type: "post",
-		url : "/member/memberIdChk",
-		data : data,
-		success : function(result){
-			//console.log("성공여부 " + result);
-			if(result != "fail"){
-				$(".idOverlapCheckOk").css("display","inline-block");
-				$(".idOverlapCheckNo").css("display","none");
-			} else {
-				$(".idOverlapCheckNo").css("display","inline-block");
-				$(".idOverlapCheckOk").css("display","none");
-			}
-		}
-	});
-});
-
-
 
 // 다음맵 api
    //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
-const signUpAddressBtn = document.querySelector(".signUpAddressBtn");
+const memberUpdateAddressBtn = document.querySelector(".memberUpdateAddressBtn");
    
 	 function execDaumPostcode() {
         new daum.Postcode({
@@ -196,5 +105,6 @@ const signUpAddressBtn = document.querySelector(".signUpAddressBtn");
 
 
 
-signUpBox_form.addEventListener("submit", handleSignUpSubmit);
-signUpAddressBtn.addEventListener("click", execDaumPostcode);
+
+memberUpdateViewBox_form.addEventListener("submit", handleUpdateSubmit);
+memberUpdateAddressBtn.addEventListener("click", execDaumPostcode);

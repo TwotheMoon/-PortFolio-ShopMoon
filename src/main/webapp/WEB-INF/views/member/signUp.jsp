@@ -37,7 +37,7 @@
 			
 			<input class="signUpName" name="memberName" placeholder="이름" > <br>
 			
-			<input class="signUpPhone" name="memberPhone" placeholder="전화번호 (-없이 입력)" > <br>
+			<input class="signUpPhone" name="memberPhone" placeholder="전화번호 (숫자만 입력)" > <br>
 			
 			<input class="signUpEmail" name="memberEmail" placeholder="이메일" > <br>
     		
