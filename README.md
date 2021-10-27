@@ -157,7 +157,7 @@
 | No|   FieldName   |  DataType      |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:--------------:|:---------:|:-------:|:--------------:|
 | 1 |  CON_NO         |    NUMBER    | NOT NULL  |   PK    | 문의 고유번호    |
-| 3 |  M_NO           | NUMBER       | NOT NULL  |   FK    | 회원 고유 번호     |
+| 3 |  M_NO           | NUMBER       | NOT NULL  |   FK    | 작성자 / 회원 고유 번호     |
 | 4 |  CON_TITLE      | VARCHAR2(100)| NOT NULL  |         | 제목 |  
 | 5 |  CON_CONTENTS   | CLOB         | NOT NULL  |         | 문의 내용 |
 | 6 |  CON_REPLY      | CLOB         |     NULL  |         | 답변  |
