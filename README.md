@@ -19,7 +19,7 @@
 
 ### Front 라이브러리
 - AOS ( 태그 요소 애니메이션 )
-- 다음 맵 API ( 회사 위치 표시 )
+- 구글 맵 API ( 회사 위치 표시 )
 - jQuery ( 바닐라와 섞어 사용 )
 - ajax ( 더보기 페이징 전략 )
 - FontAwesome ( 여러 아이콘 )
@@ -157,7 +157,7 @@
 | No|   FieldName   |  DataType      |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:--------------:|:---------:|:-------:|:--------------:|
 | 1 |  CON_NO         |    NUMBER    | NOT NULL  |   PK    | 문의 고유번호    |
-| 3 |  M_NO           | NUMBER       | NOT NULL  |   FK    | 회원 고유 번호     |
+| 3 |  M_NO           | NUMBER       | NOT NULL  |   FK    | 작성자 / 회원 고유 번호     |
 | 4 |  CON_TITLE      | VARCHAR2(100)| NOT NULL  |         | 제목 |  
 | 5 |  CON_CONTENTS   | CLOB         | NOT NULL  |         | 문의 내용 |
 | 6 |  CON_REPLY      | CLOB         |     NULL  |         | 답변  |
