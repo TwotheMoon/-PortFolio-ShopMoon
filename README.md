@@ -122,13 +122,12 @@
 
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
-| 1 |  M_NO           |    NUMBER    | NOT NULL  |   PK    | 회원 고유번호        |
-| 2 |  M_ID           | VARCHAR2(20) | NOT NULL  |         | 회원 아이디     |  
-| 3 |  M_PW           | VARCHAR2(100) | NOT NULL  |         | 비밀번호        |
-| 4 |  M_NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
-| 5 |  M_EMAIL        | VARCHAR2(50) | NULL      |         | 이메일           |
-| 6 |  M_POST_NUM     | VARCHAR2(7)  | NOT NULL  |         | 우편번호        |
-| 7 |  M_ADDRESS1     | VARCHAR2(100)| NOT NULL  |         | 주소       |
+| 1 |  M_ID           | VARCHAR2(20) | NOT NULL  |   PK    | 회원 아이디     |  
+| 2 |  M_PW           | VARCHAR2(100) | NOT NULL |         | 비밀번호        |
+| 3 |  M_NAME         | VARCHAR2(40) | NOT NULL  |         | 이름           |
+| 4 |  M_EMAIL        | VARCHAR2(50) | NULL      |         | 이메일           |
+| 5 |  M_POST_NUM     | VARCHAR2(7)  | NOT NULL  |         | 우편번호        |
+| 6 |  M_ADDRESS1     | VARCHAR2(100)| NOT NULL  |         | 주소       |
 | 7 |  M_ADDRESS2     | VARCHAR2(100)| NOT NULL  |         | 상세 주소       |
 | 8 |  M_PHONE        | VARCHAR2(20) |  NULL  |         | 핸드폰 번호     |
 | 9 | M_USER_ACTIVE   | VARCHAR2(1)  | NOT NULL  |         | 탈퇴 여부(Y:사용중, N: 탈퇴) |
@@ -150,42 +149,42 @@
 | 7 |  P_ACTIVE     | CHAR(1)      | NOT NULL  |         | 제품 활성 여부(Y: 판매중,  N: 미판매)      |
 | 8 |  P_BEST       | CHAR(1)      | NOT NULL  |         | 베스트 상품 여부Y: 베스트, N: 일반)     |
 | 9 |  p_REG_DATE   | DATE         | NOT NULL  |         | 상품 등록일 |
-
+*SEQ_PRODUCT
 
 - Contact
 
 | No|   FieldName   |  DataType      |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:--------------:|:---------:|:-------:|:--------------:|
 | 1 |  CON_NO         |    NUMBER    | NOT NULL  |   PK    | 문의 고유번호    |
-| 2 |  M_NO           | NUMBER       | NOT NULL  |   FK    | 작성자 / 회원 고유 번호     |
+| 2 |  M_ID           | VARCHAR(20)  | NOT NULL  |   FK    | 작성자 / 회원 아이디     |
 | 3 |  CON_CATEGORY   | VARCHAR2(20) | NOT NULL  |         | 카테고리 | 
 | 4 |  CON_TITLE      | VARCHAR2(100)| NOT NULL  |         | 제목 |  
 | 5 |  CON_CONTENTS   | CLOB         | NOT NULL  |         | 문의 내용 |
 | 6 |  CON_REPLY      | CLOB         |     NULL  |         | 답변  |
 | 7 |  CON_ANSWER     | CHAR(1)      |     NULL  |         | 답변 여부(Y: 완료, N:미완료) |
 | 8 |  CON_REG_DATE   | DATE         | NOT NULL  |         | 문의 등록일 |
-
+*SEQ_CONTACT
 
 - Cart
 
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
 | 1 |  CART_NO      |    NUMBER    | NOT NULL  |   PK    | 장바구니 고유번호    |
-| 4 |  M_NO         |    NUMBER    | NOT NULL  |   FK    | 회원 고유번호     |
+| 2 |  M_ID         | VARCHAR(20)  | NOT NULL  |   FK    | 주문자 / 회원 아이디   |
 | 3 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품 고유번호    |
 | 4 |  CART_QUANTITY|    NUMBER(5) | NOT NULL  |         | 상품 개수         |
 | 5 |  CART_RESULT  | VARCHAR2(7)  | NOT NULL  |         | 주문 우편번호      |
 | 6 |  CART_REG_DATE| DATE         | NOT NULL  |         | 장바구니 등록 날짜   |
-
+*SEQ_CART
 
 - Orders
 
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
 | 1 |  O_NO         |    NUMBER    | NOT NULL  |   PK    | 주문 고유번호    |
-| 2 |  M_NO         |    NUMBER    | NOT NULL  |   FK    | 주문자 고유번호 |  
+| 2 |  M_ID         | VARCHAR(20)  | NOT NULL  |   FK    | 주문자 / 회원 아이디  |
 | 3 |  O_REG_DATE   | DATE         | NOT NULL  |         | 주문 일 |
-
+*SEQ_ORDER
 
 - Order_Detail
 
@@ -199,7 +198,7 @@
 | 6 |  OD_ADDRESS1  |VARCHAR2(100) | NOT NULL  |         | 주문 주소         |
 | 7 |  OD_ADDRESS2  |VARCHAR2(100) | NOT NULL  |         | 주문 상세주소    |
 | 8 |  OD_RESULT    | CHAR(1)      | NOT NULL  |         | 주문 처리 여부(Y: 처리완료, N: 미처리)  |
-
+*SEQ_ORDER_DETAIL
 
 - Comments
 
@@ -207,11 +206,11 @@
 |:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
 | 1 |  COMM_NO      |    NUMBER    | NOT NULL  |   PK    |  고유번호    |
 | 2 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품평을 남길 상품 고유번호    |
-| 3 |  M_NO         |    NUMBER    | NOT NULL  |   FK    | 회원 고유번호        |
+| 3 |  M_ID         | VARCHAR(20)  | NOT NULL  |   FK    |  / 회원 아이디   |
 | 4 |  COMM_CONTENTS|    NUMBER    | NOT NULL  |         | 댓글 내용        |
 | 5 |  COMM_REG_DATE|    DATE      | NOT NULL  |         |  댓글 작성일        |
 | 6 |  COMM_REG_DATE|    DATE      | NOT NULL  |         |  댓글 수정일        |
-
+*SEQ_COMMENTS
 
 
 
