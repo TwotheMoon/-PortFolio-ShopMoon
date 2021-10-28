@@ -4,6 +4,7 @@ import org.shopmoon.domain.MemberVO;
 
 public interface MemberService {
 
+	
 	// 회원가입
 	public void memberJoin(MemberVO member) throws Exception;
 
@@ -18,4 +19,7 @@ public interface MemberService {
 
 	// 회원 탈퇴
 	public void memberDelete(MemberVO member) throws Exception;
+	
+
+	
 }

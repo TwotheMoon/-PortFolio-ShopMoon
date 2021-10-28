@@ -19,7 +19,7 @@
 	</insert>
 	
 	<!-- 모든 문의 글 조회 -->
-<select id="contactList" resultType="org.shopmoon.domain.ContactVO">
+<select id="contactGetList" resultType="org.shopmoon.domain.ContactVO">
 		<![CDATA[
 			select *
 			 from ( select /* +INDEX_DESC(contact SYS_C0011272) */ 
@@ -33,8 +33,18 @@
 					, CON_ANSWER as contactAnswer
 					, CON_REG_DATE as contactDate
 			 from contact 
-			where rownum <= 20)
-			where rn > 10
+			where
 	    ]]>
+	    
+		    <if test="keyword != null">
+				M_ID like '%'||#{keyword}||'%' and
+		    </if>
+		   
+	   <![CDATA[
+	   		rownum <= #{pageNum}*#{amount}
+	   		)
+        where rn > (#{pageNum} - 1) * #{amount}
+	   
+	   ]]>
 	</select>
 </mapper>

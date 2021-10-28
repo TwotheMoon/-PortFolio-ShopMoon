@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+.findIdBox{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+	.findIdBox_title{
+		margin-top: 200px;
+		font-weight: bold;
+		font-size: 25px;
+	}
+	.findIdBox_subtitle{
+		margin-top: 20px;
+		font-weight: bold;
+		font-size: 15px;
+		text-align: center;
+		line-height: 20px;
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+
+
+.findIdBox_form{
+	margin-top: 50px;
+}
+	.findId{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+
+	.findIdFail{
+		margin-top: 20px;
+		width:100%;
+		text-align: center;
+		font-size: 13px;
+		color: red;
+	}
+	.findIdBtn{
+		margin-top: 50px;
+		margin-bottom: 100px;
+		width: 430px;
+		height: 50px;
+		background-color: var(--main-bg-color);
+		border: none;
+		cursor: pointer;
+		font-weight: bold;
+	}
+		.findIdBtn:hover{
+		background-color: var(--main-bg-color);
+		opacity: 0.6;
+		cursor: pointer;
+	}
+	

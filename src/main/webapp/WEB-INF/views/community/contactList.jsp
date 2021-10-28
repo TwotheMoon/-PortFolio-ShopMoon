@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page session="false" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
@@ -40,15 +41,26 @@
 		
 		<div class="contactBox_boardBox">
 			<table class="contactBox_board">
-				<th>문의 날짜</th>
-				<th>카테고리</th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>상태</th>
-				<th>답변시간</th>
 				<tr>
-					<td>2021.01.01</td> <td>[기타]</td> <td>재고 남아있나요?</td> <td>이더문</td> <td>N</td> <td>2021.01.02</td>
+					<th>문의 날짜</th>
+					<th>카테고리</th>
+					<th>제목</th>
+					<th>내용</th>
+					<th>작성자</th>
+					<th>답변내용</th>
+					<th>답변상태</th>
 				</tr>
+				<c:forEach items="${list}" var="list">
+				<tr>
+					<td><c:out value="${list.contactDate}"></c:out></td>
+					<td><c:out value="${list.contactCategory}"></c:out></td> 
+					<td><c:out value="${list.contactTitle}"></c:out></td> 
+					<td><c:out value="${list.contactContents}"></c:out></td>
+					<td><c:out value="${list.memberId}"></c:out></td>
+					<td><c:out value="${list.contactReply}"></c:out></td>
+					<td><c:out value="${list.contactAnswer}"></c:out></td>
+				</tr>
+				</c:forEach>
 			</table>
 			<a href="/contact/contactWriteView"><button class="contactBox_board_writeBtn">글 작성</button></a>
 		</div>

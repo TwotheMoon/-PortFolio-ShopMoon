@@ -11,5 +11,5 @@ public interface ContactMapper {
 	public void contactWrite(ContactVO contact);
 	
 	// 모든 문의 글 조회
-	public List<ContactVO> contactList(Criteria cri);
+	public List<ContactVO> contactGetList(Criteria cri);
 }

@@ -1,9 +1,13 @@
 package org.shopmoon.controller;
 
+
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.shopmoon.domain.ContactVO;
+import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.MemberVO;
 import org.shopmoon.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +19,7 @@ import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
-@RequestMapping("/contact/*")
+@RequestMapping("/community/*")
 public class ContactController {
 
 	@Autowired
@@ -24,10 +28,12 @@ public class ContactController {
 	
 	// contact 모든 문의 글 조회
 	@RequestMapping(value = "/contactList", method = RequestMethod.GET)
-	public String contactList() {
+	public void contactGetList(Criteria cri, Model model) throws Exception {
 		
 		log.info("contact 페이지 진입");
-		return "./community/contact";
+		List list = contactservice.contactGetList(cri);
+		
+		model.addAttribute("list", list);
 	}
 	
 	// 문의 글 작성 뷰
@@ -52,7 +58,7 @@ public class ContactController {
 			contactservice.contactWrite(contact);
 			
 			log.info("문의 글 DB 등록 완료");
-			return "redirect:/contact/contactList";
+			return "redirect:/community/contactList";
 		}
 		
 }

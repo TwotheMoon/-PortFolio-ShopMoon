@@ -10,11 +10,11 @@
 	align-items: center;
 	font-family: 'Open Sans', sans-serif;
 }
-.loginBox_title{
-	margin-top: 200px;
-	font-weight: bold;
-	font-size: 25px;
-}
+	.loginBox_title{
+		margin-top: 200px;
+		font-weight: bold;
+		font-size: 25px;
+	}
 
 
 .loginBox_form{

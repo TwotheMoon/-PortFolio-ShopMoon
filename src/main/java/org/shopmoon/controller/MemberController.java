@@ -9,8 +9,10 @@ import org.shopmoon.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -207,6 +209,14 @@ public class MemberController {
 		}
 	}
 	
+	// 회원 아이디 찾기 뷰 진입
+	@RequestMapping("/member/findIdView")
+	public String findIdView() {
+		
+		log.info("아이디 찾기 뷰 진입");
+		return "./member/findIdView";
+	}
 	
+
 	
 }

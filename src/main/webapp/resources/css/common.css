@@ -11,6 +11,7 @@
 @import "member/myPage.css";
 @import "member/memberUpdateView.css";
 @import "member/memberDeleteView.css";
+@import "member/findIdView.css";
 @import "community/wayToCome.css";
 @import "community/contact.css";
 @Import "community/contactWriteView.css";

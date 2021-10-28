@@ -3,11 +3,15 @@ package org.shopmoon.service;
 import java.util.List;
 
 import org.shopmoon.domain.ContactVO;
+import org.shopmoon.domain.Criteria;
 import org.shopmoon.mapper.ContactMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import lombok.extern.log4j.Log4j;
+
 @Service
+@Log4j
 public class ContactServiceImpl implements ContactService{
 
 	@Autowired
@@ -18,6 +22,14 @@ public class ContactServiceImpl implements ContactService{
 	public void contactWrite(ContactVO contact) throws Exception {
 
 		contactmapper.contactWrite(contact);
+	}
+	
+	@Override
+	public List<ContactVO> contactGetList(Criteria cri) throws Exception {
+
+		log.info("(service) 리스트 가져오는중....." + cri);
+		
+		return contactmapper.contactGetList(cri);
 	}
 	
 

@@ -61,6 +61,12 @@
 			where M_ID = #{memberId}
 	</update>
 	
+		<!-- 아이디 찾기 -->
+<!-- 	<select id="findId" resultType="org.shopmoon.domain.MemberVO">
+		select M_ID as memberId, M_EMAIL as memberEmail from member where M_EMAIL = #{memberEmail}
+	</select>
+	  -->
+	
 	
 <!-- 	<resultMap type="ContactVO" id="ContactVO">
 		<result column="CON_TITLE" property="contactTitle" />
