@@ -92,7 +92,7 @@
           	<div class="menuBox_community dropBtn">
           		<h3>COMMUNITY</h3>
           		<ul class="communitylist dropList">
-          			<li ><a href="#">CONTACT</a></li>
+          			<li ><a href="/contact/contactList">CONTACT</a></li>
           			<li ><a href="/wayToCome">WAYTOCOME</a></li>
           		</ul>
           	</div>

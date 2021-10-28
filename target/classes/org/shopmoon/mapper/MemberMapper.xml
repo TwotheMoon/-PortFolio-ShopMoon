@@ -7,18 +7,17 @@
 	<!-- 회원가입 -->
 	<insert id="memberJoin">
 		insert into member values (
-		SEQ_MEMBER.NEXTVAL
-		, #{memberId}
-		, #{memberPw}
-		, #{memberName}
-		, #{memberPhone}
-		, #{memberEmail}
-		, #{memberPostNum}
-		, #{memberAddr1}
-		, #{memberAddr2}
-		, 'Y'
-		, sysdate
-		, '0'
+			 #{memberId}
+			, #{memberPw}
+			, #{memberName}
+			, #{memberPhone}
+			, #{memberEmail}
+			, #{memberPostNum}
+			, #{memberAddr1}
+			, #{memberAddr2}
+			, 'Y'
+			, sysdate
+			, '0'
 		)	
 	</insert>
 	
@@ -29,7 +28,8 @@
 	
 	<!-- 회원 로그인 & 회원정보 가져오기 -->
 	<select id="memberLogin" resultType="org.shopmoon.domain.MemberVO">
-		select M_ID as memberId
+		select
+		 M_ID as memberId
 		, M_PW as memberPw
 		, M_NAME as memberName
 		, M_PHONE as memberPhone
@@ -61,7 +61,8 @@
 			where M_ID = #{memberId}
 	</update>
 	
-	<resultMap type="ContactVO" id="ContactVO">
+	
+<!-- 	<resultMap type="ContactVO" id="ContactVO">
 		<result column="CON_TITLE" property="contactTitle" />
 		<result column="CON_CONTENTS" property="contactContents" />
 	</resultMap>
@@ -86,11 +87,11 @@
 			WHERE
 				M.M_NO = #{memberNo}
 				
-				<!-- 같은 칼럽으로 인서트 된 값을 이퀄 조인을 통해 가져오기 
+				같은 칼럽으로 인서트 된 값을 이퀄 조인을 통해 가져오기 
 					${member.memberName} 
 					${member.contactVO.contactTitle}
 					${member.contactVO.contactContents}
 					이런 식으로
-				-->
+				
 	</select>	
-</mapper>
+ --></mapper>

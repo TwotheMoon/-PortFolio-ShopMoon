@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-.contactBox{
+.contactWriteViewBox{
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
@@ -12,12 +12,12 @@
 	align-items: center;
 	font-family: 'Open Sans', sans-serif;
 }
-	.contactBox_title{
+	.contactWriteViewBox_title{
 		margin-top: 100px;
 		font-weight: bold;
 		font-size: 25px;
 	}
-	.contactBox_subtitle{
+	.contactWriteViewBox_subtitle{
 		margin-top: 20px;
 		font-weight: bold;
 		font-size: 15px;
@@ -26,50 +26,35 @@
 		font-family: 'Noto Sans KR', sans-serif;
 	}
 
-.contactBox_nav{
+.contactWriteViewBox_nav{
 	margin-top: 50px;
 	font-size: 13px;
 	cursor: pointer;
 }
-	.contactBox_nav a:first-child{
+	.contactWriteViewBox_nav a:first-child{
 		color: rgba(0, 0, 0, 1);
 		border-bottom: 1px solid rgba(0, 0, 0, 1);
 	}
-	.contactBox a:last-child{
+	.contactWriteViewBox a:last-child{
 		color: rgba(0, 0, 0, 0.3);
 	}
-	.contactBox a:last-child:hover{
+	.contactWriteViewBox a:last-child:hover{
 		color: rgba(0, 0, 0, 0.8);
 	}
 
-.contactBox_boardTitle{
+.contactWriteViewBox_boardTitle{
 	margin-top: 100px;
 	font-weight: bold;
 	font-size: 25px;
 }
-.contactBox_boardBox{
+.contactWriteViewBox_writeForm{
 	margin-top: 100px;
-	width: 100%;
-	height: 1000px;
+	width: 1000px;
+	height: 800px;
 	border: 1px solid black;
 	margin-bottom: 100px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	}
-	.contactBox_board{
-		margin: 0 auto;
-		width: 1600px;
-		height: 800px;
-		border: 1px solid red;
-	}
-	.contactBox_board th{
-		font-family: 'Noto Sans KR', sans-serif;
-		font-size: 15px;
-		font-weight: bold;
-		padding-top: 10px;
-	}
-	.contactBox_board_writeBtn{
+	.contactWriteView_writeBtn{
 		margin-top: 20px;
 	}
 	

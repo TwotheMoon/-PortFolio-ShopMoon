@@ -37,10 +37,5 @@ public class HomeController {
 		return "./community/wayToCome";
 	}
 	
-	@RequestMapping(value = "/contact", method = RequestMethod.GET)
-	public String contact() {
-		
-		log.info("contact 페이지 진입");
-		return "./community/contact";
-	}
+
 }

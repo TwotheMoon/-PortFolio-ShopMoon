@@ -4,6 +4,37 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.shopmoon.mapper.ContactMapper">
 	
+	<!--  문의 글 등록 -->
+	<insert id="contactWrite">
+		insert into contact values(
+			SEQ_CONTACT.NEXTVAL
+			, #{memberId}
+			, #{contactCategory}
+			, #{contactTitle}
+			, #{contactContents}
+			, 'N'
+			, 'N'
+			, sysdate
+		)
+	</insert>
 	
-	
+	<!-- 모든 문의 글 조회 -->
+<select id="contactList" resultType="org.shopmoon.domain.ContactVO">
+		<![CDATA[
+			select *
+			 from ( select /* +INDEX_DESC(contact SYS_C0011272) */ 
+					rownum as rn
+					, CON_NO as contactNo
+					, M_ID as memberId
+					, CON_CATEGORY as contactCategory
+					, CON_TITLE as contactTitle
+					, CON_CONTENTS as contactContents
+					, CON_Reply as contactReply
+					, CON_ANSWER as contactAnswer
+					, CON_REG_DATE as contactDate
+			 from contact 
+			where rownum <= 20)
+			where rn > 10
+	    ]]>
+	</select>
 </mapper>

@@ -23,7 +23,11 @@
 	<!-- login.jsp 컨텐츠 -->
 	<section class="myPageBox opacityBox">
 		<div class="myPageBox_title">
-			<h1><c:if test="${member != null }"><span>${member.memberName}님 의 </span>My Page</h1></c:if>
+			<h1>
+				<c:if test="${member != null }">
+					<span>${member.memberName}님 의 </span> My Page<br>
+				</c:if>
+			</h1>
 		</div>		
 		<div class="myPageBox_form">
 			

@@ -6,7 +6,8 @@ import lombok.Data;
 public class ContactVO {
 
 	private String contactNo; // PK
-	private String memberId; // FK
+	private String memberId;
+	private String contactCategory;
 	private String contactTitle;
 	private String contactContents;
 	private String contactReply;

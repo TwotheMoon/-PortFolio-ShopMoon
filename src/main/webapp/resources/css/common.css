@@ -13,6 +13,7 @@
 @import "member/memberDeleteView.css";
 @import "community/wayToCome.css";
 @import "community/contact.css";
+@Import "community/contactWriteView.css";
 @import "home.css";
 @import "errorPage.css";
 
