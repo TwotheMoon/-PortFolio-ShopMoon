@@ -39,24 +39,24 @@
 			<h1>문의 게시판 - 글 작성</h1>		
 		</div>
 		
+		<img class="contactWriteView_img" data-aos="fade-down"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/community/contactImg01.png">
 		<form class="contactWriteViewBox_writeForm" method="post">
 			
+			<label class="contactWrite_writerLabel">작성자</label>
+			<input class="contactWrite_writer" name="memberId" value="${memberId}" readonly>
 		
-			<label>작성자</label>
-			<input name="memberId" value="${memberId}" readonly>
-		
-			<label>카테고리</label>
-			<select name="contactCategory">
+			<label class="contactWrite_categoryLabel">카테고리</label>
+			<select class="contactWrite_category" name="contactCategory">
 				<option value="상품" selected>[상품]</option>
 				<option value="기타">[기타]</option>
 				<option value="제휴">[제휴]</option>
 			</select> <br>
 			
-			<label>제목</label>
-			<input type="text" name="contactTitle"> <br>
+			<label class="contactWrite_titleLabel">제목</label>
+			<input class="contactWrite_title" type="text" name="contactTitle"> <br> <br> <br>
 			
-			<label>내용</label> <br>
-			<textarea rows="30" cols="100" name="contactContents"></textarea> <br>
+			<label class="contactWrite_contentsLabel">내용</label> <br>
+			<textarea class="contactWrite_contents" rows="30" cols="90" name="contactContents"></textarea> <br>
 		
 			<button class="contactWriteView_writeBtn">작성 완료</button>	
 				

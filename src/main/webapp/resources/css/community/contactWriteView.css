@@ -47,19 +47,76 @@
 	font-weight: bold;
 	font-size: 25px;
 }
+
+.contactWriteView_img{
+	width: 100px;
+	height: 92px;
+	position: relative;
+	top: 115;
+	right: 350;
+}
 .contactWriteViewBox_writeForm{
 	margin-top: 100px;
-	width: 1000px;
-	height: 800px;
-	border: 1px solid black;
+	width: 800px;
+	height: 850px;
+	border: 5px solid rgba(220, 220, 255, 1);
 	margin-bottom: 100px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: bold;
 	}
-	.contactWriteView_writeBtn{
+	.contactWriteViewBox_writeForm label {
+		margin-left: 100px;
+		margin-right: 40px;
+	}
+	.contactWrite_titleLabel{
+		margin-right: 80px;
+	}
+	.contactWrite_contentsLabel{
 		margin-top: 20px;
+	}
+	
+	.contactWrite_title{
+		margin-left: 15px;
+	}
+	.contactWrite_writer{
+		width: 200px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	.contactWrite_title{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	.contactWrite_contents{
+		margin-top: 30px;
+		margin-left: 110px;
+		border: 3px solid rgba(220, 220, 255, 1);
+	}
+	
+	
+	
+	.contactWriteView_writeBtn{
+		margin-top: 30px;
+		margin-left: 145px;
+		width: 500px;
+		height: 50px;
+		background-color: var(--main-bg-color);
+		border: none;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	.contactWriteView_writeBtn:hover{
+		background-color: var(--main-bg-color);
+		opacity: 0.6;
+		cursor: pointer;
 	}
 	
 
 .wayToComeFooterBox{
 	margin-top: 150px;
+
 }
 	

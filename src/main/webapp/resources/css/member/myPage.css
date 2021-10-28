@@ -20,49 +20,17 @@
 .myPageBox_form{
 	margin-top: 50px;
 }
-	.myPageId{
-		width: 430px;
-		height: 60px;
-		border: none;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-	}
-
-	.myPagePw{
-		width: 430px;
-		height: 60px;
-		border: none;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
-	}
-	
-	.myPageName{
-		width: 430px;
-		height: 60px;
-		border: none;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
-	}
-	.myPagePhone{
-		width: 430px;
-		height: 60px;
-		border: none;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
-	}
-	.myPageEmail{
-		width: 430px;
-		height: 60px;
-		border: none;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
-	}
-	.myPageAddress{
-		width: 430px;
-		height: 60px;
-		border: none;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
-	}
+	.myPageId,
+	.myPagePw,
+	.myPageName,
+	.myPagePhone,
+	.myPageEmail,
+	.myPageAddress,
 	.myPageRegDate{
 		width: 430px;
 		height: 60px;
 		border: none;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 	}
 	
 	.labelId,

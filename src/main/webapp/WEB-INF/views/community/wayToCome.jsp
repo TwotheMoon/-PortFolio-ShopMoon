@@ -66,6 +66,7 @@
 			<a href="/wayToCome">Way To Come</a>
 		</div>
 		
+		<img class="wayToComeMap_img" data-aos="fade-right"  data-aos-easing="ease-in-out" data-aos-duration="1000" src="${path}/resources/img/community/wayToComeImg01.png">
 		<!-- 구글 맵 -->
 		<div id="map_ma"></div>
 		
