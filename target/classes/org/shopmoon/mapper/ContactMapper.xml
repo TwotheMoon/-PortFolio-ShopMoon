@@ -19,10 +19,10 @@
 	</insert>
 	
 	<!-- 모든 문의 글 조회 -->
-<select id="contactGetList" resultType="org.shopmoon.domain.ContactVO">
+	<select id="contactGetList" resultType="org.shopmoon.domain.ContactVO">
 		<![CDATA[
 			select *
-			 from ( select /* +INDEX_DESC(contact SYS_C0011272) */ 
+			 from ( select /*+ INDEX_DESC(c SYS_C0011272) */ 
 					rownum as rn
 					, CON_NO as contactNo
 					, M_ID as memberId
@@ -32,19 +32,31 @@
 					, CON_Reply as contactReply
 					, CON_ANSWER as contactAnswer
 					, CON_REG_DATE as contactDate
-			 from contact 
-			where
+			 from contact c
+			where 
 	    ]]>
 	    
 		    <if test="keyword != null">
-				M_ID like '%'||#{keyword}||'%' and
+				M_ID like '%' || #{keyword} || '%' and
 		    </if>
 		   
 	   <![CDATA[
-	   		rownum <= #{pageNum}*#{amount}
+	   		rownum <= #{pageNum} * #{amount}
 	   		)
         where rn > (#{pageNum} - 1) * #{amount}
 	   
 	   ]]>
 	</select>
+	
+	  <!-- 믄의 글 총 수 -->
+      <select id="contactGetTotal" resultType="int">
+      
+          select count(*) from contact
+          
+          <if test="keyword != null">
+             where M_ID like '%' || #{keyword} || '%'
+          </if>
+      </select> 
+      
+      
 </mapper>

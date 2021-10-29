@@ -27,9 +27,17 @@ public class ContactServiceImpl implements ContactService{
 	@Override
 	public List<ContactVO> contactGetList(Criteria cri) throws Exception {
 
-		log.info("(service) 리스트 가져오는중....." + cri);
+		log.info("(service) contactGetList 가져오는중....." + cri);
 		
 		return contactmapper.contactGetList(cri);
+	}
+	
+	@Override
+	public int contactGetTotal(Criteria cri) throws Exception {
+		
+		log.info("(service) contactGetTotal 가져오는중....." + cri);
+		
+		return contactmapper.contactGetTotal(cri);
 	}
 	
 

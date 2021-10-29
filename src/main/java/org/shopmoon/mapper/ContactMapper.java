@@ -12,4 +12,7 @@ public interface ContactMapper {
 	
 	// 모든 문의 글 조회
 	public List<ContactVO> contactGetList(Criteria cri);
+	
+	// 문의 글 총 수
+	public int contactGetTotal(Criteria cri);
 }

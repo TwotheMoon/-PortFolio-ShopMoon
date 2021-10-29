@@ -31,6 +31,18 @@ public class ContactMapperTests {
 		 list.forEach(board -> log.info(board));
 	        
 	    }
+	
+	
+	@Test
+	public void contactGetTotalTest() throws Exception {
+		
+		Criteria cri = new Criteria();
+		cri.setKeyword("qwer");
+		
+		int total = contactmapper.contactGetTotal(cri);
+		
+		log.info("total.. " + total);
+	}
 		
 }
 

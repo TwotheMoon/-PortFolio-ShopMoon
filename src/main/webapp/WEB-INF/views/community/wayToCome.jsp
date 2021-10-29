@@ -62,7 +62,7 @@
 		</div>
 		
 		<div class="wayToComeBox_nav">
-			<a href="/contact">Contact</a> |
+			<a href="/community/contactList">Contact</a> |
 			<a href="/wayToCome">Way To Come</a>
 		</div>
 		

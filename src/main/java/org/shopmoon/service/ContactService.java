@@ -12,4 +12,7 @@ public interface ContactService {
 	
 	// 문의 글 목록
 	public List<ContactVO> contactGetList(Criteria cri) throws Exception;
+	
+	// 문의 글 총 수
+	public int contactGetTotal(Criteria cri) throws Exception;
 }
