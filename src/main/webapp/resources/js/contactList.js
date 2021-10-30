@@ -46,21 +46,5 @@ $(".contactDetail").on("click", function(e){
 	
 });
 
-// 수정 결과 유효성
-$(document).ready(function(){
-	
-	let modifyResult = '<c:out value="${modify_result}"/>';
-	
-	checkmResult(modifyResult);
-	
-	function checkResult(result){
-		
-		if(modifyResult === '1'){
-			alert("문의 글 수정을 완료했어요.");
-		} else {
-			alert("문의 글 수정에 실패했어요.")
-		}
-	}
-});
 
 

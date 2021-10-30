@@ -18,6 +18,7 @@ public interface MemberMapper {
 	
 	// 회원 탈퇴
 	public void memberDelete(MemberVO member);
-	
 
+	//	// 회원 아이디 찾기
+//	public MemberVO memberFindId(MemberVO member);
 }

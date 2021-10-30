@@ -31,7 +31,7 @@
 			<input class="contactModify_regDate" name="contactDate" value="<c:out value='${contactInfo.contactDate }'></c:out>"  readonly> <br>
 			
 			<label class="contactModify_titleLabel">제목</label>
-			<input class="contactModify_title" name="contactTitle" value="<c:out value='${contactInfo.contactTitle }'></c:out>" > <br> <br> <br>
+			<input class="contactModify_title" name="contactTitle" value="<c:out value='${contactInfo.contactTitle }'></c:out>" > <br> <br>
 			<span id="warn_contactTitle"> 제목을 입력 해주세요.</span> <br>
 			
 			<label class="contactModify_contentsLabel">내용</label> <br>
@@ -56,7 +56,7 @@
 	</section>
 	
 		<!-- 글 등록 js -->
-<script src="${path}/resources/js/contactDetail.js"></script>
+<script src="${path}/resources/js/contactModify.js"></script>
 	
 	<footer class="wayToComeFooterBox" >
 		<jsp:include page="${path }../includes/footer.jsp" />

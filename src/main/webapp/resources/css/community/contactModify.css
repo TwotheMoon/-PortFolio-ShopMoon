@@ -113,14 +113,18 @@
 		cursor: pointer;
 	}
 	
-	#warn_contactTitle,
+	#warn_contactTitle{
+		display: none;
+		color: red;
+		font-weight: 400;
+		margin-left: 100px;
+	}
 	#warn_contactContents{
 		display: none;
 		padding-top: 10px;
 		text-align: center;
 		color: red;
 		font-weight: 400;
-		margin-left: 100px;
 	}
 	
 

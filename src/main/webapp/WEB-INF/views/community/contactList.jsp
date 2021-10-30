@@ -127,7 +127,9 @@
                 		</div>
                 	</form>
                 </div>  
-		<button class="contactBox_board_writeBtn">글 작성</button>
+         <c:if test="${loginConfirm == 1}">
+			<button class="contactBox_board_writeBtn">글 작성</button>
+         </c:if>
 		</div>
 		
 	</section>

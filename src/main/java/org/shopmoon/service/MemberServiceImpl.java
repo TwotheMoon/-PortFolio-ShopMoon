@@ -44,5 +44,11 @@ public class MemberServiceImpl implements MemberService {
 		membermapper.memberDelete(member);
 	}
 	
+//	@Override
+//	public MemberVO memberFindId(MemberVO member) throws Exception {
+//		
+//		return membermapper.memberFindId(member);
+//	}
+	
 
 }

@@ -56,9 +56,12 @@ public class ContactController {
 		HttpSession session = request.getSession();
 		member = (MemberVO) session.getAttribute("member");
 		
-		int no = 1;
+		int no = 0;
+		int yes = 1;
 		if(member == null) {
 			model.addAttribute("loginConfirm", no);
+		} else {
+			model.addAttribute("loginConfirm", yes);
 		}
 	
 	}
@@ -89,7 +92,7 @@ public class ContactController {
 		
 	// 문의 글 상세 페이지 ,  수정 페이지
 		@RequestMapping({"/contactDetail", "/contactModify"})
-		public void contactGetDetail(long contactNo, Criteria cri, Model model) throws Exception {
+		public void contactGetDetail(long contactNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
 			log.info("문의 글 상세 페이지 진입");
 			
 			// 페이지 정보

@@ -9,10 +9,8 @@ import org.shopmoon.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -64,6 +62,7 @@ public class MemberController {
 				
 				lvo.setMemberPw(""); // 인코딩된 비밀번호 정보 삭제
 				session.setAttribute("member", lvo);
+				session.setAttribute("contact", lvo);
 				return "redirect:/";
 				
 			} else {
@@ -217,6 +216,12 @@ public class MemberController {
 		return "./member/findIdView";
 	}
 	
-
+//	// 회원 아이디 찾기 메소드
+//	@RequestMapping("/member/findId")
+//	public String findId(HttpServletRequest request, MemberVO member, RedirectAttributes rttr) throws Exception {
+//		
+//
+//		return "./member/findIdView";
+//	}
 	
 }

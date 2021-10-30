@@ -8,6 +8,7 @@ let modifyForm = $(".contactModify_form");
 				
 		moveForm.attr("action", "/community/contactDetail")
 		moveForm.submit();
+	});
 	
 	// 문의 글 수정 버튼 및 유효성 검사
 	$(".contactModify_comitBtn").on("click", function(e){
@@ -41,4 +42,3 @@ let modifyForm = $(".contactModify_form");
 		}
 			
 		});
-	});
