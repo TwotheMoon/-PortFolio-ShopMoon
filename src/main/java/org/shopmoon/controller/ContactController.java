@@ -34,6 +34,7 @@ public class ContactController {
 	@RequestMapping(value = "/contactList", method = RequestMethod.GET)
 	public void contactGetList(Criteria cri, Model model, HttpServletRequest request, MemberVO member) throws Exception {
 		
+		
 		log.info("contact 페이지 진입");
 		
 		// 문의 글 목록 출력
@@ -65,6 +66,7 @@ public class ContactController {
 		}
 	
 	}
+	
 	
 	// 문의 글 작성 뷰
 	@RequestMapping("/contactWriteView")

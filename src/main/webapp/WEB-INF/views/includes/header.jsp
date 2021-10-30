@@ -63,7 +63,7 @@
             	 <!-- 로그인한 상태 -->
             	<c:if test="${member != null }">
 	            	<c:if test="${member.memberAuthority == 1 }">
-	            		<a href="/admin/adinMain">관리자 페이지</a>
+	            		<a href="/admin/adminMain">관리자 페이지</a>
 		            	<a href="/member/logout"> 로그아웃 </a>
 	            	</c:if>
 	            	<c:if test="${member.memberAuthority == 0 }">

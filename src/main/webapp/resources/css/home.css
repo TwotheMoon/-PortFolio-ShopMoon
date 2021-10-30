@@ -50,8 +50,7 @@
 /* 게시판 영역 */
 .homeBoardBox{
 	width: 1400px;
-	height: auto;
-	border: 1px solid red;
+	height: 700px;
 	margin-top: 200px;
 }
 	.homeBoardBox_boardBox{
@@ -82,7 +81,7 @@
 		}
 
 .homeFooterBox{
-	margin-top: 200px;
+	margin-top: 100px;
 }
 
 	

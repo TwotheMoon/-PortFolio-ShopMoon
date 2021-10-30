@@ -20,6 +20,7 @@
 		<h1> 관리자 페이지 </h1>
 		<h1> 관리자 페이지 </h1>
 		<h1> 관리자 페이지 </h1>
+		<a href="/admin/productEnroll"><button>상품 등록</button></a>
 		
 	</section>
 	

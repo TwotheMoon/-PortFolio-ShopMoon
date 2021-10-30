@@ -9,6 +9,7 @@ import org.shopmoon.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -216,12 +217,28 @@ public class MemberController {
 		return "./member/findIdView";
 	}
 	
-//	// 회원 아이디 찾기 메소드
-//	@RequestMapping("/member/findId")
-//	public String findId(HttpServletRequest request, MemberVO member, RedirectAttributes rttr) throws Exception {
-//		
-//
-//		return "./member/findIdView";
-//	}
+	// 회원 아이디 찾기 메소드
+	@RequestMapping(value = "/member/findId", method = RequestMethod.POST)
+	@ResponseBody
+	public String findId(HttpServletRequest request, MemberVO member, RedirectAttributes rttr, Model model) throws Exception {
+		HttpSession session = request.getSession();
+		
+		String rawEmail = "";
+		String DBEmail = "";
+		
+		MemberVO lvo = memberservice.memberFindId(member);
+		rawEmail = member.getMemberPw(); // 사용자 제출 이메일
+		DBEmail = lvo.getMemberPw(); // DB 이메일
+		
+		int no = 0;
+		int yes = 1;
+		if(rawEmail != DBEmail) {
+			model.addAttribute("findIdConfirm", no);
+		} else {
+			model.addAttribute("findIdConfirm", yes);
+		}
+
+		return "./member/findIdView";
+	}
 	
 }

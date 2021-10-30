@@ -13,9 +13,9 @@
     <script>
         AOS.init();
     </script>
-    	<!-- 구글맵 api -->
+
     
-	<!-- wayToCome.jsp 컨텐츠 -->
+	<!-- contactList.jsp 컨텐츠 -->
 	<section class="contactBox opacityBox" >
 	
 		<div class="contactBox_title">

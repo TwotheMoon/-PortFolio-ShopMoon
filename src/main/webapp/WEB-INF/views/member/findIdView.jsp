@@ -21,13 +21,14 @@
 		<div class="findIdBox_title">
 			<h1>아이디 찾기</h1>
 		</div>
-		<div class="findIdBox_subtitle">
-			<h1>회원가입떄 입력하신 이메일을 적어주세요.</h1>
-		</div>
-		<c:if test="${result == 'fail'}">
-			<div class="LoginFail">이메일을 잘못 입력했어요.</div>
+			<div class="findIdBox_subtitle">
+				<h1>회원가입떄 입력하신 이메일을 적어주세요.</h1>
+			</div>
+		
+		<c:if test="${findIdConfirm == no}">
+			<div class="LoginFail">아이디를 찾을 수 없어요.</div>
 		</c:if>
-		<c:if test="${result == 'success'}">
+		<c:if test="${findIdConfirm == yes}">
 			<div class="LoginFail">${id}</div>
 		</c:if>				
 		
@@ -35,7 +36,6 @@
 			<input class="findId" name="memberEmail" placeholder="이메일" required> <br>
 
 			<button class="findIdBtn">아이디 찾기</button> <br>
-
 		</form>
 		
 	</section>
