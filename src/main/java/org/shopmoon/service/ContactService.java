@@ -15,4 +15,10 @@ public interface ContactService {
 	
 	// 문의 글 총 수
 	public int contactGetTotal(Criteria cri) throws Exception;
+
+	// 문의 글 내용 상세 페이지
+	public ContactVO contactGetDetail(Long contactNo) throws Exception;
+	
+	// 문의 글 수정
+	public int contactModify(ContactVO contact) throws Exception;
 }

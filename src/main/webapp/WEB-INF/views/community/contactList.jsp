@@ -54,11 +54,23 @@
 				</tr>
 				<c:forEach items="${list}" var="list">
 				<tr class="contact_board_contents">
-					<td><c:out value="${list.contactNo}"></c:out></td>
+					<td>
+						<a class="contactDetail" href='<c:out value="${list.contactNo}"/>'>
+							<c:out value="${list.contactNo}"></c:out>
+						</a>
+					</td>
 					<td><c:out value="${list.contactDate}"></c:out></td>
 					<td><c:out value="[${list.contactCategory}]"></c:out></td> 
-					<td><c:out value="${list.contactTitle}"></c:out></td> 
-					<td><c:out value="${list.contactContents}"></c:out></td>
+					<td>
+						<a class="contactDetail" href='<c:out value="${list.contactNo}"/>'>
+							<c:out value="${list.contactTitle}"></c:out> 
+						</a>	
+					</td>
+					<td>
+						<a class="contactDetail" href='<c:out value="${list.contactNo}"/>'>
+							<c:out value="${list.contactContents}"></c:out>
+						</a>
+					</td>
 					<td><c:out value="${list.memberId}"></c:out></td>
 					<td><c:out value="${list.contactReply}"></c:out></td>
 					<td><c:out value="${list.contactAnswer}"></c:out></td>
@@ -116,12 +128,12 @@
                 	</form>
                 </div>  
 		<button class="contactBox_board_writeBtn">글 작성</button>
-		${loginConfirm }
 		</div>
 		
 	</section>
 	<!-- 글 목록, 페이징 js -->
 <script src="${path}/resources/js/contactList.js"></script>
+
 	<footer class="wayToComeFooterBox" >
 		<jsp:include page="${path }../includes/footer.jsp" />
 	</footer>

@@ -67,37 +67,5 @@
 	</select>
 	  -->
 	
-	
-<!-- 	<resultMap type="ContactVO" id="ContactVO">
-		<result column="CON_TITLE" property="contactTitle" />
-		<result column="CON_CONTENTS" property="contactContents" />
-	</resultMap>
-	
-	<resultMap type="MemberVO" id="MemberVO">
-		<result column="M_NO" property="memberNo" />
-		<result column="M_NAME" property="memberName" />
-	</resultMap>
 
-	<select id="selectMemberContact" parameterType="MemberVO" resultMap="MemberVO" >
-		SELECT
-			M.M_NO as memberNo
-			, M.NAME as memberName
-			, C.CON_TITLE as contactTitle
-			, C.CON_CONTENTS as contactContents
-			FROM 
-				MEMBER M 
-			LEFT JOIN 
-				CONTACT C
-			ON 
-				M.MEMBER = C.CONTACT
-			WHERE
-				M.M_NO = #{memberNo}
-				
-				같은 칼럽으로 인서트 된 값을 이퀄 조인을 통해 가져오기 
-					${member.memberName} 
-					${member.contactVO.contactTitle}
-					${member.contactVO.contactContents}
-					이런 식으로
-				
-	</select>	
- --></mapper>
+</mapper>

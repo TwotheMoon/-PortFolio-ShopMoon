@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+
+.contactDetailBox{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.contactDetail_img{
+	width: 100px;
+	height: 92px;
+	position: relative;
+	top: 115;
+	right: 350;
+}
+.contactDetail_Box{
+	margin-top: 100px;
+	width: 800px;
+	height: 850px;
+	border: 5px solid rgba(220, 220, 255, 1);
+	margin-bottom: 100px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: bold;
+	}
+
+	.contactDetail_writerLabel{
+		margin-left: 100px;
+	}
+	
+	.contactDetail_writer{
+		margin-left: 10px;
+		margin-top: 30px;
+		width: 150px;
+		height: 30px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	
+	.contactDetail_categoryLabel{
+		margin-left: 20px;
+	}
+	.contactDetail_category{
+		margin-left: 10px;
+		width: 35px;
+		height: 15px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	
+	.contactDetail_regDateLabel{
+		margin-left: 20px;
+	}
+	.contactDetail_regDate{
+		margin-left: 10px;
+		width: 130px;
+		height: 15px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	
+	.contactDetail_titleLabel{
+		margin-left: 100px;
+		margin-top: 20px;
+	}
+	.contactDetail_title{
+		width: 430px;
+		height: 30px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	
+	.contactDetail_contentsLabel{
+		margin-left: 100px;
+		margin-top: 20px;
+	}
+	.contactDetail_contents{
+		margin-top: 10px;
+		margin-left: 110px;
+		width: 580px;
+		height: 550px;
+		border: 3px solid rgba(220, 220, 255, 1);
+	}
+	
+	.contactDetail_Btns{
+		margin-left: 190px;
+	}
+	
+	.contactDetail_linkContactListBtn,
+	.contactDetail_modifyWriteBtn{
+		margin-top: 30px;
+		margin-bottom: 100px;
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 200px;
+		height: 50px;
+		background-color: var(--main-bg-color);
+		border: none;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	.contactDetail_linkContactListBtn:hover,
+	.contactDetail_modifyWriteBtn:hover{
+		background-color: var(--main-bg-color);
+		opacity: 0.6;
+		cursor: pointer;
+	}
+	
+
+.wayToComeFooterBox{
+	margin-top: 150px;
+
+}
+	

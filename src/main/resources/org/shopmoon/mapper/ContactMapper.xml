@@ -58,5 +58,30 @@
           </if>
       </select> 
       
+      <!-- 문의 글 상세  -->
+      <select id="contactGetDetail" resultType="org.shopmoon.domain.ContactVO">
+      	
+      	select 	 CON_NO as contactNo
+				, M_ID as memberId
+				, CON_CATEGORY as contactCategory
+				, CON_TITLE as contactTitle
+				, CON_CONTENTS as contactContents
+				, CON_Reply as contactReply
+				, CON_ANSWER as contactAnswer
+				, CON_REG_DATE as contactDate 
+				from contact where CON_NO = #{contactNo}
+     	
+      </select>
       
+      <!-- 문의 글 수정  -->
+      <update id="contactModify">
+      	
+      	update contact set
+      			  CON_CATEGORY = #{contactCategory}
+				, CON_TITLE = #{contactTitle}
+				, CON_CONTENTS = #{contactContents}
+				, CON_REG_DATE = sysdate
+			where CON_NO = #{contactNo}
+			
+      </update>
 </mapper>

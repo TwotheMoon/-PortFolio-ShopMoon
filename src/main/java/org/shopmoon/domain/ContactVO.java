@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ContactVO {
 
-	private String contactNo; // PK
+	private Long contactNo; // PK
 	private String memberId;
 	private String contactCategory;
 	private String contactTitle;

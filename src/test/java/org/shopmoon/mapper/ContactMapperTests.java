@@ -43,6 +43,32 @@ public class ContactMapperTests {
 		
 		log.info("total.. " + total);
 	}
+	
+	@Test
+	public void contactGetDetail() throws Exception{
+		
+		Long contactNo = 250L;
+		
+		contactmapper.contactGetDetail(contactNo);
+		
+		log.info(contactNo);
+		
+	}
+	
+	@Test
+	public void contactModifyTest() {
+		
+		ContactVO contact = new ContactVO();
+				
+		contact.setContactNo(249L);
+		System.out.println("수정 전...................." + contactmapper.contactGetDetail(contact.getContactNo()));
+		
+		contact.setContactTitle("문의 제목 수정 하였습니다.");
+		
+		contactmapper.contactModify(contact);
+		System.out.println("수정 후...................." + contactmapper.contactGetDetail(contact.getContactNo()));
+		
+	}
 		
 }
 

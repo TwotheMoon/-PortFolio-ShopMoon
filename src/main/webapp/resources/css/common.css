@@ -1,9 +1,7 @@
 @charset "UTF-8";
 @import "reset.css";
 
-/* Views */
-@import "includes/header.css";
-@import "includes/footer.css";
+/* View Style*/
 @import "about/about.css";
 @import "about/allBrand.css";
 @import "member/login.css";
@@ -15,10 +13,14 @@
 @import "community/contactList.css";
 @import "community/wayToCome.css";
 @Import "community/contactWriteView.css";
+@Import "community/contactDetail.css";
+@Import "community/contactModify.css";
+
+/* Component Style */
 @import "home.css";
 @import "errorPage.css";
-
-/* Components */
+@import "includes/header.css";
+@import "includes/footer.css";
 
 /* Fonts */
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);

@@ -40,5 +40,16 @@ public class ContactServiceImpl implements ContactService{
 		return contactmapper.contactGetTotal(cri);
 	}
 	
+	@Override
+	public ContactVO contactGetDetail(Long contactNo) throws Exception {
+		
+		return contactmapper.contactGetDetail(contactNo);
+	}
+	
+	@Override
+	public int contactModify(ContactVO contact) throws Exception {
+
+		return contactmapper.contactModify(contact);
+	}
 
 }

@@ -14,8 +14,11 @@ import org.shopmoon.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import lombok.extern.log4j.Log4j;
 
 @Controller
@@ -83,5 +86,33 @@ public class ContactController {
 			log.info("문의 글 DB 등록 완료");
 			return "redirect:/community/contactList";
 		}
+		
+	// 문의 글 상세 페이지 ,  수정 페이지
+		@RequestMapping({"/contactDetail", "/contactModify"})
+		public void contactGetDetail(long contactNo, Criteria cri, Model model) throws Exception {
+			log.info("문의 글 상세 페이지 진입");
+			
+			// 페이지 정보
+			model.addAttribute("cri", cri);
+			//
+			model.addAttribute("contactInfo", contactservice.contactGetDetail(contactNo));
+			
+		}
+		
+		/* 문의 글 내용 수정 */
+		@PostMapping("/contactModify")
+		public String contactModifyPOST(ContactVO contact, RedirectAttributes rttr) throws Exception{
+			
+			log.info("authorModifyPOST......." + contact);
+			
+			int result = contactservice.contactModify(contact);
+			
+			rttr.addFlashAttribute("modify_result", result);
+			
+			return "redirect:/community/contactList";
+			
+		}
+		
+	
 		
 }

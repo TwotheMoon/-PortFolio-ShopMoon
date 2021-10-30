@@ -17,14 +17,21 @@ import lombok.extern.log4j.Log4j;
 public class ContactServiceTestes {
 	
 	@Autowired
-	private ContactService contactService;
+	private ContactService contactservice;
 
 	@Test
 	public void contactGetListTest() throws Exception {
 		Criteria cri = new Criteria();
 		
-		List list = contactService.contactGetList(cri);
+		List list = contactservice.contactGetList(cri);
 		
 		list.forEach(board -> log.info(board));
+	}
+	
+	@Test
+	public void contactGetDetail() throws Exception{
+		long contactNo = 250L;
+		
+		log.info(contactservice.contactGetDetail(contactNo));
 	}
 }

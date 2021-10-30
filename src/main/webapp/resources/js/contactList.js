@@ -31,12 +31,35 @@ $("#searchForm button").on("click", function(e){
 // 글 작성 버튼 유효성
 $(".contactBox_board_writeBtn").click(function(){
 	
-	let memberId = ${loginConfirm};
-	if(memberId != 1 ) {
-		$(location).attr("href", "/community/contactWriteView");
-	} else {		
-		alert("로그인이 필요합니다!");
-		$(location).attr("href", "/member/login");
+	$(location).attr("href", "/community/contactWriteView");
+});
+
+
+// 상세 페이지 이동
+$(".contactDetail").on("click", function(e){
+	
+	e.preventDefault();
+	
+	moveForm.append("<input type='hidden' name='contactNo' value='"+ $(this).attr("href") + "'>");
+	moveForm.attr("action", "/community/contactDetail");
+	moveForm.submit();
+	
+});
+
+// 수정 결과 유효성
+$(document).ready(function(){
+	
+	let modifyResult = '<c:out value="${modify_result}"/>';
+	
+	checkmResult(modifyResult);
+	
+	function checkResult(result){
+		
+		if(modifyResult === '1'){
+			alert("문의 글 수정을 완료했어요.");
+		} else {
+			alert("문의 글 수정에 실패했어요.")
+		}
 	}
 });
 
