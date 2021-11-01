@@ -41,3 +41,14 @@ let modifyForm = $(".contactModify_form");
 			return false;
 		}
 	});
+	
+	// 문의 글 삭제 버튼
+	$(".contactModify_modifyDeleteBtn").on("click", function(e){
+	
+		e.preventDefault();
+	
+		moveForm.append('<input type="hidden" name="contactNo" value="${contactInfo.contactNo}">');
+		moveForm.attr("action", "/community/contactDelete");
+		moveForm.attr("method", "post");
+		moveForm.submit();
+	});

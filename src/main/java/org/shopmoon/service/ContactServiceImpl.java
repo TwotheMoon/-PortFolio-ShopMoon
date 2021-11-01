@@ -51,5 +51,11 @@ public class ContactServiceImpl implements ContactService{
 
 		return contactmapper.contactModify(contact);
 	}
+	
+	@Override
+	public int contactDelete(Long contactNo) throws Exception {
+		log.info("문의글 삭제");
+		return contactmapper.contactDelete(contactNo);
+	}
 
 }

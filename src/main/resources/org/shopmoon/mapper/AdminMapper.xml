@@ -99,7 +99,9 @@
       
       <!-- 상품 삭제 -->
 		<delete id="productDelete">
+		
 			delete from product where P_NO = #{productNo}
+		
 		</delete>
 		
 </mapper>

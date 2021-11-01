@@ -90,11 +90,12 @@
 	}
 	
 	.contactModify_Btns{
-		margin-left: 190px;
+		margin-left: 80px;
 	}
 	
 	.contactModify_comitBtn,
-	.contactModify_modifyCancleBtn{
+	.contactModify_modifyCancleBtn,
+	.contactModify_modifyDeleteBtn{
 		margin-top: 30px;
 		margin-bottom: 100px;
 		margin-left: 5px;
@@ -107,7 +108,8 @@
 		font-weight: bold;
 	}
 	.contactModify_comitBtn:hover,
-	.contactModify_modifyCancleBtn:hover{
+	.contactModify_modifyCancleBtn:hover
+	.contactModify_modifyDeleteBtn{
 		background-color: var(--main-bg-color);
 		opacity: 0.6;
 		cursor: pointer;

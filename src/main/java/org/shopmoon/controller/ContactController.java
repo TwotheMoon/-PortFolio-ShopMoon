@@ -118,6 +118,18 @@ public class ContactController {
 			
 		}
 		
+		
+		// 문의 글 삭제
+		@PostMapping("/contactDelete")
+		public String contactDeletePost(Long contactNo, RedirectAttributes rttr) throws Exception{
+			
+			int result = contactservice.contactDelete(contactNo);
+			
+			rttr.addFlashAttribute("delete_result", result);
+			
+			return "redirect:/community/contactList";
+		}
+		
 	
 		
 }

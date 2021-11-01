@@ -21,4 +21,7 @@ public interface ContactMapper {
 	
 	// 문의 글 수정
 	public int contactModify(ContactVO contact);
+
+	// 문의 글 삭제
+	public int contactDelete(Long contactNo);
 }

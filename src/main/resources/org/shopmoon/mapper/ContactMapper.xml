@@ -83,4 +83,11 @@
 			where CON_NO = #{contactNo}
 			
       </update>
+      
+     <!-- 문의 글 삭제 -->
+	<delete id="contactDelete">
+	
+		delete from contact where CON_NO = #{contactNo}
+	
+	</delete>
 </mapper>
