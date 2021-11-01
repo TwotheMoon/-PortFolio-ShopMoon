@@ -17,6 +17,8 @@
 @Import "community/contactModify.css";
 @import "admin/adminMain.css";
 @import "admin/productEnrollView.css";
+@import "admin/productList.css";
+@import "admin/productDetail.css";
 
 /* Component Style */
 @import "home.css";

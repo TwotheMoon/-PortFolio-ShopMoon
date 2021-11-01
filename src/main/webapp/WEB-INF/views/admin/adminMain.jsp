@@ -18,12 +18,13 @@
 		</div>
 		
 		<div class="adminMainBox_nav">
+			<a href="/admin/adminMain">관리자 페이지</a> |
 			<a href="/admin/productEnrollView">상품 등록</a> |
-			<a href="#">상품 관리</a> |
+			<a href="/admin/productList">상품 관리</a> |
 			<a href="#">회원 관리</a> |
 		</div>
 		
-		
+		<h1> 관리자 페이지 </h1>
 	</section>
 	
 	<footer class="adminMainFooterBox" >

@@ -20,4 +20,66 @@
 		)
 	</insert>
 	
+	<!-- 모든 상품 리스트 조회 -->
+	<select id="productGetList" resultType="org.shopmoon.domain.ProductVO">
+		<![CDATA[
+			select *
+			 from ( select /*+ INDEX_DESC(p SYS_C0011286) */ 
+					rownum as rn
+					, P_NO as productNo
+					, P_NAME as productName
+					, P_CATEGORY as productCategory
+					, P_PRICE as productPrice
+					, P_STOCK as productStock
+					, P_CONTENTS as productContents
+					, P_IMAGE as productImg
+					, P_ACTIVE as productActive
+					, P_BEST as productBest
+					, P_REG_DATE as productRegDate
+					, P_UPDATE_DATE as productUpdateDate
+			 from product p
+			where 
+	    ]]>
+		 	<if test="keyword != null">
+				P_NAME like '%' || #{keyword} || '%' and
+		    </if>
+		   
+	   <![CDATA[
+	   		rownum <= #{pageNum} * #{amount}
+	   		)
+        where rn > (#{pageNum} - 1) * #{amount}
+	   
+	   ]]>
+	</select>
+	
+  <!-- 믄의 글 총 수 -->
+    <select id="productGetTotal" resultType="int">
+    
+        select count(*) from product
+        
+        
+        <if test="keyword != null">
+           where P_NAME like '%' || #{keyword} || '%'
+        </if>
+    </select>
+    
+          <!-- 상품 조회 상세  -->
+      <select id="productGetDetail" resultType="org.shopmoon.domain.ProductVO">
+      	
+      	select 	 	
+      		 P_NO as productNo
+			, P_NAME as productName
+			, P_CATEGORY as productCategory
+			, P_PRICE as productPrice
+			, P_STOCK as productStock
+			, P_CONTENTS as productContents
+			, P_IMAGE as productImg
+			, P_ACTIVE as productActive
+			, P_BEST as productBest
+			, P_REG_DATE as productRegDate
+			, P_UPDATE_DATE as productUpdateDate
+				from product where P_NO = #{productNo}
+     	
+      </select>
+	
 </mapper>

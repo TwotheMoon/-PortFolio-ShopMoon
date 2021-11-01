@@ -36,7 +36,30 @@ public class AdminMapperTests {
 		adminmapper.productEnroll(product);
 	
 		}
+	
+	
+	@Test
+	public void productListTest() throws Exception {
+		
+		Criteria cri = new Criteria(1,10);
+
+		List list = adminmapper.productGetList(cri);
+		
+		 list.forEach(board -> log.info(board));
+	        
+	    }
+	
+	
+	@Test
+	public void productGetTotalTest() throws Exception {
+		
+		Criteria cri = new Criteria();
+		cri.setKeyword("qwe");
+		
+		int total = adminmapper.productGetTotal(cri);
+		
+		log.info("total.. " + total);
 	}
 	
-
-
+	
+	}

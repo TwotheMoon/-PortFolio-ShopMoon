@@ -1,6 +1,9 @@
 package org.shopmoon.service;
 
 
+import java.util.List;
+
+import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
 import org.shopmoon.mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +19,27 @@ public class AdminServiceImpl implements AdminService{
 	AdminMapper adminmapper;
 	
 	@Override
-	public void productEnroll(ProductVO product) {
+	public void productEnroll(ProductVO product) throws Exception{
 		
 		log.info("상품 등록 서비스 작동");
 		adminmapper.productEnroll(product);
 	}
 	
+	@Override
+	public List<ProductVO> productGetList(Criteria cri) throws Exception {
+		
+		return adminmapper.productGetList(cri);
+	}
+	
+	@Override
+	public int productGetTotal(Criteria cri) throws Exception {
+	
+		return adminmapper.productGetTotal(cri);
+	}
 
+	@Override
+	public ProductVO productGetDetail(Long productNo) throws Exception {
+		
+		return adminmapper.productGetDetail(productNo);
+	}
 }

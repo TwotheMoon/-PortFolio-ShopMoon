@@ -35,7 +35,6 @@
 			 from contact c
 			where 
 	    ]]>
-	    
 		    <if test="keyword != null">
 				M_ID like '%' || #{keyword} || '%' and
 		    </if>

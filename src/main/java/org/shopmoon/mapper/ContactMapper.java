@@ -10,7 +10,7 @@ public interface ContactMapper {
 	// 문의 글 등록
 	public void contactWrite(ContactVO contact);
 	
-	// 모든 문의 글 조회
+	// 문의 글 리스트
 	public List<ContactVO> contactGetList(Criteria cri);
 	
 	// 문의 글 총 수
