@@ -12,9 +12,11 @@ import org.shopmoon.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import lombok.extern.log4j.Log4j;
@@ -86,7 +88,7 @@ public class AdminController {
 		
 	}
 	
-	// 문의 글 내용 수정 
+	// 상품 정보 수정 메소드
 	@PostMapping("/productModify")
 	public String productModifyPOST(ProductVO product, RedirectAttributes rttr) throws Exception{
 		
@@ -95,6 +97,18 @@ public class AdminController {
 		int result = adminservice.productModify(product);
 		
 		rttr.addFlashAttribute("modify_result", result);
+		
+		return "redirect:/admin/productList";
+		
+	}
+	
+	/* 상품 정보 삭제 */
+	@PostMapping("/productDelete")
+	public String productDeletePOST(Long productNo , RedirectAttributes rttr) throws Exception {
+		
+		int result = adminservice.productDelete(productNo);
+		
+		rttr.addFlashAttribute("delete_result", result);
 		
 		return "redirect:/admin/productList";
 		

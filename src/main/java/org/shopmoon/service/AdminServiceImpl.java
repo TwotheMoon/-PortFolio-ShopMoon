@@ -8,6 +8,7 @@ import org.shopmoon.domain.ProductVO;
 import org.shopmoon.mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import lombok.extern.log4j.Log4j;
 
@@ -47,5 +48,11 @@ public class AdminServiceImpl implements AdminService{
 	public int productModify(ProductVO product) throws Exception {
 		
 		return adminmapper.productModify(product);
+	}
+	
+	@Override
+	public int productDelete(Long productNo) throws Exception {
+		log.info("상품 정보 삭제");
+		return adminmapper.productDelete(productNo);
 	}
 }

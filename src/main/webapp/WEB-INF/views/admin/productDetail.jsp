@@ -63,7 +63,7 @@
 				</div>	
 		</div>
 		    <form id="productDetail_moveForm" method="get">
-		    	<input type="hidden" name="productNo" value='<c:out value="${productInfo.productNo}"/>'>
+		   	 <input type="hidden" name="productNo" value='<c:out value="${productInfo.productNo}"/>'>
 				<input type="hidden" name="pageNum" value='<c:out value="${cri.pageNum}"/>'>
 				<input type="hidden" name="amount" value='<c:out value="${cri.amount}"/>'>
 				<input type="hidden" name="keyword" value='<c:out value="${cri.keyword}"/>'>

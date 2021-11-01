@@ -141,10 +141,12 @@
 
 
 	.productModify_Btns{
-		margin-left: 270px;
+		margin-left: 180px;
 	}
 		.productModify_linkProductListBtn,
-		.productModify_modifyWriteBtn{
+		.productModify_modifyWriteBtn,
+		.productModify_modifyDeleteBtn
+		{
 			margin-top: 30px;
 			margin-bottom: 100px;
 			margin-left: 5px;
@@ -157,7 +159,8 @@
 			font-weight: bold;
 		}
 		.productModify_linkProductListBtn:hover,
-		.productModify_modifyWriteBtn:hover{
+		.productModify_modifyWriteBtn:hover,
+		.productModify_modifyDeleteBtn:hover{
 			background-color: var(--main-bg-color);
 			opacity: 0.6;
 			cursor: pointer;

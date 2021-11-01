@@ -51,11 +51,10 @@
 				<input type="hidden" name="amount" value='<c:out value="${cri.amount}"/>'>
 				<input type="hidden" name="keyword" value='<c:out value="${cri.keyword}"/>'>
 			</form>
-			
 		
 	</section>
 	
-		<!-- 글 등록 js -->
+		<!-- 글 수정 js -->
 <script src="${path}/resources/js/contactModify.js"></script>
 	
 	<footer class="wayToComeFooterBox" >

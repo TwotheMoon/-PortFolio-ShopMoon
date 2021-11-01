@@ -62,4 +62,20 @@ public class AdminMapperTests {
 	}
 	
 	
+	/* 상품 정보 삭제 */
+	@Test
+	public void productDeleteTest() throws Exception {
+		
+		Long productNo = 39L;
+		
+		int result = adminmapper.productDelete(productNo);
+		
+		if(result == 1) {
+			System.out.println("삭제 성공");
+		}
+		
 	}
+		
+
+	
+}

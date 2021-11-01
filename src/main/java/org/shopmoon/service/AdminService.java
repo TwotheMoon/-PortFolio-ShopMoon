@@ -5,6 +5,7 @@ import java.util.List;
 import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
+import org.springframework.web.bind.annotation.PathVariable;
 
 public interface AdminService {
 
@@ -20,6 +21,10 @@ public interface AdminService {
 	// 상품 조회 상세 페이지
 	public ProductVO productGetDetail(Long productNo) throws Exception;
 	
-	// 문의 글 수정
+	// 상품 정보 수정
 	public int productModify(ProductVO product) throws Exception;
+
+	// 상품 삭제
+	public int productDelete(Long productNo) throws Exception;
+	
 }

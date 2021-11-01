@@ -6,39 +6,38 @@ let modifyForm = $(".contactModify_form");
 		
 		e.preventDefault();
 				
-		moveForm.attr("action", "/community/contactDetail")
+		moveForm.attr("action", "/community/contactDetail");
 		moveForm.submit();
 	});
 	
 	// 문의 글 수정 버튼 및 유효성 검사
 	$(".contactModify_comitBtn").on("click", function(e){
 
-		let contactTitle = $(".contactModify_title input[name='contactTitle']").val();
-		let contactContents = $(".contactModify_contents textarea").val();		
+		let contactTitle = $(".contactModify_title").val();
+		let contactContents = $(".contactModify_contents").val();		
 
-		let	TitleCk = false;
-		let ContentsCk = false;		
+		let	titleCk = false;
+		let contentsCk = false;		
 		
 		e.preventDefault();
 		
-		if(!contactTitle){
+		if(contactTitle == null){
 			$("#warn_contactTitle").css("display", "block");
 		} else {
 			$("#warn_contactTitle").css("display", "none");
-			TitleCk = true;
+			titleCk = true;
 		}
-		if(!contactContents){
+		if(contactContents == null){
 			$("#warn_contactContents").css("display", "block");
 		} else {
 			$("#warn_contactContents").css("display", "none");
-			ContentsCk = true;
+			contentsCk = true;
 		}
 
 		
-		if(TitleCk && ContentsCk ){
+		if(titleCk == true && contentsCk == true){
 			modifyForm.submit();	
 		} else {
 			return false;
 		}
-			
-		});
+	});

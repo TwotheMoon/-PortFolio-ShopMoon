@@ -5,8 +5,8 @@ let modifyForm = $(".productModify_form");
 	$(".productModify_linkProductListBtn").on("click", function(e){
 		
 		e.preventDefault();
-				
-		moveForm.attr("action", "/admin/productDetail")
+		
+		moveForm.attr("action", "/admin/productDetail");
 		moveForm.submit();
 	});
 	
@@ -15,5 +15,15 @@ let modifyForm = $(".productModify_form");
 
 		modifyForm.submit();	
 		
-			
 		});
+		
+	// 상품 삭제 버튼
+	$(".productModify_modifyDeleteBtn").on("click", function(e){
+	
+		e.preventDefault();
+	
+		moveForm.append('<input type="hidden" name="productNo" value="${productInfo.productNo}">');
+		moveForm.attr("action", "/admin/productDelete");
+		moveForm.attr("method", "post");
+		moveForm.submit();
+	});

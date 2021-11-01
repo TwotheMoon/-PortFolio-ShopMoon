@@ -13,9 +13,8 @@
 	<!-- contactDetail.jsp 컨텐츠 -->
 	<section class="productModifyBox opacityBox" >
 				
+		<form class="productModify_form" action="/admin/productModify" method="post"> 
 		<div class="productModify_Box">
-			<form class="productModify_form" action="/admin/productModify" method="post"> 
-				<input type="hidden" name="productNo" value="${productInfo.productNo}">
 				
 				<div class="productModify_rigthBox">
 					<div class="productModify_Img">상품 이미지</div>			
@@ -70,22 +69,25 @@
 				
 				<div class="productModify_botBox">
 					<label class="productModify_pContents_Label">상품 설명</label> <br>
-					<textarea class="productModify_pContents" name="productContents" cols="150" rows="20">${productInfo.productContents}</textarea> <br>
+					<textarea class="productModify_pContents" name="productContents" cols="150" rows="10">${productInfo.productContents}</textarea> <br>
+					
+					<input type="hidden" name="productNo" value="${productInfo.productNo}">
 					
 					<div class="productModify_Btns">
 						<button class="productModify_linkProductListBtn">목록으로 돌아가기</button>	
-						<button class="productModify_modifyWriteBtn">게시글 수정</button>				
+						<button class="productModify_modifyWriteBtn">수정하기</button>	
+						<button class="productModify_modifyDeleteBtn">삭제하기</button>				
 					</div>	
 				</div>	
-			</form>
 		</div>
+		</form>
+		
 		    <form id="productModify_moveForm" method="get">
-				<input type="hidden" name="contactNo" value='<c:out value="${productInfo.productNo}"/>'>
+				<input type="hidden" name="productNo" value='<c:out value="${productInfo.productNo}"/>'>
 				<input type="hidden" name="pageNum" value='<c:out value="${cri.pageNum}"/>'>
 				<input type="hidden" name="amount" value='<c:out value="${cri.amount}"/>'>
 				<input type="hidden" name="keyword" value='<c:out value="${cri.keyword}"/>'>
 			</form>
-			
 		
 	</section>
 	

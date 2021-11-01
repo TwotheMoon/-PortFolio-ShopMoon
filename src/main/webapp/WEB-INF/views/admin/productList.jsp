@@ -9,11 +9,6 @@
 </header>
 
 <body id="productListBody">
-    <!-- css AOS 초기화 -->
-    <script>
-        AOS.init();
-    </script>
-
     
 	<!-- productList.jsp 컨텐츠 -->
 	<section class="productListBox opacityBox" >
