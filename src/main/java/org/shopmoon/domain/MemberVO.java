@@ -18,7 +18,7 @@ public class MemberVO {
 	private String memberAddr2;
 	private String memberActive;
 	private String memberRegDate;
-	private String memberAuthority;
+	private int memberAuthority;
 	
 	private ContactVO contactVO; // contact 테이블
 
