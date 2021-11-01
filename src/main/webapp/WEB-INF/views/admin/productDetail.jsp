@@ -9,67 +9,61 @@
 </header>
 
 <body id="productDetailBody">
-    <!-- css AOS 초기화 -->
-    <script>
-        AOS.init();
-    </script>
     
 	<!-- contactDetail.jsp 컨텐츠 -->
 	<section class="productDetailBox opacityBox" >
 				
 		<div class="productDetail_Box">
-			
-			<div class="productDetail_rigthBox">
-				<div class="productDetail_Img">상품 이미지</div>			
-			</div>
-			
-			<div class="productDetail_leftBox">
-				<div class="productDetail_regDateBox">
-					<label class="productDetail_regDateLabel">입고 날짜</label>
-					<fmt:formatDate value="${productInfo.productRegDate}" pattern="yyyy-MM-dd"></fmt:formatDate>					
+				<div class="productDetail_rigthBox">
+					<div class="productDetail_Img">상품 이미지</div>			
 				</div>
 				
-				<div class="productDetail_upDateBox">
-					<label class="productDetail_upDateLabel">수정 날짜</label>
-					<fmt:formatDate value="${productInfo.productUpdateDate}" pattern="yyyy-MM-dd"></fmt:formatDate>	
-				</div> <br>
-				
-					<label class="productDetail_pNoLabel">상품 번호</label>
-					<input class="productDetail_pNo" value="${productInfo.productNo}" readonly> 
+				<div class="productDetail_leftBox">
 					
-					<label class="productDetail_pCategory_label">카테고리</label>
-					<input class="productDetail_pCategory" value="[${productInfo.productCategory}]" readonly> <br>
-			
-					<label class="productDetail_pName_Label">상품 이름</label>
-					<input class="productDetail_pName" value="${productInfo.productName}" readonly> <br>
-
-					<label class="productDetail_pPrice_label">가격</label>
-					<input class="productDetail_pPrice" value="${productInfo.productPrice}" readonly> <br>
-
-					<label class="productDetail_pStock_label">재고</label>
-					<input class="productDetail_pStock" value="${productInfo.productStock}" readonly> <br>
+					<div class="productDetail_regDateBox">
+						<label class="productDetail_regDateLabel">입고 날짜</label>
+						<fmt:formatDate value="${productInfo.productRegDate }" pattern="yyyy-MM-dd"></fmt:formatDate>					
+					</div>
 					
-					<label class="productDetail_pActive_label">판매 상태</label>
-					<input class="productDetail_pActive" value="${productInfo.productActive}" readonly> <br>
+					<div class="productDetail_upDateBox">
+						<label class="productDetail_upDateLabel">수정 날짜</label>
+						<fmt:formatDate value="${productInfo.productUpdateDate }" pattern="yyyy-MM-dd"></fmt:formatDate>	
+					</div> <br>
 					
-					<label class="productDetail_pBest_label">베스트 여부</label>
-					<input class="productDetail_pBest" value="${productInfo.productBest}" readonly> <br>
-			</div>
-			
-			<div class="productDetail_botBox">
+						<label class="productDetail_pNoLabel">상품 번호</label>
+						<input class="productDetail_pNo" value="${productInfo.productNo }" readonly> 
+						
+						<label class="productDetail_pCategory_label">카테고리</label>
+						<input class="productDetail_pCategory" value="${productInfo.productCategory }" readonly> <br>
 				
-				<label class="productDetail_pContents_Label">상품 설명</label> <br>
-				<textarea class="productDetail_pContents" cols="150" rows="20" readonly>${contactInfo.productContents}</textarea> <br>
+						<label class="productDetail_pName_Label">상품 이름</label>
+						<input class="productDetail_pName" value="${productInfo.productName }" readonly> <br>
+	
+						<label class="productDetail_pPrice_label">가격</label>
+						<input class="productDetail_pPrice" value="${productInfo.productPrice }" readonly> <br>
+	
+						<label class="productDetail_pStock_label">재고</label>
+						<input class="productDetail_pStock" value="${productInfo.productStock }" readonly> <br>
+						
+						<label class="productDetail_pActive_label">판매 상태</label>
+						<input class="productDetail_pActive" value="${productInfo.productActive }" readonly> <br>
+						
+						<label class="productDetail_pBest_label">베스트 여부</label>
+						<input class="productDetail_pBest" value="${productInfo.productBest }" readonly> <br>
+				</div>
 				
-				<div class="productDetail_Btns">
-					<button class="productDetail_linkProductListBtn">목록으로 돌아가기</button>	
-					<button class="productDetail_modifyWriteBtn">게시글 수정</button>				
+				<div class="productDetail_botBox">
+					<label class="productDetail_pContents_Label">상품 설명</label> <br>
+					<textarea class="productDetail_pContents" cols="150" rows="20">${productInfo.productContents}</textarea> <br>
+					
+					<div class="productDetail_Btns">
+						<button class="productDetail_linkProductListBtn">목록으로 돌아가기</button>	
+						<button class="productDetail_modifyWriteBtn">게시글 수정</button>				
+					</div>	
 				</div>	
-				
-			</div>			
 		</div>
 		    <form id="productDetail_moveForm" method="get">
-				<input type="hidden" name="contactNo" value='<c:out value="${contactInfo.contactNo}"/>'>
+		    	<input type="hidden" name="productNo" value='<c:out value="${productInfo.productNo}"/>'>
 				<input type="hidden" name="pageNum" value='<c:out value="${cri.pageNum}"/>'>
 				<input type="hidden" name="amount" value='<c:out value="${cri.amount}"/>'>
 				<input type="hidden" name="keyword" value='<c:out value="${cri.keyword}"/>'>
@@ -81,7 +75,7 @@
 		<!-- 글 등록 js -->
 <script src="${path}/resources/js/productDetail.js"></script>
 	
-	<footer class="productDetailFooterBox" >
+	<footer class="pproductDetailFooterBox" >
 		<jsp:include page="${path }../includes/footer.jsp" />
 	</footer>
 </body>

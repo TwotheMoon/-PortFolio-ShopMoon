@@ -129,7 +129,7 @@
                 </div>  
 			<button class="productListBox_board_writeBtn">글 작성</button>
 		</div>
-		
+
 	</section>
 	<!-- 글 목록, 페이징 js -->
 <script src="${path}/resources/js/productList.js"></script>

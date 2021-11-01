@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.PageDTO;
 import org.shopmoon.domain.ProductVO;
@@ -74,7 +75,7 @@ public class AdminController {
 		}
 		
 	// 상품 조회 상세 페이지 , 수정 페이지
-	@RequestMapping("/productDetail")
+	@RequestMapping({"/productDetail", "/productModify"})
 	public void productGetDetail(long productNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
 		log.info("문의 글 상세 페이지 진입");
 		
@@ -82,6 +83,20 @@ public class AdminController {
 		model.addAttribute("cri", cri);
 		//
 		model.addAttribute("productInfo", adminservice.productGetDetail(productNo));
+		
+	}
+	
+	// 문의 글 내용 수정 
+	@PostMapping("/productModify")
+	public String productModifyPOST(ProductVO product, RedirectAttributes rttr) throws Exception{
+		
+		log.info("authorModifyPOST......." + product);
+		
+		int result = adminservice.productModify(product);
+		
+		rttr.addFlashAttribute("modify_result", result);
+		
+		return "redirect:/admin/productList";
 		
 	}
 		

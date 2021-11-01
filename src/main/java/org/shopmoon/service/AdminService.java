@@ -19,4 +19,7 @@ public interface AdminService {
 	
 	// 상품 조회 상세 페이지
 	public ProductVO productGetDetail(Long productNo) throws Exception;
+	
+	// 문의 글 수정
+	public int productModify(ProductVO product) throws Exception;
 }

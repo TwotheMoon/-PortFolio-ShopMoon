@@ -42,4 +42,10 @@ public class AdminServiceImpl implements AdminService{
 		
 		return adminmapper.productGetDetail(productNo);
 	}
+	
+	@Override
+	public int productModify(ProductVO product) throws Exception {
+		
+		return adminmapper.productModify(product);
+	}
 }

@@ -2,6 +2,7 @@ package org.shopmoon.mapper;
 
 import java.util.List;
 
+import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
 
@@ -18,4 +19,7 @@ public interface AdminMapper {
 	
 	// 상품 조회 상세 페이지
 	public ProductVO productGetDetail(Long productNo);
+	
+	// 문의 글 수정
+	public int productModify(ProductVO product);
 }

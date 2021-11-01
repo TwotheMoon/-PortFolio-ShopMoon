@@ -1,7 +1,7 @@
 let moveForm = $("#productDetail_moveForm");
 
 	// 상품 목록 페이지 이동 버튼 
-	$(".productDetail_linkContactListBtn").on("click", function(e){
+	$(".productDetail_linkProductListBtn").on("click", function(e){
 		
 		e.preventDefault();
 		

@@ -19,6 +19,7 @@
 @import "admin/productEnrollView.css";
 @import "admin/productList.css";
 @import "admin/productDetail.css";
+@import "admin/productModify.css";
 
 /* Component Style */
 @import "home.css";

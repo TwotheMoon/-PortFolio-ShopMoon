@@ -81,5 +81,20 @@
 				from product where P_NO = #{productNo}
      	
       </select>
+      
+       <update id="productModify">
+      	
+      	update product set
+      		 P_NAME = #{productName}
+			, P_CATEGORY = #{productCategory}
+			, P_PRICE = #{productPrice}
+			, P_STOCK = #{productStock}
+			, P_CONTENTS = #{productContents}
+			, P_ACTIVE = #{productActive}
+			, P_BEST = #{productBest}
+			, P_UPDATE_DATE = sysdate
+			where P_NO = #{productNo}
+			
+      </update>
 	
 </mapper>
