@@ -2,6 +2,7 @@ package org.shopmoon.controller;
 
 import org.shopmoon.domain.ProductVO;
 import org.shopmoon.service.AdminService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,24 +16,34 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class AdminController {
 
+	@Autowired
 	private AdminService adminservice;
 	
+	// 관리자 페이지 이동
 	@RequestMapping("/adminMain")
 	public void adminMain() throws Exception{
 		
 		log.info("관리자 페이지 이동");
 	}
 	
-	
-	@RequestMapping("/productEnroll")
-	public void productEnrollPOST(ProductVO product, RedirectAttributes rttr) throws Exception {
-		
+	// 상품 등록 페이지 이동
+	@RequestMapping("/productEnrollView")
+	public void productEnroll() throws Exception {
 		log.info(" 상품 등록 중");
 		
-		//adminservice.productEnroll(product);
+	}
+	
+	// 상품 등록 메소드
+	@PostMapping("/productEnroll")
+	public String productEnrollPOST(ProductVO product, RedirectAttributes rttr) throws Exception {
 		
-		//rttr.addFlashAttribute("enroll_result", product.getProductName());
+		adminservice.productEnroll(product);
 		
+		String result = product.getProductName();
+		
+		rttr.addFlashAttribute("enroll_result", result);
+		
+		return "redirect:/admin/adminMain";
 	}
 	
 }

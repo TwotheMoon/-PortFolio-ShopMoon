@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+
+.productEnrollBox{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.productEnrollBox_title{
+	margin-top: 200px;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.productEnrollBox_nav{
+	margin-top: 50px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+	.productEnrollBox_nav a:first-child{
+		color: rgba(0, 0, 0, 1);
+		border-bottom: 1px solid rgba(0, 0, 0, 1);
+	}
+	.productEnrollBox_nav a:nth-child(2),
+	.productEnrollBox_nav a:nth-child(3)
+	{
+		color: rgba(0, 0, 0, 0.3);
+	}
+	.productEnrollBox_nav a:nth-child(2),
+	.productEnrollBox_nav a:nth-child(3)
+	{
+		color: rgba(0, 0, 0, 0.8);
+	}
+
+
+.productEnrollBox_form{
+	margin-top: 50px;
+}
+	.productEnrollName{
+		width: 630px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+	
+	.productEnrollPrice{
+		width: 630px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	.productEnrollStock{
+		width: 630px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	
+	.productEnrollImg{
+		width: 630px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	
+	}
+	.procutEnrollContentsBox{
+		margin-top: 50px;
+	}
+	.ck-content{
+		width: 630px;
+		height: 200px;
+	
+	}
+	.productEnrollLabel{
+		margin-left: 20px;
+	}
+	
+	
+	.productEnrollBtn,
+	.productEnroll_cansleBtn{
+		margin-top: 30px;
+		margin-bottom: 100px;
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 200px;
+		height: 50px;
+		background-color: var(--main-bg-color);
+		border: none;
+		cursor: pointer;
+		font-weight: bold;
+	}
+		.productEnrollBtn:hover,
+		.productEnroll_cansleBtn
+		{
+		background-color: var(--main-bg-color);
+		opacity: 0.6;
+		cursor: pointer;
+	}
+	
+	.loginFooterBox{
+		margin-top: 150px;
+	}
+	

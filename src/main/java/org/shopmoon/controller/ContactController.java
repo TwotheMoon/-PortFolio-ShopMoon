@@ -104,7 +104,7 @@ public class ContactController {
 			
 		}
 		
-		/* 문의 글 내용 수정 */
+		// 문의 글 내용 수정 
 		@PostMapping("/contactModify")
 		public String contactModifyPOST(ContactVO contact, RedirectAttributes rttr) throws Exception{
 			

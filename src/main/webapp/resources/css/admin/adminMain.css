@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+.adminMainBox{
+	width: 1600px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.adminMainBox_title{
+	margin-top: 100px;
+	font-weight: bold;
+	font-size: 25px;
+}
+.adminMainBox_nav{
+	margin-top: 50px;
+	font-size: 13px;
+	cursor: pointer;
+}
+	.adminMainBox_nav a:first-child{
+		color: rgba(0, 0, 0, 1);
+		border-bottom: 1px solid rgba(0, 0, 0, 1);
+	}
+	.adminMainBox_nav a:nth-child(2),
+	.adminMainBox_nav a:nth-child(3)
+	{
+		color: rgba(0, 0, 0, 0.3);
+	}
+	.adminMainBox_nav a:nth-child(2),
+	.adminMainBox_nav a:nth-child(3)
+	{
+		color: rgba(0, 0, 0, 0.8);
+	}
+	
+
+.adminMainFooterBox{
+	margin-top: 150px;
+}
+	

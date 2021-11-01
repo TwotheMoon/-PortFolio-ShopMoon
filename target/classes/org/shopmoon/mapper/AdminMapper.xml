@@ -13,9 +13,9 @@
 			, #{productStock}
 			, #{productContents}
 			, #{productImg}
-			, 'Y'
-			, 'Y'
-			, sysdate
+			, #{productActive}
+			, #{productBest}
+			, #{productRegDate}
 			, sysdate
 		)
 	</insert>
