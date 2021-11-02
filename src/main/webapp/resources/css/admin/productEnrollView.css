@@ -8,7 +8,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .productEnrollBox_title{
 	margin-top: 200px;
@@ -61,6 +61,39 @@
 		height: 60px;
 		border: none;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.5);	
+	}
+	
+	.productEnrollForm_section_title{
+		margin-top: 30px;
+	}
+	.productEnrollForm_section_content{
+		margin-top: 20px;
+	}
+	#result_card {
+		position: relative;
+	}
+	#result_card img{
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin-top: 10px;
+		margin: auto;
+	}
+	.imgDeleteBtn{
+		position: absolute;
+	    top: 0;
+	    right: 5%;
+	    background-color: #ef7d7d;
+	    color: wheat;
+	    font-weight: 900;
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 50%;
+	    line-height: 26px;
+	    text-align: center;
+	    border: none;
+	    display: block;
+	    cursor: pointer;	
 	}
 	
 	.productEnrollImg{

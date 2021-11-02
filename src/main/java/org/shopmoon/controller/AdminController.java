@@ -3,6 +3,8 @@ package org.shopmoon.controller;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -11,6 +13,7 @@ import java.util.UUID;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
+import javax.swing.ListModel;
 
 import org.shopmoon.domain.AttachImageVO;
 import org.shopmoon.domain.ContactVO;
@@ -132,6 +135,29 @@ public class AdminController {
 	public ResponseEntity<List<AttachImageVO>> uploadAjaxImgPOST(MultipartFile[] uploadFile) {
 		
 		log.info("첨부 파일 업로드 중");
+		
+		// 이미지 파일 체크
+		for(MultipartFile multipartFile : uploadFile) {
+			
+			File checkfile = new File(multipartFile.getOriginalFilename());
+			String type = null;
+			
+			try {
+				type = Files.probeContentType(checkfile.toPath());
+				log.info("MIME TYPE : " + type);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			if(!type.startsWith("image")) {
+				
+				List<AttachImageVO> list = null;
+				return new ResponseEntity<>(list, HttpStatus.BAD_REQUEST);
+				
+			}
+			
+		}
+		
 		String uploadFolder = "C:\\shopMoonUpload";
 		
 		// 날짜 폴더 경로

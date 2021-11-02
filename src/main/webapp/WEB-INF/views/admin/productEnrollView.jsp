@@ -60,12 +60,15 @@
 			
 			<input class="productEnrollStock" name="productStock" placeholder="재고" > <br>
 			
-			<div class="form-section">
-				<div class="form_section_title">
+			<div class="productEnrollForm-section">
+				<div class="productEnrollForm_section_title">
 					<label>상품 이미지</label>
 				</div>
-				<div class="form_section_content">
-					<input type="file" id="fileItem" name="uploadFile" style="height: 30px;">
+				<div class="productEnrollForm_section_content">
+					<input type="file" id="fileItem" name="uploadFile">
+					<div id="uploadResult">	
+						
+					</div>
 				</div>
 			</div>
 			
