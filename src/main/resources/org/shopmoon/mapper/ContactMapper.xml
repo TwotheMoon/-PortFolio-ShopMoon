@@ -90,4 +90,5 @@
 		delete from contact where CON_NO = #{contactNo}
 	
 	</delete>
+	
 </mapper>

@@ -61,9 +61,8 @@
 			where M_ID = #{memberId}
 	</update>
 	
-		<!-- 아이디 찾기 -->
+	<!-- 아이디 찾기 -->
 	<select id="findId" resultType="org.shopmoon.domain.MemberVO">
 		select M_ID as memberId from member where M_EMAIL = #{memberEmail}
 	</select>
-
 </mapper>

@@ -57,5 +57,4 @@ public class ContactServiceImpl implements ContactService{
 		log.info("문의글 삭제");
 		return contactmapper.contactDelete(contactNo);
 	}
-
 }
