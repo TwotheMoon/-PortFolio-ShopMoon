@@ -24,6 +24,7 @@
 - ajax ( 더보기 페이징 전략 )
 - FontAwesome ( 여러 아이콘 )
 - bxSlider( 캐러셀 )
+- 위지윅 (텍스트 편집)
 
 
 ### Front 기술 아이디어
