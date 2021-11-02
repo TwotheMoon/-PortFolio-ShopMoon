@@ -8,7 +8,6 @@ import org.shopmoon.domain.ProductVO;
 import org.shopmoon.mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import lombok.extern.log4j.Log4j;
 
@@ -24,6 +23,18 @@ public class AdminServiceImpl implements AdminService{
 		
 		log.info("상품 등록 서비스 작동");
 		adminmapper.productEnroll(product);
+		
+		// 이미지가 없을 경우 
+		if(product.getImageList() == null || product.getImageList().size() <= 0) {
+			return;
+		}
+		
+		product.getImageList().forEach(attach ->{
+			
+			attach.setProductNo(product.getProductNo());
+			adminmapper.imageEnroll(attach);
+			
+		});
 	}
 	
 	@Override

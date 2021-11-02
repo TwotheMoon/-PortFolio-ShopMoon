@@ -57,7 +57,7 @@ public class AdminController {
 	// 상품 등록 페이지 이동
 	@RequestMapping("/productEnrollView")
 	public void productEnroll() throws Exception {
-		log.info(" 상품 등록 중");
+		log.info(" 상품 등록 페이지 이동");
 		
 	}
 	
@@ -65,13 +65,17 @@ public class AdminController {
 	@PostMapping("/productEnroll")
 	public String productEnrollPOST(ProductVO product, RedirectAttributes rttr) throws Exception {
 		
+		log.info("상품 등록 메소드 진입" + product);
+		
 		adminservice.productEnroll(product);
 		
 		String result = product.getProductName();
 		
 		rttr.addFlashAttribute("enroll_result", result);
 		
+		log.info("상품 등록 메소드 실행 완료");
 		return "redirect:/admin/adminMain";
+		
 	}
 	
 	// 상품 관리(목록) 페이지 이동 및 조회

@@ -5,6 +5,13 @@
 <mapper namespace="org.shopmoon.mapper.AdminMapper">
 	
 	<insert id="productEnroll">
+	
+		<selectKey resultType="Long" keyProperty="productNo" order="AFTER">
+
+			SELECT SEQ_PRODUCT.CURRVAL FROM DUAL	
+		
+		</selectKey>
+		
 		insert into product values(	
 			SEQ_PRODUCT.NEXTVAL
 			, #{productName}
@@ -12,7 +19,6 @@
 			, #{productPrice}
 			, #{productStock}
 			, #{productContents}
-			, #{productImg}
 			, #{productActive}
 			, #{productBest}
 			, #{productRegDate}
@@ -32,7 +38,6 @@
 					, P_PRICE as productPrice
 					, P_STOCK as productStock
 					, P_CONTENTS as productContents
-					, P_IMAGE as productImg
 					, P_ACTIVE as productActive
 					, P_BEST as productBest
 					, P_REG_DATE as productRegDate
@@ -73,7 +78,6 @@
 			, P_PRICE as productPrice
 			, P_STOCK as productStock
 			, P_CONTENTS as productContents
-			, P_IMAGE as productImg
 			, P_ACTIVE as productActive
 			, P_BEST as productBest
 			, P_REG_DATE as productRegDate
@@ -104,4 +108,10 @@
 		
 		</delete>
 		
+	<!-- 이미지 등록 -->
+		<insert id="imageEnroll">
+			
+			insert into image values (#{productNo}, #{fileName}, #{uploadPath}, #{uuid}) 
+			
+		</insert>
 </mapper>

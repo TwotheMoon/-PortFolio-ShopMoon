@@ -6,7 +6,7 @@ import lombok.Data;
 public class AttachImageVO {
 
 	private String uploadPath;
-	private String uuid;
+	private String uuid; // PK
 	private String fileName;
-	private int productNo;
+	private Long productNo; // FK
 }

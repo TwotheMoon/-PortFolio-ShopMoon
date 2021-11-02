@@ -1,9 +1,11 @@
 package org.shopmoon.mapper;
 
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.shopmoon.domain.AttachImageVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,15 +28,20 @@ public class AdminMapperTests {
 		
 		ProductVO product = new ProductVO();
 		
-		product.setProductName("앨범1");
-		product.setProductCategory("앨범");
+		product.setProductName("테스트");
+		product.setProductCategory("테스트");
 		product.setProductPrice(10500);
 		product.setProductStock(10);
-		product.setProductContents("상품 설명");
-		product.setProductImg("이미지 없음");
+		product.setProductContents("테스트 설명");
+		product.setProductActive("Y");
+		product.setProductBest("Y");
+		
+		System.out.println("Before productVO :" + product);
 		
 		adminmapper.productEnroll(product);
+		log.info("등록 완료" + product);
 	
+		System.out.println("After productVO :" + product);
 		}
 	
 	
@@ -73,6 +80,21 @@ public class AdminMapperTests {
 		if(result == 1) {
 			System.out.println("삭제 성공");
 		}
+		
+	}
+	
+	/* 이미지 등록 */
+	@Test
+	public void imageEnrollTest() throws Exception {
+		
+		AttachImageVO vo = new AttachImageVO();
+		
+		vo.setProductNo(21L);
+		vo.setFileName("test");
+		vo.setUploadPath("test");
+		vo.setUuid("test4");
+		
+		adminmapper.imageEnroll(vo);
 		
 	}
 		

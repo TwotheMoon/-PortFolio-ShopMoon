@@ -33,7 +33,6 @@
 			<table class="productList_board" style=”table-layout:fixed”>
 				<tr class="productList_board_header" style="word-break:break-all">
 					<th>상품 번호</th>
-					<th>상품 이미지</th>
 					<th>카테고리</th>
 					<th>상품 이름</th>
 					<th>상품 내용</th>
@@ -51,7 +50,6 @@
 							<c:out value="${list.productNo}"></c:out>
 						</a>
 					</td>
-					<td><c:out value="${list.productImg}"></c:out></td>
 					<td><c:out value="[${list.productCategory}]"></c:out></td> 
 					<td>
 						<a class="productDetail" href='<c:out value="${list.productNo}"/>'>

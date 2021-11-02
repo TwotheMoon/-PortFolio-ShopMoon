@@ -2,6 +2,7 @@ package org.shopmoon.mapper;
 
 import java.util.List;
 
+import org.shopmoon.domain.AttachImageVO;
 import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
@@ -26,4 +27,7 @@ public interface AdminMapper {
 	
 	// 상품 삭제
 	public int productDelete(Long productNo);
+	
+	// 이미지 등록
+	public void imageEnroll(AttachImageVO vo);
 }
