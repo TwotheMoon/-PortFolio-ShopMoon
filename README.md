@@ -159,7 +159,7 @@
 | 1 |  P_NO         |    NUMBER    |    NULL   |   FK    | 상품 고유번호    |
 | 2 |  I_FILENAME   | VARCHAR2(100)| NOT NULL  |         | 이미지 이름     |  
 | 3 |  I_UPLOADPATH | VARCHAR2(200)| NOT NULL  |         | 이미지 경로    |
-| 4 |  I_UUID       | (uuid)    | NOT NULL  |   PK    | 이미지 식별 번호   |
+| 4 |  I_UUID       | VARCHAR2(100)| NOT NULL  |   PK    | 이미지 식별 번호   |
 
 
 - Contact
