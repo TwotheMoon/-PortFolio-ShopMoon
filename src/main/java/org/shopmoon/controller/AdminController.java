@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -221,6 +222,32 @@ public class AdminController {
 		ResponseEntity<List<AttachImageVO>> result = new ResponseEntity<List<AttachImageVO>>(list, HttpStatus.OK);
 		
 		return result;
+	}
+	
+	// 이미지 파일 삭제
+	@PostMapping("/deleteFile")
+	public ResponseEntity<String> deleteFile(String fileName){
+		
+		File file = null;
+		
+		try {
+			// 썸네일 파일 삭제
+			file = new File("c:\\shopMoonUpload\\" + URLDecoder.decode(fileName, "UTF-8"));
+			file.delete();
+			
+			String originFileName = file.getAbsolutePath().replace("s_", "");
+			file = new File(originFileName);
+			file.delete();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+			return new ResponseEntity<String>("fail", HttpStatus.NOT_IMPLEMENTED);
+		}
+		
+		return new ResponseEntity<String>("success", HttpStatus.OK);
+		
 	}
 	
 	
