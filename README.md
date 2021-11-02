@@ -147,11 +147,20 @@
 | 3 |  P_CATEGORY   | CHAR(1)      | NOT NULL  |         | 상품 종류 (1: 기타, 2: 베이스, 3: 미디, 4: 앨범)  |
 | 4 |  P_PRICE      | NUMBER(7)    | NOT NULL  |         | 가격            |
 | 5 |  P_CONTENTS   | CLOB         | NOT NULL  |         | 상품 설명        |
-| 6 |  P_IMAGE      | VARCHAR(50)  | NOT NULL  |         | 상품 사진        |
-| 7 |  P_ACTIVE     | CHAR(1)      | NOT NULL  |         | 제품 활성 여부(Y: 판매중,  N: 미판매)      |
-| 8 |  P_BEST       | CHAR(1)      | NOT NULL  |         | 베스트 상품 여부Y: 베스트, N: 일반)     |
-| 9 |  p_REG_DATE   | DATE         | NOT NULL  |         | 상품 등록일 |
+| 6 |  P_ACTIVE     | CHAR(1)      | NOT NULL  |         | 제품 활성 여부(Y: 판매중,  N: 미판매)      |
+| 7 |  P_BEST       | CHAR(1)      | NOT NULL  |         | 베스트 상품 여부Y: 베스트, N: 일반)     |
+| 8 |  p_REG_DATE   | DATE         | NOT NULL  |         | 상품 등록일 |
 *SEQ_PRODUCT
+
+- Image
+
+| No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
+| 1 |  P_NO         |    NUMBER    |    NULL   |   FK    | 상품 고유번호    |
+| 2 |  I_FILENAME   | VARCHAR2(100)| NOT NULL  |         | 이미지 이름     |  
+| 3 |  I_UPLOADPATH | VARCHAR2(200)| NOT NULL  |         | 이미지 경로    |
+| 4 |  I_UUID       | NUMBER       | NOT NULL  |   PK    | 이미지 식별 번호   |
+
 
 - Contact
 
