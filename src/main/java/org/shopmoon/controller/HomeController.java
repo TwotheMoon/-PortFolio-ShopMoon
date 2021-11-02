@@ -1,7 +1,5 @@
 package org.shopmoon.controller;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.MemberVO;
 import org.shopmoon.domain.PageDTO;
+import org.shopmoon.mapper.AttachMapper;
 import org.shopmoon.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -34,6 +33,9 @@ public class HomeController {
 	
 	@Autowired
 	private ContactService contactservice;
+	
+	@Autowired
+	private AttachMapper attachmapper;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Criteria cri, Model model, HttpServletRequest request, MemberVO member) throws Exception {

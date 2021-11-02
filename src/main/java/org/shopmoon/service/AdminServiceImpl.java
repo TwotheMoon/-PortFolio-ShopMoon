@@ -8,6 +8,7 @@ import org.shopmoon.domain.ProductVO;
 import org.shopmoon.mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import lombok.extern.log4j.Log4j;
 
@@ -18,6 +19,7 @@ public class AdminServiceImpl implements AdminService{
 	@Autowired
 	AdminMapper adminmapper;
 	
+	@Transactional
 	@Override
 	public void productEnroll(ProductVO product) throws Exception{
 		

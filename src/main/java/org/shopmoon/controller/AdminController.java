@@ -21,6 +21,7 @@ import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.PageDTO;
 import org.shopmoon.domain.ProductVO;
+import org.shopmoon.mapper.AttachMapper;
 import org.shopmoon.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,6 +29,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,6 +47,8 @@ public class AdminController {
 
 	@Autowired
 	private AdminService adminservice;
+	@Autowired
+	private AttachMapper attachmapper;
 	
 	// 관리자 페이지 메인
 	@RequestMapping("/adminMain")
@@ -254,6 +258,16 @@ public class AdminController {
 		
 	}
 	
+	
+	// 이미지 정보 반환
+	@GetMapping(value = "/getAttachList", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<List<AttachImageVO>> getAttachList(Long productNo){
+		
+		log.info("/getAttachList... " + productNo);
+		
+		return new ResponseEntity<List<AttachImageVO>>(attachmapper.getAttachList(productNo), HttpStatus.OK);
+		
+	}
 	
 	
 }

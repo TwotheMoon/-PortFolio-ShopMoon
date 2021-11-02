@@ -15,7 +15,10 @@
 				
 		<div class="productDetail_Box">
 				<div class="productDetail_rigthBox">
-					<div class="productDetail_Img">상품 이미지</div>			
+					<div class="productDetail_img">
+						<div id="uploadResult">
+						</div>
+					</div>
 				</div>
 				
 				<div class="productDetail_leftBox">
@@ -73,6 +76,35 @@
 	</section>
 	
 		<!-- 글 등록 js -->
+<script type="text/javascript" async="true">
+let productNo = '<c:out value="${productInfo.productNo}"/>';
+let uploadResult = $("#uploadResult");
+
+$.getJSON("/admin/getAttachList", {productNo : productNo}, function(arr){
+	
+	if(arr.length === 0){
+		let str = "";
+		str += "<div id='result_card'>";
+		str += "<img src='${path}/resources/img/noImg.png'>";
+		str += "</div>";
+			
+		uploadResult.html(str);
+		return;
+	}
+	
+	let str = "";
+	let obj = arr[0];
+
+	let fileCallPath = encodeURIComponent(obj.uploadPath + "/s_" + obj.uuid + "_" + obj.fileName);
+	str += "<div id='result_card'";
+	str += "data-path='" + obj.uploadPath + "' data-uuid='" + obj.uuid + "' data-filename='" + obj.fileName + "'";
+	str += ">";
+	str += "<img src='/display?fileName=" + fileCallPath +"'>";
+	str += "</div>";	
+	
+	uploadResult.html(str);
+});
+</script>
 <script src="${path}/resources/js/productDetail.js"></script>
 	
 	<footer class="pproductDetailFooterBox" >
