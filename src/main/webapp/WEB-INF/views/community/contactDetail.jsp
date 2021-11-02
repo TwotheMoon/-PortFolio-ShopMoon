@@ -8,10 +8,6 @@
 </header>
 
 <body id="contactDetailBody">
-    <!-- css AOS 초기화 -->
-    <script>
-        AOS.init();
-    </script>
     
 	<!-- contactDetail.jsp 컨텐츠 -->
 	<section class="contactDetailBox opacityBox" >

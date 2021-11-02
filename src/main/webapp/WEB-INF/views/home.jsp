@@ -17,7 +17,11 @@
 	<!-- bsSlide 초기화 -->
 	<script> 
 	$(document).ready(function(){
-	    $('.slider').bxSlider();
+	    $('.slider').bxSlider({
+	    	auto: true,
+	    	speed: 2000,
+	    	controls: false
+	    });
 	  });
 	</script>
    
