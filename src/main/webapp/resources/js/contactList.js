@@ -28,7 +28,7 @@ $("#searchForm button").on("click", function(e){
 });
 
 
-// 글 작성 버튼 유효성
+// 글 작성 버튼 
 $(".contactBox_board_writeBtn").click(function(){
 	
 	$(location).attr("href", "/community/contactWriteView");

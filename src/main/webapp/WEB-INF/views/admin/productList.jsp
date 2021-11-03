@@ -30,9 +30,10 @@
 		
 		<div class="productListBox_boardBox">
 			<c:if test="${listCheck != 'empty' }">
-			<table class="productList_board" style=”table-layout:fixed”>
-				<tr class="productList_board_header" style="word-break:break-all">
+			<table class="productList_board">
+				<tr class="productList_board_header">
 					<th>상품 번호</th>
+					<th>상품 이미지</th>
 					<th>카테고리</th>
 					<th>상품 이름</th>
 					<th>상품 내용</th>
@@ -46,18 +47,23 @@
 				<c:forEach items="${list}" var="list">
 				<tr class="productList_board_contents">
 					<td>
-						<a class="productDetail" href='<c:out value="${list.productNo}"/>'>
+						<a class="productList" href='<c:out value="${list.productNo}"/>'>
 							<c:out value="${list.productNo}"></c:out>
 						</a>
 					</td>
+					<td>
+						<div class="image_wrap" data-id="${list.imageList[0].productNo}" data-path="${list.imageList[0].uploadPath}" data-uuid="${list.imageList[0].uuid}" data-filename="${list.imageList[0].fileName}">
+							<img>
+						</div>
+					</td>
 					<td><c:out value="[${list.productCategory}]"></c:out></td> 
 					<td>
-						<a class="productDetail" href='<c:out value="${list.productNo}"/>'>
+						<a class="productList" href='<c:out value="${list.productNo}"/>'>
 							<c:out value="${list.productName}"></c:out> 
 						</a>	
 					</td>
 					<td>
-						<a class="productDetail" href='<c:out value="${list.productNo}"/>'>
+						<a class="productList" href='<c:out value="${list.productNo}"/>'>
 							<c:out value="${list.productContents}"></c:out>
 						</a>
 					</td>
@@ -119,15 +125,43 @@
                 			<button class='btn productListSearchBtn'>검 색</button>
                 		</div>
                 	</form>
+						<button class="productListBox_board_writeBtn">상품 등록</button>
                 </div>  
-			<button class="productListBox_board_writeBtn">글 작성</button>
 		</div>
 
 	</section>
+	
+	<footer class="productListFooterBox" >
+		<jsp:include page="${path }../includes/footer.jsp" />
+	</footer>
+	
+<script type="text/javascript">
+//이미지 리스트 출력
+$(".image_wrap").each(function(i, obj){
+		
+		const bobj = $(obj);
+			
+		if(bobj.data("path")){
+	
+			const uploadPath = bobj.data("path");
+			const uuid = bobj.data("uuid");
+			const fileName = bobj.data("filename");
+			
+			const fileCallPath = encodeURIComponent(uploadPath + "/s_" + uuid + "_" + fileName);
+			
+			$(this).find("img").attr('src', '/display?fileName=' + fileCallPath);
+	
+
+		} else {
+			
+			$(this).find("img").attr('src', '${path}/resources/img/noImgSmall.png');
+			
+		}
+			
+		
+	});
+</script>
 	<!-- 글 목록, 페이징 js -->
 <script src="${path}/resources/js/productList.js"></script>
 
-	<footer class="wayToComeFooterBox" >
-		<jsp:include page="${path }../includes/footer.jsp" />
-	</footer>
 </body>

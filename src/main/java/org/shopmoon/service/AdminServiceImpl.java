@@ -3,9 +3,11 @@ package org.shopmoon.service;
 
 import java.util.List;
 
+import org.shopmoon.domain.AttachImageVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
 import org.shopmoon.mapper.AdminMapper;
+import org.shopmoon.mapper.AttachMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +20,9 @@ public class AdminServiceImpl implements AdminService{
 
 	@Autowired
 	AdminMapper adminmapper;
+	
+	@Autowired
+	AttachMapper attachmapper;
 	
 	@Transactional
 	@Override
@@ -42,7 +47,20 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public List<ProductVO> productGetList(Criteria cri) throws Exception {
 		
-		return adminmapper.productGetList(cri);
+		
+		List<ProductVO> list = adminmapper.productGetList(cri);
+		
+		list.forEach(product -> {
+			
+			Long productNo = product.getProductNo();
+			
+			List<AttachImageVO> imageList = attachmapper.getAttachList(productNo);
+			
+			product.setImageList(imageList);
+			
+		});
+		
+		return list;
 	}
 	
 	@Override

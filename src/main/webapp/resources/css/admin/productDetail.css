@@ -35,11 +35,14 @@
 	.productDetail_Img{
 		width: 500px;
 		height: 500px;
-		border: 1px solid red;
 		margin-left: 20px;
 		margin-top: 20px;
-		display: inline-block;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
+
 	
 		.productDetail_regDateBox,
 		.productDetail_upDateBox{

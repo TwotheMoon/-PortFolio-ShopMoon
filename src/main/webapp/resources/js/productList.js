@@ -28,15 +28,15 @@ $("#productListSearchForm button").on("click", function(e){
 });
 
 
-// 글 작성 버튼 유효성
-$(".pageMakerBtn_btn a").click(function(){
+// 글 작성 버튼 
+$(".productListBox_board_writeBtn").click(function(){
 	
-	$(location).attr("href", "/admin/productList");
+	$(location).attr("href", "/admin/productEnrollView");
 });
 
 
 // 상세 페이지 이동
-$(".productDetail").on("click", function(e){
+$(".productList").on("click", function(e){
 	
 	e.preventDefault();
 	
@@ -46,12 +46,14 @@ $(".productDetail").on("click", function(e){
 	
 });
 
-/* 삭제 결과 경고창 */
+// 삭제 결과 경고창 
 	let delete_result = '${delete_result}';
 	
 	if(delete_result == 1){
 		alert("삭제 완료");
 	}
+	
+	
 
 
 

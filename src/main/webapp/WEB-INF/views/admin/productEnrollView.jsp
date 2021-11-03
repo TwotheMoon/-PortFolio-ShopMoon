@@ -78,9 +78,10 @@
 			
 			<label class="productEnrollRegDate_label productEnrollLabel"> 상품 등록일 </label>
 			<input name="productRegDate" class="productEnrollRegDate" autocomplete="off" readonly="readonly"> <br>
-			
-			<button class="productEnrollBtn" type="submit">상품 등록</button>
-			<button class="productEnroll_cansleBtn" type="button">취소</button> <br>
+			<div class="productdEnrollBtn_Box">
+				<button class="productEnrollBtn" type="submit">상품 등록</button>
+				<button class="productEnroll_cansleBtn" type="button">취소</button> <br>
+			</div>
 		</form>
 		
 	</section>
