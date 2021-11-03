@@ -50,11 +50,11 @@
 		
 		<!-- 게시판 영역 -->
 		<section class="homeBoardBox">
-			<h1> 게시판 영역 </h1>
+			<h1> 문의 게시판 </h1>
 			<div class="contactBox_boardBox">
 			<c:if test="${listCheck != 'empty' }">
-			<table class="contactBox_board" style=”table-layout:fixed”>
-				<tr class="contactBox_board_header" style="word-break:break-all">
+			<table class="contactBox_board">
+				<tr class="contactBox_board_header">
 					<th>문의 번호</th>
 					<th>문의 날짜</th>
 					<th>카테고리</th>

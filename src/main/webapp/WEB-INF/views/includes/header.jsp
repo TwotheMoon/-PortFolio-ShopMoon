@@ -22,7 +22,6 @@
 <link rel="icon" href="img/favicon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <!-- js -->
-<script src="${path}/resources/js/common.js" async></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>﻿
@@ -107,6 +106,6 @@
           		</div>
         </div>
     </aside>
-
+<script src="${path}/resources/js/common.js"></script>
 </body>
 

@@ -40,7 +40,10 @@
 	}
 	
 
-.adminMainFooterBox{
-	margin-top: 150px;
+.adminMainBox_contants{
+	margin-top: 100px;
+	width: 500px;
+	height: 500px;	
+	border: 1px solid red;
 }
-	
+

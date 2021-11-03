@@ -53,6 +53,11 @@
 	height: 700px;
 	margin-top: 200px;
 }
+	.homeBoardBox h1{
+		font-weight: bold;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 20px;
+	}
 	.homeBoardBox_boardBox{
 			height: 100%;
 			display: flex;

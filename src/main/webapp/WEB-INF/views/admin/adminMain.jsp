@@ -21,15 +21,14 @@
 			<a href="/admin/adminMain">관리자 페이지</a> |
 			<a href="/admin/productEnrollView">상품 등록</a> |
 			<a href="/admin/productList">상품 관리</a> |
-			<a href="#">회원 관리</a> |
+			<a href="/#">회원 관리</a> |
 		</div>
 		
-		<h1> 관리자 페이지 </h1>
+		<div class="adminMainBox_contants">
+					
+		</div>
 	</section>
-	
-	<footer class="adminMainFooterBox" >
-		<jsp:include page="${path}../includes/footer.jsp" />
-	</footer>
+
 
  <!-- 관리자 페이지 js -->
 <script src="${path}/resources/js/adminMain.js"></script>

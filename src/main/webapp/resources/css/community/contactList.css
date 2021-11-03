@@ -67,6 +67,8 @@
 		width: 1200px;
 		height: 600px;
 		border: 5px solid rgba(220, 220, 255, 1);
+		border-collapse: collapse;
+	    table-layout: fixed;
 	}
 	.contactBox_board_header{
 		height: 40px;
@@ -82,8 +84,10 @@
 		border-top: 1px solid rgba(220, 220, 255, 1);
 		border-bottom: 1px solid rgba(220, 220, 255, 1);
 		text-align: center;
-		padding-top: 20px;
-		height: 40px;
+		overflow: hidden;
+  		text-overflow: ellipsis;
+  		white-space: nowrap;
+  		vertical-align : middle;
 	}
 	.contactDetail{
 		font-weight: bold;
