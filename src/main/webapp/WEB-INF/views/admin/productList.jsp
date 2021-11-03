@@ -52,7 +52,7 @@
 						</a>
 					</td>
 					<td>
-						<div class="image_wrap" data-id="${list.imageList[0].productNo}" data-path="${list.imageList[0].uploadPath}" data-uuid="${list.imageList[0].uuid}" data-filename="${list.imageList[0].fileName}">
+						<div class="productList_image_wrap" data-id="${list.imageList[0].productNo}" data-path="${list.imageList[0].uploadPath}" data-uuid="${list.imageList[0].uuid}" data-filename="${list.imageList[0].fileName}">
 							<img>
 						</div>
 					</td>
@@ -82,6 +82,8 @@
 					검색 결과가 없어요.
 				</div>
 			</c:if>
+			
+			
 			<!-- 페이지 이동 인터페이스 -->
 			<div class="productList_pageMaker_box">
 				<ul class="productList_pageMaker">
@@ -137,7 +139,7 @@
 	
 <script type="text/javascript">
 //이미지 리스트 출력
-$(".image_wrap").each(function(i, obj){
+$(".productList_image_wrap").each(function(i, obj){
 		
 		const bobj = $(obj);
 			
@@ -146,19 +148,17 @@ $(".image_wrap").each(function(i, obj){
 			const uploadPath = bobj.data("path");
 			const uuid = bobj.data("uuid");
 			const fileName = bobj.data("filename");
-			
 			const fileCallPath = encodeURIComponent(uploadPath + "/s_" + uuid + "_" + fileName);
+			
+			console.log("이미지 경로 : " + uploadPath);
 			
 			$(this).find("img").attr('src', '/display?fileName=' + fileCallPath);
 	
-
 		} else {
 			
 			$(this).find("img").attr('src', '${path}/resources/img/noImgSmall.png');
 			
 		}
-			
-		
 	});
 </script>
 	<!-- 글 목록, 페이징 js -->

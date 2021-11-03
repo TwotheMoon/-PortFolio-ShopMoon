@@ -108,7 +108,7 @@ public class AdminController {
 		
 		// 페이지 정보
 		model.addAttribute("cri", cri);
-		//
+		
 		model.addAttribute("productInfo", adminservice.productGetDetail(productNo));
 		
 	}
@@ -260,7 +260,7 @@ public class AdminController {
 	
 	
 	// 이미지 정보 반환
-	@GetMapping(value = "/getAttachList", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@GetMapping(value = "/getAttachListMain", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<List<AttachImageVO>> getAttachList(Long productNo){
 		
 		log.info("/getAttachList... " + productNo);

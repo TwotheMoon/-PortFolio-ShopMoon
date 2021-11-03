@@ -37,14 +37,26 @@
 		
 		<!-- 상품 영역 -->
 		<section class="homeContentsBox">
-			<h1> 상품 영역 </h1>
+			<h1> BEST </h1>
 			<div class="homeContentsBox_poductBox">
-				<div>상품 img1</div>
-				<div>상품 img2</div>
-				<div>상품 img3</div>
-				<div>상품 img4</div>
-				<div>상품 img5</div>
-				<div>상품 img6</div>
+				<div>
+					<img alt="guitar_화이트팔콘" src="${path}/resources/img/home/homeImg01.jpg">
+				</div>
+				<div>
+					<img alt="guitar_팬더스트렛" src="${path}/resources/img/home/homeImg02.jpg">
+				</div>
+				<div>
+					<img alt="base_코로나베이스" src="${path}/resources/img/home/homeImg03.jpg">
+				</div>
+				<div>
+					<img alt="midi_스칼렛2i2" src="${path}/resources/img/home/homeImg04.jpg">
+				</div>
+				<div>
+					<img alt="album_베큐엄" src="${path}/resources/img/home/homeImg05.jpg">
+				</div>
+				<div>
+					<img alt="album_인큐" src="${path}/resources/img/home/homeImg06.jpg">
+				</div>
 			</div>
 		</section>
 		

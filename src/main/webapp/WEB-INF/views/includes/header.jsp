@@ -82,7 +82,7 @@
           	<div class="menuBox_shop dropBtn">
           		<h3>SHOP</h3>
          		<ul class="shoplist dropList">
-          			<li ><a href="#">GUITAR</a></li>
+          			<li ><a href="/shop/guitarList">GUITAR</a></li>
           			<li ><a href="#">BASS</a></li>
           			<li ><a href="#">MIDI</a></li>
           			<li ><a href="#">ALBUM</a></li>

@@ -29,7 +29,6 @@
 .homeContentsBox{
 	width: 1400px;
 	height: 100%;
-	border: 1px solid red;
 	margin-top: 100px;
 }
 	.homeContentsBox_poductBox{
@@ -40,11 +39,22 @@
 		align-content: center;
 		justify-content: space-around;
 	}
+		.homeContentsBox h1{
+			font-weight: bold;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 20px;
+			margin-bottom: 20px;
+	}
 		.homeContentsBox_poductBox div{
-			border: 1px solid black;
+			border: 3px solid rgba(220, 220, 255, 1);
 			width: 400px;
 			height: 400px;
 			
+		}
+		.homeContentsBox_poductBox div:nth-child(4),
+		.homeContentsBox_poductBox div:nth-child(5),
+		.homeContentsBox_poductBox div:nth-child(6){
+			margin-top: 50px;
 		}
 
 /* 게시판 영역 */

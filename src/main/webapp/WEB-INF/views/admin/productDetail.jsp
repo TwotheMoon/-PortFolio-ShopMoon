@@ -75,14 +75,13 @@
 		
 	</section>
 	
-		<!-- 글 등록 js -->
-		
+		<!-- 상품 상세 js -->
 <script type="text/javascript" >
 /* 이미지 정보 호출 */
 let productNo = '<c:out value="${productInfo.productNo}"/>';
 let uploadResult = $("#uploadResult");			
 
-$.getJSON("/admin/getAttachList", {productNo : productNo}, function(arr){	
+$.getJSON("/admin/getAttachListMain", {productNo : productNo}, function(arr){	
 	
 	if(arr.length === 0){
 		
@@ -107,7 +106,6 @@ $.getJSON("/admin/getAttachList", {productNo : productNo}, function(arr){
 	str += "</div>";		
 	
 	uploadResult.html(str);						
-	
 });	
 </script>
 <script src="${path}/resources/js/productDetail.js"></script>

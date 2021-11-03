@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.shopmoon.mapper.AdminMapper">
+<mapper namespace="org.shopmoon.mapper.ShopMapper">
 	
 	<insert id="productEnroll">
 	
@@ -26,8 +26,8 @@
 		)
 	</insert>
 	
-	<!-- 모든 상품 리스트 조회 -->
-	<select id="productGetList" resultType="org.shopmoon.domain.ProductVO">
+	<!-- 기타 리스트 조회 -->
+	<select id="guitarGetList" resultType="org.shopmoon.domain.ProductVO">
 		<![CDATA[
 			select *
 			 from ( select /*+ INDEX_DESC(p SYS_C0011286) */ 
@@ -43,7 +43,7 @@
 					, P_REG_DATE as productRegDate
 					, P_UPDATE_DATE as productUpdateDate
 			 from product p
-			where 
+			where P_CATEGORY = '기타' and
 	    ]]>
 		 	<if test="keyword != null">
 				P_NAME like '%' || #{keyword} || '%' and
@@ -57,18 +57,19 @@
 	   ]]>
 	</select>
 	
-  <!-- 믄의 글 총 수 -->
-    <select id="productGetTotal" resultType="int">
+  <!-- 기타 총 수 -->
+    <select id="guitarGetTotal" resultType="int">
     
         select count(*) from product
         
+        
         <if test="keyword != null">
-           where P_NAME like '%' || #{keyword} || '%'
+           where P_NAME like '%' || #{keyword} || '%' and P_CATEGORY = '기타'
         </if>
     </select>
     
           <!-- 상품 조회 상세  -->
-      <select id="productGetDetail" resultType="org.shopmoon.domain.ProductVO">
+      <select id="guitarGetDetail" resultType="org.shopmoon.domain.ProductVO">
       	
       	select 	 	
       		 P_NO as productNo
@@ -84,33 +85,5 @@
 				from product where P_NO = #{productNo}
      	
       </select>
-      
-       <update id="productModify">
-      	
-      	update product set
-      		 P_NAME = #{productName}
-			, P_CATEGORY = #{productCategory}
-			, P_PRICE = #{productPrice}
-			, P_STOCK = #{productStock}
-			, P_CONTENTS = #{productContents}
-			, P_ACTIVE = #{productActive}
-			, P_BEST = #{productBest}
-			, P_UPDATE_DATE = sysdate
-			where P_NO = #{productNo}
-			
-      </update>
-      
-      <!-- 상품 삭제 -->
-		<delete id="productDelete">
-		
-			delete from product where P_NO = #{productNo}
-		
-		</delete>
-		
-	<!-- 이미지 등록 -->
-		<insert id="imageEnroll">
-			
-			insert into image values (#{productNo}, #{fileName}, #{uploadPath}, #{uuid}) 
-			
-		</insert>
+
 </mapper>

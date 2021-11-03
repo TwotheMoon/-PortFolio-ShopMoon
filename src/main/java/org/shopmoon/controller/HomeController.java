@@ -8,14 +8,17 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.shopmoon.domain.AttachImageVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.MemberVO;
 import org.shopmoon.domain.PageDTO;
 import org.shopmoon.mapper.AttachMapper;
+import org.shopmoon.service.AdminService;
 import org.shopmoon.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,6 +36,8 @@ public class HomeController {
 	
 	@Autowired
 	private ContactService contactservice;
+	@Autowired
+	private AdminService adminservice;
 	
 	@Autowired
 	private AttachMapper attachmapper;
@@ -112,6 +117,5 @@ public class HomeController {
 		return result;
 		
 	}
-	
 
 }

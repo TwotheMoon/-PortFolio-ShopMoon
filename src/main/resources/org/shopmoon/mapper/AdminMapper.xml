@@ -62,7 +62,6 @@
     
         select count(*) from product
         
-        
         <if test="keyword != null">
            where P_NAME like '%' || #{keyword} || '%'
         </if>
