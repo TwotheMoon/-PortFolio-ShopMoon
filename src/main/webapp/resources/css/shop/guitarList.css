@@ -10,12 +10,14 @@
 	flex-direction: column;
 	align-items: center;
 	font-family: 'Open Sans', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 	.guitarListBox_title{
 		margin-top: 100px;
 		font-weight: bold;
 		font-size: 25px;
 	}
+	
 
 .guitarListBox_nav{
 	margin-top: 50px;
@@ -40,18 +42,38 @@
 
 .guitarListBox_section{
 	margin-top: 20px;
-	width: 100%;
+	width: 1400px;
 	margin-bottom: 100px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
 	}
-	.guitarListBox_imgBox a{
+	.guitarListBox_contents a{
 		color: rgba(0, 0, 0, 1);
 	}
-	.guitarListBox_imgBox a:hover{
+	.guitarListBox_contents a:hover{
 		color: rgba(0, 0, 0, 0.5);
 	}
+	.guitarListBox_imgBox_img{
+		width: 300px;
+		height: 300px;
+		margin: 30px 15px 20px 15px;
+	}
+	
+	.guitarListName{
+		margin: 0 auto;
+		width: 300px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	.guitarListPrice{
+		margin-top: 20px;
+	}
+	
 	
 	
 	.guitarList_pageMaker_box{

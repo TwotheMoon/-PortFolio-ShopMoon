@@ -40,6 +40,9 @@ public class ShopController {
 	@Autowired
 	private ShopService shopservice;
 	
+	@Autowired
+	private AttachMapper attachmapper;
+	
 	
 	// 기타 리스트 페이지 이동 및 조회
 	@RequestMapping(value = "guitarList", method = RequestMethod.GET)
@@ -64,10 +67,23 @@ public class ShopController {
 	@RequestMapping("/guitarDetail")
 	public void guitarGetDetail(long productNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
 		
+		log.info("기타 상세 페이지");
+		
 		// 페이지 정보
 		model.addAttribute("cri", cri);
 		
 		model.addAttribute("guitarInfo", shopservice.guitarGetDetail(productNo));
 		
 	}
+	
+	// 이미지 정보 반환
+	@GetMapping(value = "/getAttachListMain", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<List<AttachImageVO>> getAttachList(Long productNo){
+		
+		log.info("/getAttachList... " + productNo);
+		
+		return new ResponseEntity<List<AttachImageVO>>(attachmapper.getAttachList(productNo), HttpStatus.OK);
+		
+	}
+	
 }

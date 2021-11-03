@@ -30,20 +30,31 @@
 		</div>
 		
 		<div class="guitarListBox_section">
-			<div class="guitarListBox_imgBox">
 			<c:if test="${listCheck != 'empty' }">
 				<c:forEach items="${list}" var="list">
-				
-					<div class="guitarList_image_wrap" data-id="${list.imageList[0].productNo}" data-path="${list.imageList[0].uploadPath}" data-uuid="${list.imageList[0].uuid}" data-filename="${list.imageList[0].fileName}">
-						<img>
-					</div>		
-				
-					<a class="guitarList" href='<c:out value="${list.productNo}"/>'>
-						<c:out value="${list.productName}"></c:out> 
-					</a>	
-				</c:forEach>
+					<div class="guitarListBox_contents">
+					
+						<div class="guitarList_image_wrap" data-id="${list.imageList[0].productNo}" data-path="${list.imageList[0].uploadPath}" data-uuid="${list.imageList[0].uuid}" data-filename="${list.imageList[0].fileName}">
+							<a class="guitarList" href='<c:out value="${list.productNo}"/>'>
+								<img class="guitarListBox_imgBox_img">
+							</a>
+						</div> <br>
+						
+						<div class="guitarListName">
+							<a class="guitarList" href='<c:out value="${list.productNo}"/>'>
+								<c:out value="${list.productName}"></c:out> 
+							</a>
+						</div>
+						<div class="guitarListPrice">
+							<c:out value="${list.productPrice}원"></c:out>						
+						</div>
+						
+						
+					</div>
+				</c:forEach> <br>
 			</c:if>
-			</div>
+		</div>
+			 
 			<c:if test="${listCheck == 'empty' }">
 				<div class="productListBoard_empty">
 					검색 결과가 없어요.
@@ -95,7 +106,7 @@
                 		</div>
                 	</form>
                 </div>  
-		</div>
+	
 		
 	</section>
 

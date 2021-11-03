@@ -29,6 +29,7 @@
 
 /* /admin */
 @import "shop/guitarList.css";
+@import "shop/guitarDetail.css";
 
 /* Component Style */
 @import "home.css";

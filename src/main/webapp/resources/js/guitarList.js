@@ -34,7 +34,7 @@ $(".guitarList").on("click", function(e){
 	e.preventDefault();
 	
 	moveForm.append("<input type='hidden' name='productNo' value='"+ $(this).attr("href") + "'>");
-	moveForm.attr("action", "/admin/productDetail");
+	moveForm.attr("action", "/shop/guitarDetail");
 	moveForm.submit();
 	
 });

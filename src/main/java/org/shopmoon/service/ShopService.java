@@ -2,10 +2,8 @@ package org.shopmoon.service;
 
 import java.util.List;
 
-import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
-import org.springframework.web.bind.annotation.PathVariable;
 
 public interface ShopService {
 
