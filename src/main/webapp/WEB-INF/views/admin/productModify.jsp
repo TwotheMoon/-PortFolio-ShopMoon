@@ -17,7 +17,10 @@
 		<div class="productModify_Box">
 				
 				<div class="productModify_rigthBox">
-					<div class="productModify_Img">상품 이미지</div>			
+					<div class="productModify_Img">
+						<div id="uploadResult">
+						</div>
+					</div>			
 				</div>
 				
 				<div class="productModify_leftBox">
@@ -67,9 +70,18 @@
 						</select>
 				</div>
 				
+				<div class="productModify_form_section">
+	                <div class="productModify_form_section_content">
+						<input type="file" id ="fileItem" name='uploadFile' style="height: 30px;">
+						<div id="uploadResult">
+															
+						</div>									
+                	</div>
+                </div>
+				
 				<div class="productModify_botBox">
 					<label class="productModify_pContents_Label">상품 설명</label> <br>
-					<textarea class="productModify_pContents" name="productContents" cols="150" rows="10">${productInfo.productContents}</textarea> <br>
+					<textarea class="productModify_pContents" name="productContents">${productInfo.productContents}</textarea> <br>
 					
 					<input type="hidden" name="productNo" value="${productInfo.productNo}">
 					
@@ -91,6 +103,45 @@
 		
 	</section>
 	
+<script type="text/javascript">
+/* 기존 이미지 출력 */
+let productNo = '<c:out value="${productInfo.productNo}"/>';
+let uploadResult = $("#uploadResult");
+
+$.getJSON("/admin/getAttachListMain", {productNo : productNo}, function(arr){
+	
+	console.log(arr);
+	
+	if(arr.length === 0){
+		
+		
+		let str = "";
+		str += "<div id='result_card'>";
+		str += "<img src='${path}/resources/img/noImg.png'>";
+		str += "</div>";
+		
+		uploadResult.html(str);				
+		return;
+	}
+	
+	let str = "";
+	let obj = arr[0];
+	
+	let fileCallPath = encodeURIComponent(obj.uploadPath + "/" + obj.uuid + "_" + obj.fileName);
+	str += "<div id='result_card'";
+	str += "data-path='" + obj.uploadPath + "' data-uuid='" + obj.uuid + "' data-filename='" + obj.fileName + "'";
+	str += ">";
+	str += "<img src='/display?fileName=" + fileCallPath +"'>";
+	str += "<div class='imgDeleteBtn' data-file='" + fileCallPath + "'>x</div>";
+	str += "<input type='hidden' name='imageList[0].fileName' value='"+ obj.fileName +"'>";
+	str += "<input type='hidden' name='imageList[0].uuid' value='"+ obj.uuid +"'>";
+	str += "<input type='hidden' name='imageList[0].uploadPath' value='"+ obj.uploadPath +"'>";				
+	str += "</div>";
+	
+	uploadResult.html(str);			
+	
+});// GetJSON
+</script>
 		<!-- 글 등록 js -->
 <script src="${path}/resources/js/productModify.js"></script>
 	

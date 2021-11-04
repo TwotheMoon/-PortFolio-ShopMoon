@@ -75,15 +75,40 @@ public class AdminServiceImpl implements AdminService{
 		return adminmapper.productGetDetail(productNo);
 	}
 	
+	@Transactional
 	@Override
 	public int productModify(ProductVO product) throws Exception {
 		
-		return adminmapper.productModify(product);
+		int result = adminmapper.productModify(product);
+		
+		if(result == 1 && product.getImageList() != null && product.getImageList().size() > 0) {
+			
+			adminmapper.deleteImgAll(product.getProductNo());
+			
+			product.getImageList().forEach(attach -> {
+				
+				attach.setProductNo(product.getProductNo());
+				adminmapper.imageEnroll(attach);
+			});
+			
+		}
+		
+		return result;
 	}
 	
 	@Override
+	@Transactional
 	public int productDelete(Long productNo) throws Exception {
 		log.info("상품 정보 삭제");
+		
+		adminmapper.deleteImgAll(productNo);
+		
 		return adminmapper.productDelete(productNo);
+	}
+	
+	@Override
+	public List<AttachImageVO> getAttachInfo(Long productNo) {
+
+		return adminmapper.getAttachInfo(productNo);
 	}
 }

@@ -100,17 +100,40 @@
 			
       </update>
       
-      <!-- 상품 삭제 -->
-		<delete id="productDelete">
-		
-			delete from product where P_NO = #{productNo}
-		
-		</delete>
+     <!-- 상품 삭제 -->
+	<delete id="productDelete">
+	
+		delete from product where P_NO = #{productNo}
+	
+	</delete>
 		
 	<!-- 이미지 등록 -->
-		<insert id="imageEnroll">
-			
-			insert into image values (#{productNo}, #{fileName}, #{uploadPath}, #{uuid}) 
-			
-		</insert>
+	<insert id="imageEnroll">
+		
+		insert into image values (#{productNo}, #{fileName}, #{uploadPath}, #{uuid}) 
+		
+	</insert>
+		
+	<!-- 상품 수정시 이미지 전체 삭제 -->
+	<delete id="deleteImgAll">
+		
+		delete from image where P_NO = #{productNo}
+		
+	</delete>
+	
+	<!-- 배치) 어제 날짜 이미지 리스트 -->
+	<select id="checkFileList" resultType="org.shopmoon.domain.AttachImageVO">
+	
+		select P_NO as productNo, I_FILENAME as fileName, I_UPLOADPATH as uploadPath, I_UUID as uuid from image where I_UPLOADPATH = to_char(sysdate -1, 'yyyy\mm\dd')	
+	
+	</select>
+	
+	<!-- 지정 상품 이미지 정보 가져오기 -->
+	<select id="getAttachInfo" resultType="org.shopmoon.domain.AttachImageVO">
+	
+		select P_NO as productNo, I_FILENAME as fileName, I_UPLOADPATH as uploadPath, I_UUID as uuid from image where P_NO = #{productNo}	
+	
+	</select>
+
+
 </mapper>

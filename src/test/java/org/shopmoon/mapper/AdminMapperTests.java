@@ -97,7 +97,31 @@ public class AdminMapperTests {
 		adminmapper.imageEnroll(vo);
 		
 	}
+	
+	/* 상품 수정시 이미지 전체 삭제 */
+	@Test
+	public void deleteImgAllTest() {
 		
-
+		Long productNo = 36L;
+		
+		adminmapper.deleteImgAll(productNo);
+	}
+	
+	/* 어제 날짜 이미지 파일 가져오기 */
+	@Test
+	public void checkImgListTest() {
+		adminmapper.checkFileList();
+	}
+	
+    /* 지정 상품 이미지 가져오기 */
+	@Test
+	public void getAttachInfoTest() {
+		
+		Long productNo = 50L;
+		
+		List<AttachImageVO> list = adminmapper.getAttachInfo(productNo);
+		
+		log.info("list: " + list);
+	}
 	
 }

@@ -22,37 +22,21 @@
 				</div>
 				
 				<div class="guitarDetail_leftBox">
-					
-					<div class="guitarDetail_regDateBox">
-						<label class="guitarDetail_regDateLabel">입고 날짜</label>
-						<fmt:formatDate value="${guitarInfo.productRegDate }" pattern="yyyy-MM-dd"></fmt:formatDate>					
-					</div>
-					
-					<div class="guitarDetail_upDateBox">
-						<label class="guitarDetail_upDateLabel">수정 날짜</label>
-						<fmt:formatDate value="${guitarInfo.productUpdateDate }" pattern="yyyy-MM-dd"></fmt:formatDate>	
-					</div> <br>
-					
-						<label class="guitarDetail_pNoLabel">상품 번호</label>
-						<input class="guitarDetail_pNo" value="${guitarInfo.productNo }" readonly> 
-						
-						<label class="guitarDetail_pCategory_label">카테고리</label>
-						<input class="guitarDetail_pCategory" value="${guitarInfo.productCategory }" readonly> <br>
 				
-						<label class="guitarDetail_pName_Label">상품 이름</label>
-						<input class="guitarDetail_pName" value="${guitarInfo.productName }" readonly> <br>
-	
-						<label class="guitarDetail_pPrice_label">가격</label>
-						<input class="guitarDetail_pPrice" value="${guitarInfo.productPrice }" readonly> <br>
-	
-						<label class="guitarDetail_pStock_label">재고</label>
-						<input class="guitarDetail_pStock" value="${guitarInfo.productStock }" readonly> <br>
-						
-						<label class="guitarDetail_pActive_label">판매 상태</label>
-						<input class="guitarDetail_pActive" value="${guitarInfo.productActive }" readonly> <br>
-						
-						<label class="guitarDetail_pBest_label">베스트 여부</label>
-						<input class="guitarDetail_pBest" value="${guitarInfo.productBest }" readonly> <br>
+					<label class="guitarDetail_pNoLabel">상품 번호</label>
+					<input class="guitarDetail_pNo" value="${guitarInfo.productNo }" readonly> 
+					
+					<label class="guitarDetail_pCategory_label">카테고리</label>
+					<input class="guitarDetail_pCategory" value="${guitarInfo.productCategory }" readonly> <br>
+			
+					<label class="guitarDetail_pName_Label">상품 이름</label>
+					<input class="guitarDetail_pName" value="${guitarInfo.productName }" readonly> <br>
+
+					<label class="guitarDetail_pPrice_label">가격</label>
+					<input class="guitarDetail_pPrice" value="${guitarInfo.productPrice }원" readonly> <br>
+
+					<label class="guitarDetail_pCount_label">주문수량</label>
+					<input class="guitarDetail_pCount" type="number">
 				</div>
 				
 				<div class="guitarDetail_botBox">

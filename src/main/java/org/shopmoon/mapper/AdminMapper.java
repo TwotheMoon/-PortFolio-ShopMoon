@@ -30,4 +30,13 @@ public interface AdminMapper {
 	
 	// 이미지 등록
 	public void imageEnroll(AttachImageVO vo);
+	
+	// 상품 수정시 이미지 전체 삭제
+	public void deleteImgAll(Long productNo);
+	
+	// 배치) 어제 날짜 이미지 리스트
+	public List<AttachImageVO> checkFileList();
+	
+	// 지정 상품 이미지 정보 가져오기
+	public List<AttachImageVO> getAttachInfo(Long productNo);
 }

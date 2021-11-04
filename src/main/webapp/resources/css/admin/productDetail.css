@@ -140,6 +140,9 @@
 		}
 		.productDetail_pContents{
 			margin-left: 25px;
+			width: 950px; 
+			height: 170px; 
+		    resize: none;
 		}
 
 

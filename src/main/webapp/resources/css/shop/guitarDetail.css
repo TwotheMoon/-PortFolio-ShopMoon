@@ -44,19 +44,6 @@
 	}
 
 	
-		.guitarDetail_regDateBox,
-		.guitarDetail_upDateBox{
-			margin-top: 50px;
-			display: inline-block;
-		}
-	
-		
-		.guitarDetail_upDateBox{
-			display: inline-block;
-			margin-left: 20px;
-			
-		}	
-	
 		.guitarDetail_pNo{
 			margin-top: 20px;
 			margin-left: 10px;
@@ -98,35 +85,13 @@
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		.guitarDetail_pStock_label{
+		.guitarDetail_pCount_label{
 			margin-top: 20px;
 		}
-		.guitarDetail_pStock{
+		.guitarDetail_pCount{
 			margin-top: 20px;
 			margin-left: 10px;
-			width: 100px;		
-			height: 30px;
-			border: none;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-		}
-		.guitarDetail_pActive_label{
-			margin-top: 20px;
-		}
-		.guitarDetail_pActive{
-			margin-top: 20px;
-			margin-left: 10px;
-			width: 100px;		
-			height: 30px;
-			border: none;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-		}
-		.guitarDetail_pBest_label{
-			margin-top: 20px;
-		}
-		.guitarDetail_pBest{
-			margin-top: 20px;
-			margin-left: 10px;
-			width: 100px;		
+			width: 50px;		
 			height: 30px;
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -140,6 +105,9 @@
 		}
 		.guitarDetail_pContents{
 			margin-left: 25px;
+			width: 950px; 
+			height: 170px; 
+		    resize: none;
 		}
 
 

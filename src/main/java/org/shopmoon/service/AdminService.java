@@ -2,6 +2,7 @@ package org.shopmoon.service;
 
 import java.util.List;
 
+import org.shopmoon.domain.AttachImageVO;
 import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
@@ -26,5 +27,8 @@ public interface AdminService {
 
 	// 상품 삭제
 	public int productDelete(Long productNo) throws Exception;
+	
+	// 지정 상품 정보 가져오기
+	public List<AttachImageVO> getAttachInfo(Long productNo);
 	
 }

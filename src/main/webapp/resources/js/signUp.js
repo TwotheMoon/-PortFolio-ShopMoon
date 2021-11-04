@@ -97,19 +97,6 @@ function confirmPhoneNum(memberPhone){
 	}		
 }
 
-// 이메일 입력방식 선택
-$(function(){
-
-	$(".selBoxDirect").hide();
-	$(".signUpEmail2").change(function() {
-                //직접입력을 누를 때 나타남
-		if($(".signUpEmail2").val() == "direct") {
-			$(".selBoxDirect").show();
-		}  else {
-			$(".selBoxDirect").hide();
-		}
-	}) 
-});
 
 // id 중복검사
 $(".signUpId").on("propertychange change keyup paste input", function(){
