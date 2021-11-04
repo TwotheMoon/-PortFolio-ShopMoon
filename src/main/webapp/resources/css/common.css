@@ -32,6 +32,10 @@
 @import "shop/guitarDetail.css";
 @import "shop/baseList.css";
 @import "shop/baseDetail.css";
+@import "shop/midiList.css";
+@import "shop/midiDetail.css";
+@import "shop/albumList.css";
+@import "shop/albumDetail.css";
 
 /* Component Style */
 @import "home.css";

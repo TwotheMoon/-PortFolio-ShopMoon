@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+
+.midiDetailBox{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.midiDetail_Box{
+	margin-top: 100px;
+	width: 1000px;
+	height: 100%;
+	border: 5px solid rgba(220, 220, 255, 1);
+	margin-bottom: 100px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: bold;
+	}
+	.midiDetail_rigthBox{
+		display: inline-block;
+	}
+	.midiDetail_leftBox{
+		float: right;
+		width: 400px;
+		margin-right: 20px;
+		margin-top: 20px;
+	}
+	.midiDetail_Img{
+		width: 500px;
+		height: 500px;
+		margin-left: 20px;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	
+		.midiDetail_pNo{
+			margin-top: 20px;
+			margin-left: 10px;
+			width: 40px;
+			height: 30px;
+			border: none;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		}
+		
+		.midiDetail_pCategory_label{
+			margin-left: 20px;
+		}
+		.midiDetail_pCategory{
+			margin-left: 10px;
+			width: 55px;		
+			height: 30px;
+			border: none;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		}
+		.midiDetail_pName_Label{
+			margin-top: 20px;
+		}
+		.midiDetail_pName{
+			margin-top: 20px;
+			margin-left: 10px;
+			width: 210px;		
+			height: 30px;
+			border: none;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		}
+		.midiDetail_pPrice_label{
+			margin-top: 20px;
+		}
+		.midiDetail_pPrice{
+			margin-top: 20px;
+			margin-left: 10px;
+			width: 100px;		
+			height: 30px;
+			border: none;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		}
+		.midiDetail_pCount_label{
+			margin-top: 20px;
+		}
+		.midiDetail_pCount{
+			margin-top: 20px;
+			margin-left: 10px;
+			width: 50px;		
+			height: 30px;
+			border: none;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		}
+	
+	.midiDetail_botBox{
+		margin-top: 20px;
+	}
+		.midiDetail_pContents_Label{
+			margin-left: 20px;
+		}
+		.midiDetail_pContents{
+			margin-left: 25px;
+			width: 950px; 
+			height: 170px; 
+		    resize: none;
+		}
+
+
+	.midiDetail_Btns{
+		margin-left: 180px;
+	}
+		.midiDetail_linkguitarListBtn,
+		.midiDetail_modifyWriteBtn,
+		.midiDetail_linkGuitarListBtn{
+			margin-top: 30px;
+			margin-bottom: 100px;
+			margin-left: 5px;
+			margin-right: 5px;
+			width: 200px;
+			height: 50px;
+			background-color: var(--main-bg-color);
+			border: none;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		.midiDetail_linkguitarListBtn:hover,
+		.midiDetail_modifyWriteBtn:hover,
+		.midiDetail_linkGuitarListBtn:hover{
+			background-color: var(--main-bg-color);
+			opacity: 0.6;
+			cursor: pointer;
+		}
+	
+
+.midiDetailFooterBox{
+	margin-top: 150px;
+
+}
+	

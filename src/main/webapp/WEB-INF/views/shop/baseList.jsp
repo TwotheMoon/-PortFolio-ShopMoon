@@ -19,7 +19,7 @@
 	<section class="baseListBox opacityBox" >
 	
 		<div class="baseListBox_title">
-			<h1>#Moon - Base</h1>
+			<h1>#Moon - BASE</h1>
 		</div>
 		
 		<div class="baseListBox_nav">

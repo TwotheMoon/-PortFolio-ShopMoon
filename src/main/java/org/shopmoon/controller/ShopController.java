@@ -107,6 +107,68 @@ public class ShopController {
 		model.addAttribute("baseInfo", shopservice.shopGetDetail(productNo));
 	}
 	
+	// 미디 리스트 페이지 이동 및 조회
+	@RequestMapping(value = "midiList", method = RequestMethod.GET)
+	public void midiList(Criteria cri, Model model) throws Exception{
+		
+		log.info("미디 리스트 이동");
+		
+		List list = shopservice.midiGetList(cri);
+		
+		// 키워드 검색 결과
+		if(!list.isEmpty()) {
+			model.addAttribute("list",list);
+		} else {
+			model.addAttribute("listCheck", "empty");
+			return;
+		}
+		
+		model.addAttribute("pageMaker", new PageDTO(cri, shopservice.midiGetTotal(cri)));
+	}
+	
+	// 미디 상세 페이지
+	@RequestMapping("/midiDetail")
+	public void midiGetDetail(long productNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
+		
+		log.info("미디 상세 페이지");
+		
+		// 페이지 정보
+		model.addAttribute("cri", cri);
+		
+		model.addAttribute("midiInfo", shopservice.shopGetDetail(productNo));
+	}
+	
+	// 앨범 리스트 페이지 이동 및 조회
+	@RequestMapping(value = "albumList", method = RequestMethod.GET)
+	public void albumList(Criteria cri, Model model) throws Exception{
+		
+		log.info("앨범 리스트 이동");
+		
+		List list = shopservice.albumGetList(cri);
+		
+		// 키워드 검색 결과
+		if(!list.isEmpty()) {
+			model.addAttribute("list",list);
+		} else {
+			model.addAttribute("listCheck", "empty");
+			return;
+		}
+		
+		model.addAttribute("pageMaker", new PageDTO(cri, shopservice.albumGetTotal(cri)));
+	}
+	
+	// 앨범 상세 페이지
+	@RequestMapping("/albumDetail")
+	public void albumGetDetail(long productNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
+		
+		log.info("앨범 상세 페이지");
+		
+		// 페이지 정보
+		model.addAttribute("cri", cri);
+		
+		model.addAttribute("albumInfo", shopservice.shopGetDetail(productNo));
+	}
+	
 	
 	
 	// 이미지 정보 반환

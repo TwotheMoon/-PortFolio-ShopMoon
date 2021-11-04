@@ -64,7 +64,6 @@
         </if>
     </select>
     
-      
       <!-- 베이스 리스트 조회 -->
 	<select id="baseGetList" resultType="org.shopmoon.domain.ProductVO">
 		<![CDATA[
@@ -106,5 +105,90 @@
         </if>
         
     </select>
+    
+      <!-- 미디 리스트 조회 -->
+	<select id="midiGetList" resultType="org.shopmoon.domain.ProductVO">
+		<![CDATA[
+			select *
+			 from ( select /*+ INDEX_DESC(p SYS_C0011286) */ 
+					rownum as rn
+					, P_NO as productNo
+					, P_NAME as productName
+					, P_CATEGORY as productCategory
+					, P_PRICE as productPrice
+					, P_STOCK as productStock
+					, P_CONTENTS as productContents
+					, P_ACTIVE as productActive
+					, P_BEST as productBest
+					, P_REG_DATE as productRegDate
+					, P_UPDATE_DATE as productUpdateDate
+			 from product p
+			where P_CATEGORY = '미디' and
+	    ]]>
+		 	<if test="keyword != null">
+				P_NAME like '%' || #{keyword} || '%' and
+		    </if>
+		   
+	   <![CDATA[
+	   		rownum <= #{pageNum} * #{amount}
+	   		)
+        where rn > (#{pageNum} - 1) * #{amount}
+	   
+	   ]]>
+	</select>
+	
+  <!-- 미디 총 수 -->
+    <select id="midiGetTotal" resultType="int">
+    
+        select count(*) from product
+        
+        <if test="keyword != null">
+           where P_NAME like '%' || #{keyword} || '%' and P_CATEGORY = '미디'
+        </if>
+        
+    </select>
+    
+      <!-- 앨범 리스트 조회 -->
+	<select id="albumGetList" resultType="org.shopmoon.domain.ProductVO">
+		<![CDATA[
+			select *
+			 from ( select /*+ INDEX_DESC(p SYS_C0011286) */ 
+					rownum as rn
+					, P_NO as productNo
+					, P_NAME as productName
+					, P_CATEGORY as productCategory
+					, P_PRICE as productPrice
+					, P_STOCK as productStock
+					, P_CONTENTS as productContents
+					, P_ACTIVE as productActive
+					, P_BEST as productBest
+					, P_REG_DATE as productRegDate
+					, P_UPDATE_DATE as productUpdateDate
+			 from product p
+			where P_CATEGORY = '앨범' and
+	    ]]>
+		 	<if test="keyword != null">
+				P_NAME like '%' || #{keyword} || '%' and
+		    </if>
+		   
+	   <![CDATA[
+	   		rownum <= #{pageNum} * #{amount}
+	   		)
+        where rn > (#{pageNum} - 1) * #{amount}
+	   
+	   ]]>
+	</select>
+	
+  <!-- 베이스 총 수 -->
+    <select id="albumGetTotal" resultType="int">
+    
+        select count(*) from product
+        
+        <if test="keyword != null">
+           where P_NAME like '%' || #{keyword} || '%' and P_CATEGORY = '앨범'
+        </if>
+        
+    </select>
+    
 
 </mapper>

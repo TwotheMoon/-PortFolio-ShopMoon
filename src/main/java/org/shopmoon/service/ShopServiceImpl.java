@@ -85,5 +85,57 @@ public class ShopServiceImpl implements ShopService{
 		return shopmapper.baseGetTotal(cri);
 	}
 	
+	// 미디 리스트
+	@Override
+	public List<ProductVO> midiGetList(Criteria cri) throws Exception {
+	
+		List<ProductVO> list = shopmapper.midiGetList(cri);
+			
+			list.forEach(product -> {
+				
+				Long productNo = product.getProductNo();
+				
+				List<AttachImageVO> imageList = attachmapper.getAttachList(productNo);
+				
+				product.setImageList(imageList);
+				
+			});
+		
+		return list;
+	}
+	
+	// 미디 총 개수
+	@Override
+	public int midiGetTotal(Criteria cri) throws Exception {
+		
+		return shopmapper.midiGetTotal(cri);
+	}
+	
+	// 앨범 리스트
+	@Override
+	public List<ProductVO> albumGetList(Criteria cri) throws Exception {
+	
+		List<ProductVO> list = shopmapper.albumGetList(cri);
+			
+			list.forEach(product -> {
+				
+				Long productNo = product.getProductNo();
+				
+				List<AttachImageVO> imageList = attachmapper.getAttachList(productNo);
+				
+				product.setImageList(imageList);
+				
+			});
+		
+		return list;
+	}
+	
+	// 앨범 총 개수
+	@Override
+	public int albumGetTotal(Criteria cri) throws Exception {
+		
+		return shopmapper.albumGetTotal(cri);
+	}
+	
 	
 }

@@ -16,11 +16,22 @@ public interface ShopService {
 	// 기타 총 개수
 	public int guitarGetTotal(Criteria cri) throws Exception;
 	
-	// 기타 리스트
+	// 베이스 리스트
 	public List<ProductVO> baseGetList(Criteria cri) throws Exception;
 	
-	// 기타 총 개수
+	// 베이스 총 개수
 	public int baseGetTotal(Criteria cri) throws Exception;
+
+	// 미디 리스트
+	public List<ProductVO> midiGetList(Criteria cri) throws Exception;
 	
+	// 미디 총 개수
+	public int midiGetTotal(Criteria cri) throws Exception;
+	
+	// 앨범 리스트
+	public List<ProductVO> albumGetList(Criteria cri) throws Exception;
+	
+	// 앨범 총 개수
+	public int albumGetTotal(Criteria cri) throws Exception;
 	
 }

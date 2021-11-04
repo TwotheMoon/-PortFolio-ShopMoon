@@ -25,5 +25,17 @@ public interface ShopMapper {
 	// 베이스 총 개수
 	public int baseGetTotal(Criteria cri);
 	
+	// 미디 리스트
+	public List<ProductVO> midiGetList(Criteria cri);
+		
+	// 미디 총 개수
+	public int midiGetTotal(Criteria cri);
+	
+	// 앨범 리스트
+	public List<ProductVO> albumGetList(Criteria cri);
+		
+	// 앨범 총 개수
+	public int albumGetTotal(Criteria cri);
+	
 		
 }
