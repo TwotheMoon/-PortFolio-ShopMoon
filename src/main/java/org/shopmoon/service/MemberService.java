@@ -21,5 +21,5 @@ public interface MemberService {
 	public void memberDelete(MemberVO member) throws Exception;
 	
 	// 회원 아이디 찾기
-	public MemberVO memberFindId(MemberVO member) throws Exception;
+	public MemberVO memberFindId(String memberEmail) throws Exception;
 }

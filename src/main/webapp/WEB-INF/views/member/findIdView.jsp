@@ -25,17 +25,18 @@
 				<h1>회원가입떄 입력하신 이메일을 적어주세요.</h1>
 			</div>
 		
-		<c:if test="${findIdConfirm == no}">
-			<div class="LoginFail">아이디를 찾을 수 없어요.</div>
-		</c:if>
-		<c:if test="${findIdConfirm == yes}">
-			<div class="LoginFail">${id}</div>
-		</c:if>				
 		
 		<form class="findIdBox_form"  method="post">
 			<input class="findId" name="memberEmail" placeholder="이메일" required> <br>
 
-			<button class="findIdBtn">아이디 찾기</button> <br>
+			<c:if test="${result == 0}">
+				<div class="LoginFail">아이디를 찾을 수 없어요.</div>
+			</c:if>
+			<c:if test="${result == 1}">
+				<div class="LoginSuccess">회원님의 아이디는 : ${memberId} 입니다.</div> 
+			</c:if>				
+			<button class="findIdBtn">아이디 찾기</button> 
+			<button class="redirectHomeBtn">돌아가기</button> <br>
 		</form>
 		
 	</section>

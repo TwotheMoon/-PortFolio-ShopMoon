@@ -61,7 +61,7 @@
 					
 					<div class="productDetail_Btns">
 						<button class="productDetail_linkProductListBtn">목록으로 돌아가기</button>	
-						<button class="productDetail_modifyWriteBtn">게시글 수정</button>				
+						<button class="productDetail_modifyWriteBtn">상품 수정</button>				
 					</div>	
 				</div>	
 		</div>

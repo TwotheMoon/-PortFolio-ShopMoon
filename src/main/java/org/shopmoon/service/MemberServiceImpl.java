@@ -45,9 +45,9 @@ public class MemberServiceImpl implements MemberService {
 	}
 	
 	@Override
-	public MemberVO memberFindId(MemberVO member) throws Exception {
+	public MemberVO memberFindId(String memberEmail) throws Exception {
 		
-		return membermapper.memberFindId(member);	
+		return membermapper.memberFindId(memberEmail);	
 		
 	}
 	

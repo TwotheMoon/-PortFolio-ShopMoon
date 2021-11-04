@@ -20,5 +20,5 @@ public interface MemberMapper {
 	public void memberDelete(MemberVO member);
 
 	// 회원 아이디 찾기
-	public MemberVO memberFindId(MemberVO member);
+	public MemberVO memberFindId(String memberEmail);
 }

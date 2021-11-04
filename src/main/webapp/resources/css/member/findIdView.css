@@ -42,17 +42,25 @@
 		font-size: 13px;
 		color: red;
 	}
-	.findIdBtn{
-		margin-top: 50px;
-		margin-bottom: 100px;
-		width: 430px;
+	.LoginSuccess{
+		margin-top: 20px;
+		width:100%;
+		text-align: center;
+		font-size: 13px;
+		color: black;
+	}
+	.findIdBtn,
+	.redirectHomeBtn{
+		margin: 50px 10px 100px 10px;
+		width: 200px;
 		height: 50px;
 		background-color: var(--main-bg-color);
 		border: none;
 		cursor: pointer;
 		font-weight: bold;
 	}
-		.findIdBtn:hover{
+		.findIdBtn:hover,
+		.redirectHomeBtn:hover{
 		background-color: var(--main-bg-color);
 		opacity: 0.6;
 		cursor: pointer;

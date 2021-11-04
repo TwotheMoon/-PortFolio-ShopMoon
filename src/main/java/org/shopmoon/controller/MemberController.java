@@ -218,27 +218,31 @@ public class MemberController {
 	}
 	
 	// 회원 아이디 찾기 메소드
-	@RequestMapping(value = "/member/findId", method = RequestMethod.POST)
-	@ResponseBody
+	@RequestMapping(value = "/findId", method = RequestMethod.POST)
 	public String findId(HttpServletRequest request, MemberVO member, RedirectAttributes rttr, Model model) throws Exception {
-		HttpSession session = request.getSession();
+	
+		String memberEmail = request.getParameter("memberEmail");
+		MemberVO lvo = memberservice.memberFindId(memberEmail);
 		
-		String rawEmail = "";
-		String DBEmail = "";
+		String memberId = "";
 		
-		MemberVO lvo = memberservice.memberFindId(member);
-		rawEmail = member.getMemberPw(); // 사용자 제출 이메일
-		DBEmail = lvo.getMemberPw(); // DB 이메일
-		
-		int no = 0;
-		int yes = 1;
-		if(rawEmail != DBEmail) {
-			model.addAttribute("findIdConfirm", no);
+		if(lvo == null) {
+			memberId = "empty";
 		} else {
-			model.addAttribute("findIdConfirm", yes);
+			memberId = lvo.getMemberId();
+		}
+		
+		if(memberId == "empty") {
+			int result = 0;
+			rttr.addFlashAttribute("result", result);
+			return "redirect:/member/findIdView";
+		} else {
+			int result = 1;
+			rttr.addFlashAttribute("result", result);
+			rttr.addFlashAttribute("memberId", memberId);
+			return "redirect:/member/findIdView";
 		}
 
-		return "./member/findIdView";
 	}
 	
 }
