@@ -8,50 +8,50 @@
 	<jsp:include page="${path }../includes/header.jsp" />
 </header>
 
-<body id="baseDetailBody">
+<body id="albumDetailBody">
     
 	<!-- contactDetail.jsp 컨텐츠 -->
-	<section class="baseDetailBox opacityBox" >
+	<section class="albumDetailBox opacityBox" >
 				
-		<div class="baseDetail_Box">
-				<div class="baseDetail_rigthBox">
-					<div class="baseDetail_img">
+		<div class="albumDetail_Box">
+				<div class="albumDetail_rigthBox">
+					<div class="albumDetail_img">
 						<div id="uploadResult">
 						</div>
 					</div>
 				</div>
 				
-				<div class="baseDetail_leftBox">
+				<div class="albumDetail_leftBox">
 				
-					<label class="baseDetail_pNoLabel">상품 번호</label>
-					<input class="baseDetail_pNo" value="${baseInfo.productNo }" readonly> 
+					<label class="albumDetail_pNoLabel">상품 번호</label>
+					<input class="albumDetail_pNo" value="${albumInfo.productNo }" readonly> 
 					
-					<label class="baseDetail_pCategory_label">카테고리</label>
-					<input class="baseDetail_pCategory" value="${baseInfo.productCategory }" readonly> <br>
+					<label class="albumDetail_pCategory_label">카테고리</label>
+					<input class="albumDetail_pCategory" value="${albumInfo.productCategory }" readonly> <br>
 			
-					<label class="baseDetail_pName_Label">상품 이름</label>
-					<input class="baseDetail_pName" value="${baseInfo.productName }" readonly> <br>
+					<label class="albumDetail_pName_Label">상품 이름</label>
+					<input class="albumDetail_pName" value="${albumInfo.productName }" readonly> <br>
 
-					<label class="baseDetail_pPrice_label">가격</label>
-					<input class="baseDetail_pPrice" value="${baseInfo.productPrice }원" readonly> <br>
+					<label class="albumDetail_pPrice_label">가격</label>
+					<input class="albumDetail_pPrice" value="${albumInfo.productPrice }원" readonly> <br>
 
-					<label class="baseDetail_pCount_label">주문수량</label>
-					<input class="baseDetail_pCount" type="number" placeholder="1">
+					<label class="albumDetail_pCount_label">주문수량</label>
+					<input class="albumDetail_pCount" type="number" placeholder="1">
 				</div>
 				
-				<div class="baseDetail_botBox">
-					<label class="baseDetail_pContents_Label">상품 설명</label> <br>
-					<textarea class="baseDetail_pContents" cols="150" rows="20">${baseInfo.productContents}</textarea> <br>
+				<div class="albumDetail_botBox">
+					<label class="albumDetail_pContents_Label">상품 설명</label> <br>
+					<textarea class="albumDetail_pContents" cols="150" rows="20">${albumInfo.productContents}</textarea> <br>
 					
-					<div class="baseDetail_Btns">
-						<button class="baseDetail_linkguitarListBtn">바로 구매</button>	
-						<button class="baseDetail_modifyWriteBtn">장바구니</button>	
-						<button class="baseDetail_linkListBtn">목록으로 돌아가기</button>			
+					<div class="albumDetail_Btns">
+						<button class="albumDetail_linkguitarListBtn">바로 구매</button>	
+						<button class="albumDetail_modifyWriteBtn">장바구니</button>	
+						<button class="albumDetail_linkListBtn">목록으로 돌아가기</button>			
 					</div>	
 				</div>	
 		</div>
-		    <form id="baseDetail_moveForm" method="get">
-		   	 <input type="hidden" name="productNo" value='<c:out value="${baseInfo.productNo}"/>'>
+		    <form id="albumDetail_moveForm" method="get">
+		   	 <input type="hidden" name="productNo" value='<c:out value="${albumInfo.productNo}"/>'>
 				<input type="hidden" name="pageNum" value='<c:out value="${cri.pageNum}"/>'>
 				<input type="hidden" name="amount" value='<c:out value="${cri.amount}"/>'>
 				<input type="hidden" name="keyword" value='<c:out value="${cri.keyword}"/>'>
@@ -63,7 +63,7 @@
 		<!-- 상품 상세 js -->
 <script type="text/javascript" >
 /* 이미지 정보 호출 */
-let productNo = '<c:out value="${baseInfo.productNo}"/>';
+let productNo = '<c:out value="${albumInfo.productNo}"/>';
 let uploadResult = $("#uploadResult");			
 
 $.getJSON("/shop/getAttachListMain", {productNo : productNo}, function(arr){	
@@ -93,9 +93,9 @@ $.getJSON("/shop/getAttachListMain", {productNo : productNo}, function(arr){
 	uploadResult.html(str);						
 });	
 </script>
-<script src="${path}/resources/js/baseDetail.js"></script>
+<script src="${path}/resources/js/albumDetail.js"></script>
 	
-	<footer class="baseDetailFooterBox" >
+	<footer class="albumDetailFooterBox" >
 		<jsp:include page="${path }../includes/footer.jsp" />
 	</footer>
 </body>

@@ -46,7 +46,7 @@
 					<div class="guitarDetail_Btns">
 						<button class="guitarDetail_linkguitarListBtn">바로 구매</button>	
 						<button class="guitarDetail_modifyWriteBtn">장바구니</button>	
-						<button class="guitarDetail_linkGuitarListBtn">목록으로 돌아가기</button>			
+						<button class="guitarDetail_linkListBtn">목록으로 돌아가기</button>			
 					</div>	
 				</div>	
 		</div>

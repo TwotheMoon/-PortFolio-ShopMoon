@@ -22,7 +22,7 @@ let moveForm = $("#midiDetail_moveForm");
 	});*/
 	
 	// 기타 목록 페이지 이동 버튼
-	$(".midiDetail_linkGuitarListBtn").on("click", function(e){
+	$(".midiDetail_linkListBtn").on("click", function(e){
 		
 		e.preventDefault();
 		

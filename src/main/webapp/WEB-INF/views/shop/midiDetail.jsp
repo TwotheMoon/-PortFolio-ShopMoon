@@ -46,7 +46,7 @@
 					<div class="midiDetail_Btns">
 						<button class="midiDetail_linkguitarListBtn">바로 구매</button>	
 						<button class="midiDetail_modifyWriteBtn">장바구니</button>	
-						<button class="midiDetail_linkGuitarListBtn">목록으로 돌아가기</button>			
+						<button class="midiDetail_linkListBtn">목록으로 돌아가기</button>			
 					</div>	
 				</div>	
 		</div>

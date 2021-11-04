@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+
+.albumListBox{
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+	.albumListBox_title{
+		margin-top: 100px;
+		font-weight: bold;
+		font-size: 25px;
+	}
+	
+
+.albumListBox_nav{
+	margin-top: 50px;
+	font-size: 13px;
+	cursor: pointer;
+}
+	.albumListBox_nav a:nth-child(4){
+		color: rgba(0, 0, 0, 1);
+		border-bottom: 1px solid rgba(0, 0, 0, 1);
+	}
+	.albumListBox_nav a:nth-child(1),
+	.albumListBox_nav a:nth-child(2),
+	.albumListBox_nav a:nth-child(3){
+		color: rgba(0, 0, 0, 0.3);
+	}
+	.albumListBox_nav a:nth-child(1):hover,
+	.albumListBox_nav a:nth-child(2):hover,
+	.albumListBox_nav a:nth-child(3):hover{
+		color: rgba(0, 0, 0, 0.8);
+	}
+
+
+.albumListBox_section{
+	margin-top: 20px;
+	width: 1400px;
+	margin-bottom: 100px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
+	}
+	.albumListBox_contents a{
+		color: rgba(0, 0, 0, 1);
+	}
+	.albumListBox_contents a:hover{
+		color: rgba(0, 0, 0, 0.5);
+	}
+	.albumListBox_imgBox_img{
+		width: 300px;
+		height: 300px;
+		margin: 30px 15px 20px 15px;
+	}
+	
+	.albumListName{
+		margin: 0 auto;
+		width: 300px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	.albumListPrice{
+		margin-top: 20px;
+	}
+	
+	
+	
+	.albumList_pageMaker_box{
+		text-align: center;
+	    margin-top: 30px;
+	    margin-bottom: 40px;
+	}	
+	.albumList_pageMaker_box a{
+		color : black;
+	}
+	.albumList_pageMaker{
+	    list-style: none;
+	    display: inline-block;
+	}	
+	.pageMakerBtn {
+	    float: left;
+	    width: 40px;
+	    height: 40px;
+	    line-height: 40px;
+	    margin-left: 20px;
+	}
+	.albumListPrev,
+	.albumListNext {
+	    border: 1px solid var(--main-bg-color);
+	    padding: 0 10px;
+	    font-weight: bold;
+	    color: black;
+	    background-color: var(--main-bg-color);
+	}
+	.albumListPrev a,
+	.albumListNext a {
+	    color: #ccc;
+	}
+	.active{						
+		border : 2px solid black;
+		font-weight:400;
+	}
+	.albumListSearch_text{
+		width: 100px;
+		height: 40px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		margin-bottom: 150px;
+	}
+	
+
+
+	

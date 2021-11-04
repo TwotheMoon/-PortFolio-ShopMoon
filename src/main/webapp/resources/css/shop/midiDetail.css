@@ -116,7 +116,7 @@
 	}
 		.midiDetail_linkguitarListBtn,
 		.midiDetail_modifyWriteBtn,
-		.midiDetail_linkGuitarListBtn{
+		.midiDetail_linkListBtn{
 			margin-top: 30px;
 			margin-bottom: 100px;
 			margin-left: 5px;
@@ -130,7 +130,7 @@
 		}
 		.midiDetail_linkguitarListBtn:hover,
 		.midiDetail_modifyWriteBtn:hover,
-		.midiDetail_linkGuitarListBtn:hover{
+		.midiDetail_linkListBtn:hover{
 			background-color: var(--main-bg-color);
 			opacity: 0.6;
 			cursor: pointer;
