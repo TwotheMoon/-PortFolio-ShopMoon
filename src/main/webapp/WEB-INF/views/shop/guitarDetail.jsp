@@ -36,7 +36,7 @@
 					<input class="guitarDetail_pPrice" value="${guitarInfo.productPrice }원" readonly> <br>
 
 					<label class="guitarDetail_pCount_label">주문수량</label>
-					<input class="guitarDetail_pCount" type="number">
+					<input class="guitarDetail_pCount" type="number" placeholder="1">
 				</div>
 				
 				<div class="guitarDetail_botBox">
@@ -45,7 +45,8 @@
 					
 					<div class="guitarDetail_Btns">
 						<button class="guitarDetail_linkguitarListBtn">바로 구매</button>	
-						<button class="guitarDetail_modifyWriteBtn">장바구니</button>				
+						<button class="guitarDetail_modifyWriteBtn">장바구니</button>	
+						<button class="guitarDetail_linkGuitarListBtn">목록으로 돌아가기</button>			
 					</div>	
 				</div>	
 		</div>

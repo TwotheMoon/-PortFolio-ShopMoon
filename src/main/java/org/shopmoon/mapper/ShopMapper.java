@@ -10,13 +10,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 public interface ShopMapper {
 
-	// 상품 리스트
+	// shop 관련 상품 상세 페이지
+	public ProductVO shopGetDetail(Long productNo);
+
+	// 기타 리스트
 	public List<ProductVO> guitarGetList(Criteria cri);
 	
 	// 기타 총 개수
-	public int guitarGetTotal(Criteria cri);
+	public int guitarGetTotal(Criteria cri);	
 	
-	// 기타 조회 상세 페이지
-	public ProductVO guitarGetDetail(Long productNo);
+	// 베이스 리스트
+	public List<ProductVO> baseGetList(Criteria cri);
+		
+	// 베이스 총 개수
+	public int baseGetTotal(Criteria cri);
 	
+		
 }

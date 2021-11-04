@@ -1,6 +1,6 @@
 
-let moveForm = $("#guitarList_moveForm");
-let searchForm = $("#guitarListSearchForm");
+let moveForm = $("#baseList_moveForm");
+let searchForm = $("#baseListSearchForm");
 
 // 페이지 이동 
 $(".pageMakerBtn a").on("click", function(e){
@@ -12,7 +12,7 @@ $(".pageMakerBtn a").on("click", function(e){
 });
 
 // 검색 버튼
-$("#guitarListSearchForm button").on("click", function(e){
+$("#baseListSearchForm button").on("click", function(e){
 	
 	e.preventDefault();
 	
@@ -29,12 +29,12 @@ $("#guitarListSearchForm button").on("click", function(e){
 
 
 // 상세 페이지 이동
-$(".guitarListToDetail").on("click", function(e){
+$(".baseListToDetail").on("click", function(e){
 	
 	e.preventDefault();
 	
 	moveForm.append("<input type='hidden' name='productNo' value='"+ $(this).attr("href") + "'>");
-	moveForm.attr("action", "/shop/guitarDetail");
+	moveForm.attr("action", "/shop/baseDetail");
 	moveForm.submit();
 	
 });

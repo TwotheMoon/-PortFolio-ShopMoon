@@ -72,9 +72,42 @@ public class ShopController {
 		// 페이지 정보
 		model.addAttribute("cri", cri);
 		
-		model.addAttribute("guitarInfo", shopservice.guitarGetDetail(productNo));
-		
+		model.addAttribute("guitarInfo", shopservice.shopGetDetail(productNo));
 	}
+	
+	
+	// 베이스 리스트 페이지 이동 및 조회
+	@RequestMapping(value = "baseList", method = RequestMethod.GET)
+	public void baseList(Criteria cri, Model model) throws Exception{
+		
+		log.info("베이스 리스트 이동");
+		
+		List list = shopservice.baseGetList(cri);
+		
+		// 키워드 검색 결과
+		if(!list.isEmpty()) {
+			model.addAttribute("list",list);
+		} else {
+			model.addAttribute("listCheck", "empty");
+			return;
+		}
+		
+		model.addAttribute("pageMaker", new PageDTO(cri, shopservice.baseGetTotal(cri)));
+	}
+	
+	// 베이스 상세 페이지
+	@RequestMapping("/baseDetail")
+	public void baseGetDetail(long productNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
+		
+		log.info("베이스 상세 페이지");
+		
+		// 페이지 정보
+		model.addAttribute("cri", cri);
+		
+		model.addAttribute("baseInfo", shopservice.shopGetDetail(productNo));
+	}
+	
+	
 	
 	// 이미지 정보 반환
 	@GetMapping(value = "/getAttachListMain", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

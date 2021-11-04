@@ -27,9 +27,11 @@
 @import "admin/productDetail.css";
 @import "admin/productModify.css";
 
-/* /admin */
+/* /shop */
 @import "shop/guitarList.css";
 @import "shop/guitarDetail.css";
+@import "shop/baseList.css";
+@import "shop/baseDetail.css";
 
 /* Component Style */
 @import "home.css";

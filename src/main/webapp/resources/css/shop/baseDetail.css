@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-.guitarDetailBox{
+.baseDetailBox{
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
@@ -14,7 +14,7 @@
 }
 
 
-.guitarDetail_Box{
+.baseDetail_Box{
 	margin-top: 100px;
 	width: 1000px;
 	height: 100%;
@@ -23,16 +23,16 @@
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: bold;
 	}
-	.guitarDetail_rigthBox{
+	.baseDetail_rigthBox{
 		display: inline-block;
 	}
-	.guitarDetail_leftBox{
+	.baseDetail_leftBox{
 		float: right;
 		width: 400px;
 		margin-right: 20px;
 		margin-top: 20px;
 	}
-	.guitarDetail_Img{
+	.baseDetail_Img{
 		width: 500px;
 		height: 500px;
 		margin-left: 20px;
@@ -44,7 +44,7 @@
 	}
 
 	
-		.guitarDetail_pNo{
+		.baseDetail_pNo{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 40px;
@@ -53,20 +53,20 @@
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
 		
-		.guitarDetail_pCategory_label{
+		.baseDetail_pCategory_label{
 			margin-left: 20px;
 		}
-		.guitarDetail_pCategory{
+		.baseDetail_pCategory{
 			margin-left: 10px;
 			width: 55px;		
 			height: 30px;
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		.guitarDetail_pName_Label{
+		.baseDetail_pName_Label{
 			margin-top: 20px;
 		}
-		.guitarDetail_pName{
+		.baseDetail_pName{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 210px;		
@@ -74,10 +74,10 @@
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		.guitarDetail_pPrice_label{
+		.baseDetail_pPrice_label{
 			margin-top: 20px;
 		}
-		.guitarDetail_pPrice{
+		.baseDetail_pPrice{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 100px;		
@@ -85,10 +85,10 @@
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		.guitarDetail_pCount_label{
+		.baseDetail_pCount_label{
 			margin-top: 20px;
 		}
-		.guitarDetail_pCount{
+		.baseDetail_pCount{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 50px;		
@@ -97,13 +97,13 @@
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
 	
-	.guitarDetail_botBox{
+	.baseDetail_botBox{
 		margin-top: 20px;
 	}
-		.guitarDetail_pContents_Label{
+		.baseDetail_pContents_Label{
 			margin-left: 20px;
 		}
-		.guitarDetail_pContents{
+		.baseDetail_pContents{
 			margin-left: 25px;
 			width: 950px; 
 			height: 170px; 
@@ -111,12 +111,12 @@
 		}
 
 
-	.guitarDetail_Btns{
+	.baseDetail_Btns{
 		margin-left: 180px;
 	}
-		.guitarDetail_linkguitarListBtn,
-		.guitarDetail_modifyWriteBtn,
-		.guitarDetail_linkGuitarListBtn{
+		.baseDetail_linkguitarListBtn,
+		.baseDetail_modifyWriteBtn,
+		.baseDetail_linkBaseListBtn{
 			margin-top: 30px;
 			margin-bottom: 100px;
 			margin-left: 5px;
@@ -128,16 +128,16 @@
 			cursor: pointer;
 			font-weight: bold;
 		}
-		.guitarDetail_linkguitarListBtn:hover,
-		.guitarDetail_modifyWriteBtn:hover,
-		.guitarDetail_linkGuitarListBtn:hover{
+		.baseDetail_linkguitarListBtn:hover,
+		.baseDetail_modifyWriteBtn:hover,
+		.baseDetail_linkBaseListBtn:hover{
 			background-color: var(--main-bg-color);
 			opacity: 0.6;
 			cursor: pointer;
 		}
 	
 
-.guitarDetailFooterBox{
+.baseDetailFooterBox{
 	margin-top: 150px;
 
 }

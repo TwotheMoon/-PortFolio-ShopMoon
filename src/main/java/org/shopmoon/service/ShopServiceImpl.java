@@ -25,6 +25,13 @@ public class ShopServiceImpl implements ShopService{
 	@Autowired
 	AttachMapper attachmapper;
 	
+	// shop 관련 상품 상세 페이지
+		@Override
+		public ProductVO shopGetDetail(Long productNo) throws Exception {
+
+			return shopmapper.shopGetDetail(productNo);
+		}
+	
 	
 	// 기타 리스트
 	@Override
@@ -52,10 +59,31 @@ public class ShopServiceImpl implements ShopService{
 		return shopmapper.guitarGetTotal(cri);
 	}
 	
-	// 기타 상세 페이지
+	// 베이스 리스트
 	@Override
-	public ProductVO guitarGetDetail(Long productNo) throws Exception {
-
-		return shopmapper.guitarGetDetail(productNo);
+	public List<ProductVO> baseGetList(Criteria cri) throws Exception {
+	
+		List<ProductVO> list = shopmapper.baseGetList(cri);
+			
+			list.forEach(product -> {
+				
+				Long productNo = product.getProductNo();
+				
+				List<AttachImageVO> imageList = attachmapper.getAttachList(productNo);
+				
+				product.setImageList(imageList);
+				
+			});
+		
+		return list;
 	}
+	
+	// 베이스 총 개수
+	@Override
+	public int baseGetTotal(Criteria cri) throws Exception {
+		
+		return shopmapper.baseGetTotal(cri);
+	}
+	
+	
 }

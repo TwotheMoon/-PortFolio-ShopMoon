@@ -35,7 +35,7 @@
 					<a href="/member/login">로그인 / 회원가입</a>
 					<a href="#">장바구니</a>
 					<a href="#">주문조회</a>
-					<a href="#">마이페이지</a>
+					<a href="/member/myPage">마이페이지</a>
 				</div>
 			</div>
 			<div class="footerSectionBox_exchange">

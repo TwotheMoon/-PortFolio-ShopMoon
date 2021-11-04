@@ -1,4 +1,4 @@
-let moveForm = $("#guitarDetail_moveForm");
+let moveForm = $("#baseDetail_moveForm");
 
 	// 바로구매 버튼 
 /*	$(".productDetail_linkProductListBtn").on("click", function(e){
@@ -22,12 +22,12 @@ let moveForm = $("#guitarDetail_moveForm");
 	});*/
 	
 	// 기타 목록 페이지 이동 버튼
-	$(".guitarDetail_linkGuitarListBtn").on("click", function(e){
+	$(".baseDetail_linkBaseListBtn").on("click", function(e){
 		
 		e.preventDefault();
 		
 		$("input[name=productNo]").remove();
-		moveForm.attr("action", "/shop/guitarList");
+		moveForm.attr("action", "/shop/baseList");
 		moveForm.submit();
 		
 	});

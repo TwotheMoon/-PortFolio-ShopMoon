@@ -4,27 +4,24 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.shopmoon.mapper.ShopMapper">
 	
-	<insert id="productEnroll">
 	
-		<selectKey resultType="Long" keyProperty="productNo" order="AFTER">
-
-			SELECT SEQ_PRODUCT.CURRVAL FROM DUAL	
-		
-		</selectKey>
-		
-		insert into product values(	
-			SEQ_PRODUCT.NEXTVAL
-			, #{productName}
-			, #{productCategory}
-			, #{productPrice}
-			, #{productStock}
-			, #{productContents}
-			, #{productActive}
-			, #{productBest}
-			, #{productRegDate}
-			, sysdate
-		)
-	</insert>
+      <!-- shop 관련 상품 조회 상세  -->
+      <select id="shopGetDetail" resultType="org.shopmoon.domain.ProductVO">
+      	
+      	select 	 	
+      		 P_NO as productNo
+			, P_NAME as productName
+			, P_CATEGORY as productCategory
+			, P_PRICE as productPrice
+			, P_STOCK as productStock
+			, P_CONTENTS as productContents
+			, P_ACTIVE as productActive
+			, P_BEST as productBest
+			, P_REG_DATE as productRegDate
+			, P_UPDATE_DATE as productUpdateDate
+				from product where P_NO = #{productNo}
+     	
+      </select>
 	
 	<!-- 기타 리스트 조회 -->
 	<select id="guitarGetList" resultType="org.shopmoon.domain.ProductVO">
@@ -62,28 +59,52 @@
     
         select count(*) from product
         
-        
         <if test="keyword != null">
            where P_NAME like '%' || #{keyword} || '%' and P_CATEGORY = '기타'
         </if>
     </select>
     
-          <!-- 상품 조회 상세  -->
-      <select id="guitarGetDetail" resultType="org.shopmoon.domain.ProductVO">
-      	
-      	select 	 	
-      		 P_NO as productNo
-			, P_NAME as productName
-			, P_CATEGORY as productCategory
-			, P_PRICE as productPrice
-			, P_STOCK as productStock
-			, P_CONTENTS as productContents
-			, P_ACTIVE as productActive
-			, P_BEST as productBest
-			, P_REG_DATE as productRegDate
-			, P_UPDATE_DATE as productUpdateDate
-				from product where P_NO = #{productNo}
-     	
-      </select>
+      
+      <!-- 베이스 리스트 조회 -->
+	<select id="baseGetList" resultType="org.shopmoon.domain.ProductVO">
+		<![CDATA[
+			select *
+			 from ( select /*+ INDEX_DESC(p SYS_C0011286) */ 
+					rownum as rn
+					, P_NO as productNo
+					, P_NAME as productName
+					, P_CATEGORY as productCategory
+					, P_PRICE as productPrice
+					, P_STOCK as productStock
+					, P_CONTENTS as productContents
+					, P_ACTIVE as productActive
+					, P_BEST as productBest
+					, P_REG_DATE as productRegDate
+					, P_UPDATE_DATE as productUpdateDate
+			 from product p
+			where P_CATEGORY = '베이스' and
+	    ]]>
+		 	<if test="keyword != null">
+				P_NAME like '%' || #{keyword} || '%' and
+		    </if>
+		   
+	   <![CDATA[
+	   		rownum <= #{pageNum} * #{amount}
+	   		)
+        where rn > (#{pageNum} - 1) * #{amount}
+	   
+	   ]]>
+	</select>
+	
+  <!-- 베이스 총 수 -->
+    <select id="baseGetTotal" resultType="int">
+    
+        select count(*) from product
+        
+        <if test="keyword != null">
+           where P_NAME like '%' || #{keyword} || '%' and P_CATEGORY = '베이스'
+        </if>
+        
+    </select>
 
 </mapper>
