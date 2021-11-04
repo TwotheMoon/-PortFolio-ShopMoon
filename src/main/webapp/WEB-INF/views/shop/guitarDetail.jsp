@@ -41,7 +41,7 @@
 				
 				<div class="guitarDetail_botBox">
 					<label class="guitarDetail_pContents_Label">상품 설명</label> <br>
-					<textarea class="guitarDetail_pContents" cols="150" rows="20">${guitarInfo.productContents}</textarea> <br>
+					<textarea class="guitarDetail_pContents" cols="150" rows="20" readonly>${guitarInfo.productContents}</textarea> <br>
 					
 					<div class="guitarDetail_Btns">
 						<button class="guitarDetail_linkguitarListBtn">바로 구매</button>	

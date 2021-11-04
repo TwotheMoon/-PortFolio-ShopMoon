@@ -65,7 +65,7 @@
     </select>
     
       <!-- 베이스 리스트 조회 -->
-	<select id="baseGetList" resultType="org.shopmoon.domain.ProductVO">
+	<select id="bassGetList" resultType="org.shopmoon.domain.ProductVO">
 		<![CDATA[
 			select *
 			 from ( select /*+ INDEX_DESC(p SYS_C0011286) */ 
@@ -96,7 +96,7 @@
 	</select>
 	
   <!-- 베이스 총 수 -->
-    <select id="baseGetTotal" resultType="int">
+    <select id="bassGetTotal" resultType="int">
     
         select count(*) from product
         

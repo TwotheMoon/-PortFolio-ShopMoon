@@ -20,10 +20,10 @@ public interface ShopMapper {
 	public int guitarGetTotal(Criteria cri);	
 	
 	// 베이스 리스트
-	public List<ProductVO> baseGetList(Criteria cri);
+	public List<ProductVO> bassGetList(Criteria cri);
 		
 	// 베이스 총 개수
-	public int baseGetTotal(Criteria cri);
+	public int bassGetTotal(Criteria cri);
 	
 	// 미디 리스트
 	public List<ProductVO> midiGetList(Criteria cri);

@@ -57,7 +57,7 @@
 				
 				<div class="productDetail_botBox">
 					<label class="productDetail_pContents_Label">상품 설명</label> <br>
-					<textarea class="productDetail_pContents">${productInfo.productContents}</textarea> <br>
+					<textarea class="productDetail_pContents" readonly>${productInfo.productContents}</textarea> <br>
 					
 					<div class="productDetail_Btns">
 						<button class="productDetail_linkProductListBtn">목록으로 돌아가기</button>	

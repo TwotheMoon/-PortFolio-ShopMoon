@@ -141,7 +141,11 @@
 			height: 170px; 
 		    resize: none;
 		}
+		.productModify_form_section_content_header{
+			margin-left: 20px;
+		}
 		.productModify_form_section_content input{
+			margin-top: 10px;
 			margin-left: 20px;
 		}
 

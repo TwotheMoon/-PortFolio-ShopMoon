@@ -72,6 +72,7 @@
 				
 				<div class="productModify_form_section">
 	                <div class="productModify_form_section_content">
+	                	<h1 class="productModify_form_section_content_header">이미지 변경</h1>
 						<input type="file" id ="fileItem" name='uploadFile' style="height: 30px;">
 						<div id="uploadResult">
 															
@@ -86,8 +87,8 @@
 					<input type="hidden" name="productNo" value="${productInfo.productNo}">
 					
 					<div class="productModify_Btns">
-						<button class="productModify_linkProductListBtn">목록으로 돌아가기</button>	
 						<button class="productModify_modifyWriteBtn">수정하기</button>	
+						<button class="productModify_linkProductListBtn">수정 취소</button>	
 						<button class="productModify_modifyDeleteBtn">삭제하기</button>				
 					</div>	
 				</div>	

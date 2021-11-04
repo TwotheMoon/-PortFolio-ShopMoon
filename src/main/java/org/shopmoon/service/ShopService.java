@@ -17,10 +17,10 @@ public interface ShopService {
 	public int guitarGetTotal(Criteria cri) throws Exception;
 	
 	// 베이스 리스트
-	public List<ProductVO> baseGetList(Criteria cri) throws Exception;
+	public List<ProductVO> bassGetList(Criteria cri) throws Exception;
 	
 	// 베이스 총 개수
-	public int baseGetTotal(Criteria cri) throws Exception;
+	public int bassGetTotal(Criteria cri) throws Exception;
 
 	// 미디 리스트
 	public List<ProductVO> midiGetList(Criteria cri) throws Exception;

@@ -1,4 +1,4 @@
-let moveForm = $("#baseDetail_moveForm");
+let moveForm = $("#bassDetail_moveForm");
 
 	// 바로구매 버튼 
 /*	$(".productDetail_linkProductListBtn").on("click", function(e){
@@ -22,12 +22,12 @@ let moveForm = $("#baseDetail_moveForm");
 	});*/
 	
 	// 기타 목록 페이지 이동 버튼
-	$(".baseDetail_linkListBtn").on("click", function(e){
+	$(".bassDetail_linkListBtn").on("click", function(e){
 		
 		e.preventDefault();
 		
 		$("input[name=productNo]").remove();
-		moveForm.attr("action", "/shop/baseList");
+		moveForm.attr("action", "/shop/bassList");
 		moveForm.submit();
 		
 	});

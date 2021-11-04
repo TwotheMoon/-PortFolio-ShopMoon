@@ -41,7 +41,7 @@
 				
 				<div class="midiDetail_botBox">
 					<label class="midiDetail_pContents_Label">상품 설명</label> <br>
-					<textarea class="midiDetail_pContents" cols="150" rows="20">${midiInfo.productContents}</textarea> <br>
+					<textarea class="midiDetail_pContents" cols="150" rows="20" readonly>${midiInfo.productContents}</textarea> <br>
 					
 					<div class="midiDetail_Btns">
 						<button class="midiDetail_linkguitarListBtn">바로 구매</button>	

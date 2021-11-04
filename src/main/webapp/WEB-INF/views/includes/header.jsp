@@ -62,7 +62,7 @@
             	 <!-- 로그인한 상태 -->
             	<c:if test="${member != null }">
 	            	<c:if test="${member.memberAuthority == 1 }">
-	            		<a href="/admin/adminMain">관리자 페이지</a>
+	            		<a href="/admin/productList">관리자 페이지</a>
 		            	<a href="/member/logout"> 로그아웃 </a>
 	            	</c:if>
 	            	<c:if test="${member.memberAuthority == 0 }">
@@ -83,7 +83,7 @@
           		<h3>SHOP</h3>
          		<ul class="shoplist dropList">
           			<li ><a href="/shop/guitarList">GUITAR</a></li>
-          			<li ><a href="/shop/baseList">BASS</a></li>
+          			<li ><a href="/shop/bassList">BASS</a></li>
           			<li ><a href="/shop/midiList">MIDI</a></li>
           			<li ><a href="/shop/albumList">ALBUM</a></li>
           		</ul>

@@ -1,6 +1,6 @@
 
-let moveForm = $("#baseList_moveForm");
-let searchForm = $("#baseListSearchForm");
+let moveForm = $("#bassList_moveForm");
+let searchForm = $("#bassListSearchForm");
 
 // 페이지 이동 
 $(".pageMakerBtn a").on("click", function(e){
@@ -12,7 +12,7 @@ $(".pageMakerBtn a").on("click", function(e){
 });
 
 // 검색 버튼
-$("#baseListSearchForm button").on("click", function(e){
+$("#bassListSearchForm button").on("click", function(e){
 	
 	e.preventDefault();
 	
@@ -29,12 +29,12 @@ $("#baseListSearchForm button").on("click", function(e){
 
 
 // 상세 페이지 이동
-$(".baseListToDetail").on("click", function(e){
+$(".bassListToDetail").on("click", function(e){
 	
 	e.preventDefault();
 	
 	moveForm.append("<input type='hidden' name='productNo' value='"+ $(this).attr("href") + "'>");
-	moveForm.attr("action", "/shop/baseDetail");
+	moveForm.attr("action", "/shop/bassDetail");
 	moveForm.submit();
 	
 });

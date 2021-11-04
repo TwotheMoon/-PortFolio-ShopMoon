@@ -30,8 +30,8 @@
 /* /shop */
 @import "shop/guitarList.css";
 @import "shop/guitarDetail.css";
-@import "shop/baseList.css";
-@import "shop/baseDetail.css";
+@import "shop/bassList.css";
+@import "shop/bassDetail.css";
 @import "shop/midiList.css";
 @import "shop/midiDetail.css";
 @import "shop/albumList.css";

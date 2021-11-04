@@ -24,7 +24,7 @@
 		
 		<div class="guitarListBox_nav">
 			<a href="/shop/guitarList">Guitar</a> |
-			<a href="/shop/baseList">Base</a> |
+			<a href="/shop/bassList">Bass</a> |
 			<a href="/shop/midiList">Midi</a> |
 			<a href="/shop/albumList">Album</a>
 		</div>

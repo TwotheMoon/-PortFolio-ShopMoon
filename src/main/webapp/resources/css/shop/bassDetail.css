@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-.baseDetailBox{
+.bassDetailBox{
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
@@ -14,7 +14,7 @@
 }
 
 
-.baseDetail_Box{
+.bassDetail_Box{
 	margin-top: 100px;
 	width: 1000px;
 	height: 100%;
@@ -23,16 +23,16 @@
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: bold;
 	}
-	.baseDetail_rigthBox{
+	.bassDetail_rigthBox{
 		display: inline-block;
 	}
-	.baseDetail_leftBox{
+	.bassDetail_leftBox{
 		float: right;
 		width: 400px;
 		margin-right: 20px;
 		margin-top: 20px;
 	}
-	.baseDetail_Img{
+	.bassDetail_Img{
 		width: 500px;
 		height: 500px;
 		margin-left: 20px;
@@ -44,7 +44,7 @@
 	}
 
 	
-		.baseDetail_pNo{
+		.bassDetail_pNo{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 40px;
@@ -53,20 +53,20 @@
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
 		
-		.baseDetail_pCategory_label{
+		.bassDetail_pCategory_label{
 			margin-left: 20px;
 		}
-		.baseDetail_pCategory{
+		.bassDetail_pCategory{
 			margin-left: 10px;
 			width: 55px;		
 			height: 30px;
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		.baseDetail_pName_Label{
+		.bassDetail_pName_Label{
 			margin-top: 20px;
 		}
-		.baseDetail_pName{
+		.bassDetail_pName{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 210px;		
@@ -74,10 +74,10 @@
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		.baseDetail_pPrice_label{
+		.bassDetail_pPrice_label{
 			margin-top: 20px;
 		}
-		.baseDetail_pPrice{
+		.bassDetail_pPrice{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 100px;		
@@ -85,10 +85,10 @@
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		.baseDetail_pCount_label{
+		.bassDetail_pCount_label{
 			margin-top: 20px;
 		}
-		.baseDetail_pCount{
+		.bassDetail_pCount{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 50px;		
@@ -97,13 +97,13 @@
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
 	
-	.baseDetail_botBox{
+	.bassDetail_botBox{
 		margin-top: 20px;
 	}
-		.baseDetail_pContents_Label{
+		.bassDetail_pContents_Label{
 			margin-left: 20px;
 		}
-		.baseDetail_pContents{
+		.bassDetail_pContents{
 			margin-left: 25px;
 			width: 950px; 
 			height: 170px; 
@@ -111,12 +111,12 @@
 		}
 
 
-	.baseDetail_Btns{
+	.bassDetail_Btns{
 		margin-left: 180px;
 	}
-		.baseDetail_linkguitarListBtn,
-		.baseDetail_modifyWriteBtn,
-		.baseDetail_linkListBtn{
+		.bassDetail_linkguitarListBtn,
+		.bassDetail_modifyWriteBtn,
+		.bassDetail_linkListBtn{
 			margin-top: 30px;
 			margin-bottom: 100px;
 			margin-left: 5px;
@@ -128,16 +128,16 @@
 			cursor: pointer;
 			font-weight: bold;
 		}
-		.baseDetail_linkguitarListBtn:hover,
-		.baseDetail_modifyWriteBtn:hover,
-		.baseDetail_linkListBtn:hover{
+		.bassDetail_linkguitarListBtn:hover,
+		.bassDetail_modifyWriteBtn:hover,
+		.bassDetail_linkListBtn:hover{
 			background-color: var(--main-bg-color);
 			opacity: 0.6;
 			cursor: pointer;
 		}
 	
 
-.baseDetailFooterBox{
+.bassDetailFooterBox{
 	margin-top: 150px;
 
 }

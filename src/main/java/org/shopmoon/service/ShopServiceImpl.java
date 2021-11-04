@@ -61,9 +61,9 @@ public class ShopServiceImpl implements ShopService{
 	
 	// 베이스 리스트
 	@Override
-	public List<ProductVO> baseGetList(Criteria cri) throws Exception {
+	public List<ProductVO> bassGetList(Criteria cri) throws Exception {
 	
-		List<ProductVO> list = shopmapper.baseGetList(cri);
+		List<ProductVO> list = shopmapper.bassGetList(cri);
 			
 			list.forEach(product -> {
 				
@@ -80,9 +80,9 @@ public class ShopServiceImpl implements ShopService{
 	
 	// 베이스 총 개수
 	@Override
-	public int baseGetTotal(Criteria cri) throws Exception {
+	public int bassGetTotal(Criteria cri) throws Exception {
 		
-		return shopmapper.baseGetTotal(cri);
+		return shopmapper.bassGetTotal(cri);
 	}
 	
 	// 미디 리스트

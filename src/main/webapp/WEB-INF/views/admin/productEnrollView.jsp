@@ -5,8 +5,7 @@
 <%@ page session="true" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
-<!-- 위지윅 에디터 -->
-<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+
 <!-- 달력 위젯 -->
 <link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
 
@@ -24,10 +23,9 @@
 		</div>		
 		
 		<div class="productEnrollBox_nav">
-			<a href="/admin/adminMain">관리자 페이지</a> |
 			<a href="/admin/productEnrollView">상품 등록</a> |
 			<a href="/admin/productList">상품 관리</a> |
-			<a href="#">회원 관리</a> |
+			<a href="#">회원 관리</a> 
 		</div>
 		
 		
@@ -73,7 +71,7 @@
 			</div>
 			
 			<div class="procutEnrollContentsBox">
-				<textarea class="productEnrollContents" name="productContents" placeholder="상품 설명" ></textarea> <br>
+				<textarea class="productEnrollContents" name="productContents"  placeholder="상품 설명" ></textarea> <br>
 			</div>
 			
 			<label class="productEnrollRegDate_label productEnrollLabel"> 상품 등록일 </label>
@@ -96,12 +94,7 @@
 <script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 
 <script type="text/javascript">
-/* 위지윅 적용*/
-ClassicEditor
-	.create(document.querySelector('.productEnrollContents'))
-	.catch(error=>{
-		console.error(error);
-	});
+
 
 /* 달력 위젯 적용  */
 	/* 설정 */

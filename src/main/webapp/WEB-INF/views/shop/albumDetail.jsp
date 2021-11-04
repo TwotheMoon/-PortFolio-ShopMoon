@@ -41,7 +41,7 @@
 				
 				<div class="albumDetail_botBox">
 					<label class="albumDetail_pContents_Label">상품 설명</label> <br>
-					<textarea class="albumDetail_pContents" cols="150" rows="20">${albumInfo.productContents}</textarea> <br>
+					<textarea class="albumDetail_pContents" cols="150" rows="20" readonly>${albumInfo.productContents}</textarea> <br>
 					
 					<div class="albumDetail_Btns">
 						<button class="albumDetail_linkguitarListBtn">바로 구매</button>	

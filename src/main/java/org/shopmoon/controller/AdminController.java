@@ -80,7 +80,7 @@ public class AdminController {
 		rttr.addFlashAttribute("enroll_result", result);
 		
 		log.info("상품 등록 메소드 실행 완료");
-		return "redirect:/admin/adminMain";
+		return "redirect:/admin/productList";
 		
 	}
 	

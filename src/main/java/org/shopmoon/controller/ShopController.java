@@ -77,12 +77,12 @@ public class ShopController {
 	
 	
 	// 베이스 리스트 페이지 이동 및 조회
-	@RequestMapping(value = "baseList", method = RequestMethod.GET)
-	public void baseList(Criteria cri, Model model) throws Exception{
+	@RequestMapping(value = "bassList", method = RequestMethod.GET)
+	public void bassList(Criteria cri, Model model) throws Exception{
 		
 		log.info("베이스 리스트 이동");
 		
-		List list = shopservice.baseGetList(cri);
+		List list = shopservice.bassGetList(cri);
 		
 		// 키워드 검색 결과
 		if(!list.isEmpty()) {
@@ -92,19 +92,19 @@ public class ShopController {
 			return;
 		}
 		
-		model.addAttribute("pageMaker", new PageDTO(cri, shopservice.baseGetTotal(cri)));
+		model.addAttribute("pageMaker", new PageDTO(cri, shopservice.bassGetTotal(cri)));
 	}
 	
 	// 베이스 상세 페이지
-	@RequestMapping("/baseDetail")
-	public void baseGetDetail(long productNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
+	@RequestMapping("/bassDetail")
+	public void bassGetDetail(long productNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
 		
 		log.info("베이스 상세 페이지");
 		
 		// 페이지 정보
 		model.addAttribute("cri", cri);
 		
-		model.addAttribute("baseInfo", shopservice.shopGetDetail(productNo));
+		model.addAttribute("bassInfo", shopservice.shopGetDetail(productNo));
 	}
 	
 	// 미디 리스트 페이지 이동 및 조회
