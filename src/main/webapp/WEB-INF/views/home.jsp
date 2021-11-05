@@ -157,6 +157,7 @@
 				</c:forEach>
 			</table>
 			</c:if>
+			
            
 		</div>
 		    <form id="contactList_moveForm" action="/community/contactList" method="get">
@@ -168,6 +169,7 @@
 	</section>
 	
 	<script src="${path}/resources/js/contactList.js"></script>
+	<script src="${path}/resources/js/todoList.js"></script>
 	<footer class="homeFooterBox" >
 		<jsp:include page="includes/footer.jsp" />
 	</footer>

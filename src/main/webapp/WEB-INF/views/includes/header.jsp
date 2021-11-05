@@ -105,7 +105,18 @@
 	          		</ul>
           		</div>
         </div>
+        
+         <form id="todo-form">
+         	<h1>당신만을 위한 메모장</h1>
+            <input type="text" placeholder="뭐든 적어보세요!" required />
+        </form>
+        <div id="todo_listBox">
+            <ul id="todo-list"></ul>
+        </div>
+        
     </aside>
+
+<script src="${path}/resources/js/todoList.js"></script>
 <script src="${path}/resources/js/common.js"></script>
 </body>
 
