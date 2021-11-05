@@ -33,7 +33,9 @@
 			
 			<div class="contactDetail_Btns">
 				<button class="contactDetail_linkContactListBtn">목록으로 돌아가기</button>	
-				<button class="contactDetail_modifyWriteBtn">게시글 수정</button>
+				<c:if test="${result == 1}">
+					<button class="contactDetail_modifyWriteBtn">게시글 수정</button>
+				</c:if>
 					
 			</div>				
 		</div>

@@ -91,4 +91,12 @@
 	
 	</delete>
 	
+	<!-- 문의 작성자 id 확인 -->
+	
+	<select id="contactGetMemberId" resultType="String">
+		
+		select C.M_ID as memberId from contact C join member M on c.M_ID = m.M_ID where CON_NO = #{contactNo} 
+		
+	</select>
+	
 </mapper>

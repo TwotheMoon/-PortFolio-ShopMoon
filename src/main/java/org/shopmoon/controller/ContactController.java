@@ -102,8 +102,30 @@ public class ContactController {
 		
 	// 문의 글 상세 페이지 ,  수정 페이지
 		@RequestMapping({"/contactDetail", "/contactModify"})
-		public void contactGetDetail(long contactNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
+		public void contactGetDetail(Long contactNo, Criteria cri, Model model, HttpServletRequest request) throws Exception {
 			log.info("문의 글 상세 페이지 진입");
+			
+			String DBmemberId = contactservice.contactGetMemberId(contactNo);
+			log.info("DB아이디 " + DBmemberId);
+			
+			HttpSession session = request.getSession();
+			MemberVO memberInfo = (MemberVO) session.getAttribute("member");
+			String memberId = "";
+			
+			if(memberInfo == null) {
+				int result = 0;
+				model.addAttribute("result", result);
+			} else {
+				memberId = memberInfo.getMemberId();
+				log.info("세션 아이디 " + memberId);
+				
+				if(memberId.equals(DBmemberId)) {
+					int result = 1;
+					model.addAttribute("result", result);
+				}
+			}
+			
+			
 			
 			// 페이지 정보
 			model.addAttribute("cri", cri);
@@ -138,6 +160,5 @@ public class ContactController {
 			return "redirect:/community/contactList";
 		}
 		
-	
 		
 }

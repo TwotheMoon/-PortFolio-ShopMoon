@@ -25,4 +25,6 @@ public interface ContactService {
 	// 문의 글 삭제
 	public int contactDelete(Long contactNo) throws Exception;
 	
+	// 문의 글 작성자 id 확인
+	public String contactGetMemberId(Long contactNo);
 }

@@ -69,6 +69,14 @@ public class ContactMapperTests {
 		System.out.println("수정 후...................." + contactmapper.contactGetDetail(contact.getContactNo()));
 		
 	}
+	
+	@Test
+	public void contactGetMemberIdTest() throws Exception {
+		
+		Long contactNo = 252L;
+		 
+		contactmapper.contactGetMemberId(contactNo);
+	}
 		
 }
 

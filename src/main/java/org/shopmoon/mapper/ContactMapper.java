@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
+import org.shopmoon.domain.MemberVO;
 
 public interface ContactMapper {
 
@@ -24,6 +25,9 @@ public interface ContactMapper {
 
 	// 문의 글 삭제
 	public int contactDelete(Long contactNo);
+	
+	// 문의 글 작성자 id 확인
+	public String contactGetMemberId(Long contactNo);
 
 	
 }
