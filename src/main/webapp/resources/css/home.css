@@ -39,16 +39,26 @@
 		align-content: center;
 		justify-content: space-around;
 	}
+	.homeContentsBox_poductBox img{
+		width: 350px;
+		height: 350px;
+	}
+	.homeContentsBox_poductBox img:hover{
+		width: 350px;
+		height: 350px;
+		opacity: 0.6;
+	}
 		.homeContentsBox h1{
 			font-weight: bold;
 			font-family: 'Open Sans', sans-serif;
 			font-size: 20px;
 			margin-bottom: 20px;
+			margin-left: 55px;
 	}
 		.homeContentsBox_poductBox div{
 			border: 3px solid rgba(220, 220, 255, 1);
-			width: 400px;
-			height: 400px;
+			width: 350px;
+			height: 350px;
 			
 		}
 		.homeContentsBox_poductBox div:nth-child(4),
@@ -56,17 +66,108 @@
 		.homeContentsBox_poductBox div:nth-child(6){
 			margin-top: 50px;
 		}
+/* 텍스트 영역 */
+.homeContents2Box{
+	width: 1400px;
+	height: 100%;
+	margin-top: 100px;
+}
+	.homeContents2Box_imgSection1{
+		position: relative;	
+		display: flex;
+		justify-content: center;
+	}
+		.homeContents2Box_imgSection1_contents img,
+		.homeContents2Box_imgSection2_contents img{
+			width: 530px;
+			height: 350px;
+			margin: 0px 30px 0px 30px;
+			
+		}
+		.homeContents2Box_imgSection1_contents img:hover,
+		.homeContents2Box_imgSection2_contents img:hover{
+			opacity: 0.6;
+		}
+		
+		.homeContents2Box_imgSection1_header{
+			position: absolute;
+			top: 40px;
+			left: 200px;
+			font-size: 40px;
+			font-weight: bold;
+			color: white;
+			font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+		}
+		.homeContents2Box_imgSection1_text{
+			position: absolute;
+			top: 120px;
+			left: 220px;
+			font-size: 15px;
+			color: white;
+			text-align: center;
+			line-height: 20px;
+			font-weight: 400;
+			font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+		}
+		.homeContents2Box_imgSection1_header2{
+			position: absolute;
+			top: 40px;
+			right: 250px;
+			font-size: 40px;
+			font-weight: bold;
+			color: maroon;
+			font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+		}
+		.homeContents2Box_imgSection1_text2{
+			position: absolute;
+			top: 120px;
+			right: 300px;
+			font-size: 15px;
+			color: maroon;
+			text-align: center;
+			line-height: 20px;
+			font-weight: 400;
+			font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+		}
+		
+	.homeContents2Box_imgSection2{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		margin-top: 100px;
+	}
+	.homeContents2Box_imgSection2 img:hover{
+		opacity: 0.6;
+	}
+	.homeContents2Box_imgSection2_header{
+		margin-top: 20px;
+		text-align: center;
+		font-size: 20px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+	}
+	.homeContents2Box_imgSection2_text{
+		margin-top: 30px;
+		text-align: center;
+		font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+		line-height: 25px;
+	}
 
 /* 게시판 영역 */
 .homeBoardBox{
 	width: 1400px;
 	height: 700px;
-	margin-top: 200px;
+	margin-top: 150px;
 }
 	.homeBoardBox h1{
+		font-family: 'Open Sans', sans-serif;
 		font-weight: bold;
-		font-family: 'Noto Sans KR', sans-serif;
+		margin-left: 100px;
 		font-size: 20px;
+	}
+	.homeContents2Box_imgSection2 img{
+		margin-top: 20px;
 	}
 	.homeBoardBox_boardBox{
 			height: 100%;

@@ -77,6 +77,7 @@ public class MemberController {
 			rttr.addFlashAttribute("result", 0);
 			return "redirect:/member/login";
 		}
+		
 	}
 	
 	// 로그아웃 메소드
