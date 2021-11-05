@@ -23,16 +23,13 @@
 - jQuery ( 바닐라와 섞어 사용 )
 - ajax ( 더보기 페이징 전략 )
 - FontAwesome ( 여러 아이콘 )
-- bxSlider( 캐러셀 )
-- 위지윅 (텍스트 편집)
+- bxSlider( 캐러셀 
 
 
 ### Front 기술 아이디어
 - localstorage를 통한 브라우저 메모장 유틸
-- ajax를 통한 상품 페이지 더보기 구현( 성능 향상 ) 
+- ajax를 이용한 회원가입 유효성 
 - 메인 페이지 캐러셀( bxSlider 사용 )
-- 상품 좋아요 DB에서 lickHeart = 1 반환시 하트 색칠
-
 
 ### 페이지 구성 JSP
 
@@ -43,8 +40,8 @@
    1. section1 : 캐러셀 
    
    2. section2 : 
-     - DB에서 끌어온 베스트 상품 목록
-     - 상품 문의 게시판 최근 5개
+     - 베스트 상품 목록
+     - 상품 문의 게시판 
      - 오른쪽 fixed 채팅창 슬라이드  
 
 
@@ -54,7 +51,7 @@
 - *재사용 **nav.jsp** : 메뉴 구성                                         
    1. 로그인 | 회원가입 | 장바구니 | 마이페이지
      - 로그인시 로그인, 회원가입 hide -> 회원 아이디 표시
-     - 관리자 로그인시 관리자 페이지 ( adminPageMain.jsp )  
+     - 관리자 로그인시 관리자 페이지 ( adminMain.jsp )  
 
 
    2. ABOUT
@@ -211,17 +208,6 @@
 | 8 |  OD_RESULT    | CHAR(1)      | NOT NULL  |         | 주문 처리 여부(Y: 처리완료, N: 미처리)  |
 *SEQ_ORDER_DETAIL
 
-- Comments
-
-| No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
-|:-:|:-------------:|:------------:|:---------:|:-------:|:--------------:|
-| 1 |  COMM_NO      |    NUMBER    | NOT NULL  |   PK    |  고유번호    |
-| 2 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품평을 남길 상품 고유번호    |
-| 3 |  M_ID         | VARCHAR(20)  | NOT NULL  |   FK    |  / 회원 아이디   |
-| 4 |  COMM_CONTENTS|    NUMBER    | NOT NULL  |         | 댓글 내용        |
-| 5 |  COMM_REG_DATE|    DATE      | NOT NULL  |         |  댓글 작성일        |
-| 6 |  COMM_REG_DATE|    DATE      | NOT NULL  |         |  댓글 수정일        |
-*SEQ_COMMENTS
 
 
 
