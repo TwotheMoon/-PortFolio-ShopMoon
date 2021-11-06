@@ -21,10 +21,11 @@
 					</div>
 				</div>
 				
+				<form class="guitarDetail_form" method="post">
 				<div class="guitarDetail_leftBox">
 				
 					<label class="guitarDetail_pNoLabel">상품 번호</label>
-					<input class="guitarDetail_pNo" value="${guitarInfo.productNo }" readonly> 
+					<input class="guitarDetail_pNo" value="<c:out value='${guitarInfo.productNo }'></c:out>" readonly> 
 					
 					<label class="guitarDetail_pCategory_label">카테고리</label>
 					<input class="guitarDetail_pCategory" value="${guitarInfo.productCategory }" readonly> <br>
@@ -48,7 +49,8 @@
 						<button class="guitarDetail_modifyWriteBtn">장바구니</button>	
 						<button class="guitarDetail_linkListBtn">목록으로 돌아가기</button>			
 					</div>	
-				</div>	
+				</div>
+				</form>	
 		</div>
 		    <form id="guitarDetail_moveForm" method="get">
 		   	 <input type="hidden" name="productNo" value='<c:out value="${guitarInfo.productNo}"/>'>

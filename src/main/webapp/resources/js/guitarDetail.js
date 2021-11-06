@@ -9,17 +9,17 @@ let moveForm = $("#guitarDetail_moveForm");
 		moveForm.attr("action", "/admin/productList");
 		moveForm.submit();
 		
-	});
+	});*/
 	
 	// 장바구니 버튼
-	$(".productDetail_modifyWriteBtn").on("click", function(e){
+	$(".guitarDetail_modifyWriteBtn").on("click", function(e){
 		
 		e.preventDefault();
 		
 		moveForm.attr("action", "/admin/productModify");
 		moveForm.submit();
 		
-	});*/
+	});
 	
 	// 기타 목록 페이지 이동 버튼
 	$(".guitarDetail_linkListBtn").on("click", function(e){

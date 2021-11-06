@@ -5,11 +5,9 @@ $(".findIdBtn").click(function(){
 	$(".findIdBox_form").submit();	
 });
 
-// 홈으로 돌아가기
-$(".redirectHomeBtn").click(function(e){
-	
-	e.preventDefault()
-	
-	$(".findIdBox_form").attr("href", "/member/login");
+// 로그인으로 돌아가기
+$(".redirectHomeBtn").click(function(){
 
+	location.replace("/member/login");
+	
 });

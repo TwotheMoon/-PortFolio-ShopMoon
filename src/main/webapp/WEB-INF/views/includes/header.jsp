@@ -65,6 +65,7 @@
 	            		<a href="/admin/productList">관리자 페이지</a>
 		            	<a href="/member/logout"> 로그아웃 </a>
 	            	</c:if>
+	            	<!-- 관리자 메뉴 -->
 	            	<c:if test="${member.memberAuthority == 0 }">
 		            	<a href="/member/logout"> 로그아웃 </a>
 		            	<a href="#"> 장바구니 </a>
@@ -107,7 +108,7 @@
         </div>
         
          <form id="todo-form">
-         	<h1>당신만을 위한 메모장</h1>
+         	<h1>#Moon Memo</h1>
             <input type="text" placeholder="뭐든 적어보세요!" required />
         </form>
         <div id="todo_listBox">
