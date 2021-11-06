@@ -181,8 +181,7 @@
 | 2 |  M_ID         | VARCHAR(20)  | NOT NULL  |   FK    | 주문자 / 회원 아이디   |
 | 3 |  P_NO         |    NUMBER    | NOT NULL  |   FK    | 상품 고유번호    |
 | 4 |  CART_QUANTITY|    NUMBER(5) | NOT NULL  |         | 상품 개수         |
-| 5 |  CART_RESULT  | VARCHAR2(7)  | NOT NULL  |         | 주문 우편번호      |
-| 6 |  CART_REG_DATE| DATE         | NOT NULL  |         | 장바구니 등록 날짜   |
+| 5 |  CART_REG_DATE| DATE         | NOT NULL  |         | 장바구니 등록 날짜   |
 *SEQ_CART
 
 - Orders
