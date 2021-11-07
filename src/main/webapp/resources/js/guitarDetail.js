@@ -16,7 +16,7 @@ let moveForm = $("#guitarDetail_moveForm");
 		
 		e.preventDefault();
 		
-		moveForm.attr("action", "/admin/productModify");
+		moveForm.attr("action", "/shop/productModify");
 		moveForm.submit();
 		
 	});
