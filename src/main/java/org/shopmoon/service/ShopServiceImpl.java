@@ -4,6 +4,7 @@ package org.shopmoon.service;
 import java.util.List;
 
 import org.shopmoon.domain.AttachImageVO;
+import org.shopmoon.domain.CartVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
 import org.shopmoon.mapper.AdminMapper;
@@ -135,6 +136,13 @@ public class ShopServiceImpl implements ShopService{
 	public int albumGetTotal(Criteria cri) throws Exception {
 		
 		return shopmapper.albumGetTotal(cri);
+	}
+	
+	// 장바구니 등록
+	@Override
+	public void cartEnroll(CartVO cart) throws Exception {
+
+		shopmapper.cartEnroll(cart);
 	}
 	
 	

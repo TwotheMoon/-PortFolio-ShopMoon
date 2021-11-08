@@ -3,12 +3,15 @@ package org.shopmoon.controller;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.shopmoon.domain.AttachImageVO;
+import org.shopmoon.domain.CartVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.MemberVO;
 import org.shopmoon.domain.PageDTO;
@@ -26,6 +29,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -168,6 +172,24 @@ public class ShopController {
 		
 		model.addAttribute("albumInfo", shopservice.shopGetDetail(productNo));
 	}
+	
+	// 장바구니 페이지
+//  @RequestMapping("/cartEnroll")
+//	public void cartGetList(HttpServletRequest request, HttpSession session, CartVO cart) {
+//		
+//		log.info("장바구니 리스트");
+//
+//		MemberVO member = (MemberVO)session.getAttribute("member");
+//		if(member == null) {
+//			
+//		} else {
+//			
+//			String memberId = member.getMemberId();
+//			cart.setMemberId(memberId);
+//			shopservice.cartEnroll(cart);
+//			
+//		}
+//	}
 	
 	
 	

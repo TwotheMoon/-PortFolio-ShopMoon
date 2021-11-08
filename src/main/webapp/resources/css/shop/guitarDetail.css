@@ -85,10 +85,10 @@
 			border: none;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		.guitarDetail_pCount_label{
+		.guitarDetail_pQuantity_label{
 			margin-top: 20px;
 		}
-		.guitarDetail_pCount{
+		.guitarDetail_pQuantity{
 			margin-top: 20px;
 			margin-left: 10px;
 			width: 50px;		

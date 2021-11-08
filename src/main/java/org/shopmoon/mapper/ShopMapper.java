@@ -3,6 +3,7 @@ package org.shopmoon.mapper;
 import java.util.List;
 
 import org.shopmoon.domain.AttachImageVO;
+import org.shopmoon.domain.CartVO;
 import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
@@ -36,6 +37,9 @@ public interface ShopMapper {
 		
 	// 앨범 총 개수
 	public int albumGetTotal(Criteria cri);
+	
+	// 장바구니 등록
+	public void cartEnroll(CartVO cart);
 	
 		
 }

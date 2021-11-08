@@ -12,7 +12,7 @@
     
 	<!-- contactDetail.jsp 컨텐츠 -->
 	<section class="guitarDetailBox opacityBox" >
-				
+		<form class="guitarDetail_form" method="post">		
 		<div class="guitarDetail_Box">
 				<div class="guitarDetail_rigthBox">
 					<div class="guitarDetail_img">
@@ -21,23 +21,23 @@
 					</div>
 				</div>
 				
-				<form class="guitarDetail_form" method="post">
+				
 				<div class="guitarDetail_leftBox">
 				
 					<label class="guitarDetail_pNoLabel">상품 번호</label>
-					<input class="guitarDetail_pNo" value="<c:out value='${guitarInfo.productNo }'></c:out>" readonly> 
+					<input class="guitarDetail_pNo" name="productNo" value="<c:out value='${guitarInfo.productNo }'></c:out>" readonly> 
 					
 					<label class="guitarDetail_pCategory_label">카테고리</label>
-					<input class="guitarDetail_pCategory" value="${guitarInfo.productCategory }" readonly> <br>
+					<input class="guitarDetail_pCategory" value="<c:out value='${guitarInfo.productCategory }'></c:out>" readonly> <br>
 			
 					<label class="guitarDetail_pName_Label">상품 이름</label>
-					<input class="guitarDetail_pName" value="${guitarInfo.productName }" readonly> <br>
+					<input class="guitarDetail_pName" value="<c:out value='${guitarInfo.productName }'></c:out>" readonly> <br>
 
 					<label class="guitarDetail_pPrice_label">가격</label>
-					<input class="guitarDetail_pPrice" value="${guitarInfo.productPrice }원" readonly> <br>
+					<input class="guitarDetail_pPrice" name="productPrice" value="<c:out value='${guitarInfo.productPrice }'></c:out>" readonly> <br>
 
-					<label class="guitarDetail_pCount_label">주문수량</label>
-					<input class="guitarDetail_pCount" type="number" placeholder="1">
+					<label class="guitarDetail_pQuantity_label">주문수량</label>
+					<input class="guitarDetail_pQuantity" name="cartQuantity" type="number" placeholder="수량">
 				</div>
 				
 				<div class="guitarDetail_botBox">
@@ -50,8 +50,9 @@
 						<button class="guitarDetail_linkListBtn">목록으로 돌아가기</button>			
 					</div>	
 				</div>
-				</form>	
+				
 		</div>
+		</form>	
 		    <form id="guitarDetail_moveForm" method="get">
 		   	 <input type="hidden" name="productNo" value='<c:out value="${guitarInfo.productNo}"/>'>
 				<input type="hidden" name="pageNum" value='<c:out value="${cri.pageNum}"/>'>

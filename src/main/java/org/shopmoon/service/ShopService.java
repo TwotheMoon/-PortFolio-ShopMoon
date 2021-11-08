@@ -2,6 +2,7 @@ package org.shopmoon.service;
 
 import java.util.List;
 
+import org.shopmoon.domain.CartVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.ProductVO;
 
@@ -34,4 +35,6 @@ public interface ShopService {
 	// 앨범 총 개수
 	public int albumGetTotal(Criteria cri) throws Exception;
 	
+	// 장바구니 등록
+	public void cartEnroll(CartVO cart) throws Exception;
 }

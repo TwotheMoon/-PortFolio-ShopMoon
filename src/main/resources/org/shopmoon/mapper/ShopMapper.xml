@@ -190,5 +190,16 @@
         
     </select>
     
+    <!-- 장바구니 등록 -->
+	<insert id="cartEnroll">
+		insert into cart values(
+			#{seq_cart.nextval}
+			, #{memberId}
+			, #{productNo}
+			, #{cartQuantity}
+			, sysdate 
+		)
+	</insert>
+    
 
 </mapper>

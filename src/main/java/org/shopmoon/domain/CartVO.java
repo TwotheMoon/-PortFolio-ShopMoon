@@ -8,8 +8,9 @@ import lombok.Data;
 public class CartVO {
 
 	private Long cartNo; 	// PK
-	private Long memberId;  // FK
+	private String memberId;  // FK
 	private Long productNo; // FK
+	private int productPrice;
 	private int cartQuantity;
 	private Date cartRegDate;
 	
