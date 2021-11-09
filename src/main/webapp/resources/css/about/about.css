@@ -135,4 +135,14 @@ padding-bottom: 300px;
 	.aboutBox_column3 p span{
 		font-size: 25px;
 	}
+
+.youtubeHeader{
+	font-family: 'Noto Serif Display', serif;
+	font-size: 20px;
+}
+.youtubeBox{
+	border: 10px solid var(--main-bg-color);
+	border-radius: 20px;
+	margin-bottom: 250px;
+}
 	

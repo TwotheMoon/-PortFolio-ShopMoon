@@ -60,10 +60,17 @@
 				저희는 고객님들과 함께 만들어갑니다. <br>
 			</p>
 		</div>
+		
+		
+        <h1 class="youtubeHeader" data-aos="zoom-in"  data-aos-easing="ease-in-out">with Chillhop Music</h1>
+        <div id="player" class="youtubeBox" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000"></div>
 	</section>
 	
 	<footer class="aboutFooterBox" >
 		<jsp:include page="${path }../includes/footer.jsp" />
 	</footer>
-
+	
+	
+<!-- 어바웃 js -->
+<script src="${path}/resources/js/about.js"></script>
 </body>
