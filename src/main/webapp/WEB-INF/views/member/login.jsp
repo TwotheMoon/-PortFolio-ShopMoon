@@ -45,7 +45,7 @@
 		
 			<div class="loginBox_find">
 			<a href="/member/findIdView"><button class="loginBox_findId">아이디 찾기</button></a>
-				<button class="loginBox_findPw">비밀번호 찾기</button>
+			<a href="/member/findPwView"><button class="loginBox_findPw">비밀번호 찾기</button></a>
 			</div>
 			<a href="/member/signUp"><button class="loginBox_signUp">회원가입</button></a>
 		

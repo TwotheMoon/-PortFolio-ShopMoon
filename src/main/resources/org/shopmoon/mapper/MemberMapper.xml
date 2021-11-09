@@ -65,4 +65,9 @@
 	<select id="memberFindId" resultType="org.shopmoon.domain.MemberVO">
 		select M_ID as memberId from member where M_EMAIL = #{memberEmail}
 	</select>
+	
+	<!-- 비밀번호 찾기 -->
+<!-- 	<select id="memberFindId" resultType="org.shopmoon.domain.MemberVO">
+		select M_PW as memberPw from member where M_PHONE = #{memberPhone}
+	</select> -->
 </mapper>

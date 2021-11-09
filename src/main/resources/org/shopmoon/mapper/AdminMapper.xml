@@ -57,7 +57,8 @@
 	   ]]>
 	</select>
 	
-  <!-- 믄의 글 총 수 -->
+
+  <!-- 상품 총 수 -->
     <select id="productGetTotal" resultType="int">
     
         select count(*) from product

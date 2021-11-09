@@ -12,6 +12,7 @@
 @import "member/memberUpdateView.css";
 @import "member/memberDeleteView.css";
 @import "member/findIdView.css";
+@import "member/findPwView.css";
 
 /* /community */
 @import "community/contactList.css";

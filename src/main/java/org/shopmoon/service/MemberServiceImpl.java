@@ -1,6 +1,5 @@
 package org.shopmoon.service;
 
-import org.apache.ibatis.session.SqlSession;
 import org.shopmoon.domain.MemberVO;
 import org.shopmoon.mapper.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +49,12 @@ public class MemberServiceImpl implements MemberService {
 		return membermapper.memberFindId(memberEmail);	
 		
 	}
+	
+//	@Override
+//	public MemberVO memberFindPw(String memberPhone) throws Exception {
+//
+//		return membermapper.memberFindPw(memberPhone);
+//	}
 	
 
 }

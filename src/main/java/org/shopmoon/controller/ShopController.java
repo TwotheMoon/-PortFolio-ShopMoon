@@ -50,9 +50,11 @@ public class ShopController {
 	
 	// 기타 리스트 페이지 이동 및 조회
 	@RequestMapping(value = "guitarList", method = RequestMethod.GET)
-	public void guitarList(Criteria cri, Model model) throws Exception{
+	public void guitarList(Model model) throws Exception{
 		
 		log.info("기타 리스트 이동");
+		
+		Criteria cri = new Criteria(1,8);
 		
 		List list = shopservice.guitarGetList(cri);
 		

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+
+.findPwBox{
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Open Sans', sans-serif;
+}
+	.findPwBox_title{
+		margin-top: 200px;
+		font-weight: bold;
+		font-size: 25px;
+	}
+	.findPwBox_subtitle{
+		margin-top: 20px;
+		font-weight: bold;
+		font-size: 15px;
+		text-align: center;
+		line-height: 20px;
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+
+
+.findPwBox_form{
+	margin-top: 50px;
+}
+	.findPw{
+		width: 430px;
+		height: 60px;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	}
+
+	.findPwFail{
+		margin-top: 20px;
+		width:100%;
+		text-align: center;
+		font-size: 13px;
+		color: red;
+	}
+	.LoginSuccess{
+		margin-top: 20px;
+		width:100%;
+		text-align: center;
+		font-size: 13px;
+		color: black;
+	}
+	.findPwBtn,
+	.redirectHomeBtn{
+		margin: 50px 10px 100px 10px;
+		width: 200px;
+		height: 50px;
+		background-color: var(--main-bg-color);
+		border: none;
+		cursor: pointer;
+		font-weight: bold;
+	}
+		.findPwBtn:hover,
+		.redirectHomeBtn:hover{
+		background-color: var(--main-bg-color);
+		opacity: 0.6;
+		cursor: pointer;
+	}
+	

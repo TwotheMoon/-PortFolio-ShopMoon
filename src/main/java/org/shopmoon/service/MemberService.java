@@ -22,4 +22,7 @@ public interface MemberService {
 	
 	// 회원 아이디 찾기
 	public MemberVO memberFindId(String memberEmail) throws Exception;
+	
+	// 회원 비밀번호 찾기
+	//public MemberVO memberFindPw(String memberPhone) throws Exception;
 }
