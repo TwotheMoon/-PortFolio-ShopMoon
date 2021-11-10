@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.shopmoon.domain.ContactVO;
 import org.shopmoon.domain.Criteria;
-import org.shopmoon.domain.MemberVO;
 
 public interface ContactMapper {
 

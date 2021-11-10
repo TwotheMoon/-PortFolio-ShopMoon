@@ -77,7 +77,6 @@ private String getFolderYesterDay() {
 			});
 		}
 		
-		
 		// 삭제 대상 파일 제거
 		log.warn("file Delete : ");
 		for(File file : removeFileList) {

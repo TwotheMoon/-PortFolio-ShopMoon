@@ -8,17 +8,13 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.shopmoon.domain.AttachImageVO;
 import org.shopmoon.domain.Criteria;
 import org.shopmoon.domain.MemberVO;
 import org.shopmoon.domain.PageDTO;
-import org.shopmoon.mapper.AttachMapper;
-import org.shopmoon.service.AdminService;
 import org.shopmoon.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,12 +32,8 @@ public class HomeController {
 	
 	@Autowired
 	private ContactService contactservice;
-	@Autowired
-	private AdminService adminservice;
 	
-	@Autowired
-	private AttachMapper attachmapper;
-	
+	// 메인페이지
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Criteria cri, Model model, HttpServletRequest request, MemberVO member) throws Exception {
 		// 문의 글 목록 출력
@@ -74,6 +66,7 @@ public class HomeController {
 		return "home";
 	}
 	
+	// about 페이지
 	@RequestMapping(value="/about", method = RequestMethod.GET)
 	public String about() {
 		
@@ -81,6 +74,7 @@ public class HomeController {
 		return "./about/about";
 	}
 	
+	// allBrand 페이지
 	@RequestMapping(value="/allBrand", method = RequestMethod.GET)
 	public String allBrand() {
 		
@@ -88,6 +82,7 @@ public class HomeController {
 		return "./about/allBrand";
 	}
 	
+	// wayToCome 페이지
 	@RequestMapping(value="/wayToCome", method = RequestMethod.GET)
 	public String wayToCome() {
 		
@@ -95,6 +90,7 @@ public class HomeController {
 		return "./community/wayToCome";
 	}
 	
+	// 이미지 출력
 	@GetMapping("/display")
 	public ResponseEntity<byte[]> getImage(String fileName){
 		

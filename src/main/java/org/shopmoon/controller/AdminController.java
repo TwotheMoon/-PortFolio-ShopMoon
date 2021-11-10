@@ -55,7 +55,6 @@ public class AdminController {
 		log.info("관리자 페이지 이동");
 	}
 	
-	
 	// 상품 등록 페이지 이동
 	@RequestMapping("/productEnrollView")
 	public void productEnroll() throws Exception {
@@ -291,7 +290,6 @@ public class AdminController {
 		return new ResponseEntity<List<AttachImageVO>>(attachmapper.getAttachList(productNo), HttpStatus.OK);
 		
 	}
-	
 	
 }
 	

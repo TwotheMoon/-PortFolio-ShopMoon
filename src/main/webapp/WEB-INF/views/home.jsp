@@ -9,11 +9,7 @@
 </header>	
 	
 <body id="homeBody">
-    
-	<!-- css AOS 초기화 -->
-	<script>
-	    AOS.init();
-	</script>
+
 	<!-- bsSlide 초기화 -->
 	<script> 
 	$(document).ready(function(){
@@ -158,7 +154,6 @@
 			</table>
 			</c:if>
 			
-           
 		</div>
 		    <form id="contactList_moveForm" action="/community/contactList" method="get">
 				<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
@@ -168,11 +163,11 @@
 		</section>
 	</section>
 	
-	<script src="${path}/resources/js/contactList.js"></script>
-	<script src="${path}/resources/js/todoList.js"></script>
 	<footer class="homeFooterBox" >
 		<jsp:include page="includes/footer.jsp" />
 	</footer>
 
+	<script src="${path}/resources/js/contactList.js"></script>
+	<script src="${path}/resources/js/todoList.js"></script>
 </body>
 

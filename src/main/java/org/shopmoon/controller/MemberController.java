@@ -28,6 +28,7 @@ public class MemberController {
 	@Autowired
 	private BCryptPasswordEncoder pwEncoder;
 	
+	
 	// 로그인 뷰 진입
 	@RequestMapping("/login")
 	public String login() {
@@ -40,7 +41,7 @@ public class MemberController {
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String loginPOST(HttpServletRequest request, MemberVO member, RedirectAttributes rttr) throws Exception {
 							// 로그인 성공시 세션 저장을 위해  // 회원 데이터 받기위해  // 로그인 실패시 실패 페이지 리다이렉트
-
+		
 		HttpSession session = request.getSession();
 		String rawPw = "";
 		String encodePw = "";
