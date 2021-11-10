@@ -1,13 +1,9 @@
 package org.shopmoon.domain;
 
-import org.springframework.stereotype.Service;
 
-import lombok.Getter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@Service
-@ToString
+@Data
 public class PageDTO {
 
 	private int pageStart;
@@ -35,5 +31,6 @@ public class PageDTO {
         this.next = this.pageEnd < realEnd;
 	
 	}
+
 	
 }

@@ -1,35 +1,21 @@
 package org.shopmoon.controller;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.shopmoon.domain.AttachImageVO;
-import org.shopmoon.domain.CartVO;
 import org.shopmoon.domain.Criteria;
-import org.shopmoon.domain.MemberVO;
 import org.shopmoon.domain.PageDTO;
 import org.shopmoon.mapper.AttachMapper;
-import org.shopmoon.mapper.ShopMapper;
-import org.shopmoon.service.AdminService;
-import org.shopmoon.service.ContactService;
 import org.shopmoon.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -50,17 +36,15 @@ public class ShopController {
 	
 	// 기타 리스트 페이지 이동 및 조회
 	@RequestMapping(value = "guitarList", method = RequestMethod.GET)
-	public void guitarList(Model model) throws Exception{
+	public void guitarList(Criteria cri, Model model) throws Exception{
 		
 		log.info("기타 리스트 이동");
-		
-		Criteria cri = new Criteria(1,8);
 		
 		List list = shopservice.guitarGetList(cri);
 		
 		// 키워드 검색 결과
 		if(!list.isEmpty()) {
-			model.addAttribute("list",list);
+			model.addAttribute("list", list);
 		} else {
 			model.addAttribute("listCheck", "empty");
 			return;
