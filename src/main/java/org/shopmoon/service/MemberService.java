@@ -25,4 +25,6 @@ public interface MemberService {
 	
 	// 회원 비밀번호 찾기
 	//public MemberVO memberFindPw(String memberPhone) throws Exception;
+	
+	
 }

@@ -10,10 +10,6 @@
 </header>
 
 <body id="loginBody">
-    <!-- css AOS 초기화 -->
-    <script>
-        AOS.init();
-    </script>
 
     
 	<!-- login.jsp 컨텐츠 -->
@@ -57,21 +53,5 @@
 	
 <!-- 로그인 js -->
 <script src="${path}/resources/js/login.js"></script>
-<script type='text/javascript'>
-        //<![CDATA[
-        // 사용할 앱의 JavaScript 키를 설정해 주세요.
-        Kakao.init('13c8a4cbd0212f0efd7ee600e96e9a0c');
-        // 카카오 로그인 버튼을 생성합니다.
-        Kakao.Auth.createLoginButton({
-            container: '#kakao-login-btn',
-            success: function (authObj) {
-                alert(JSON.stringify(authObj));
-            },
-            fail: function (err) {
-                alert(JSON.stringify(err));
-            }
-        });
-      //]]>
-    </script>
 
 </body>
