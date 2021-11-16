@@ -173,6 +173,18 @@
 | 8 |  CON_REG_DATE   | DATE         | NOT NULL  |         | 문의 등록일 |
 *SEQ_CONTACT
 
+- Reply
+
+| No|   FieldName   |  DataType      |   Null    |   Key   | Comment        |  
+|:-:|:-------------:|:--------------:|:---------:|:-------:|:--------------:|
+| 1 |  R_NO           |    NUMBER    | NOT NULL  |   PK    | 댓글 고유번호    |
+| 2 |  M_ID           | VARCHAR(20)  | NOT NULL  |   FK    | 작성자 / 회원 아이디     |
+| 3 |  CON_NO         | VARCHAR2(20) | NOT NULL  |   FK    | 카테고리 | 
+| 4 |  R_CONTENTS     | VARCHAR2(100)| NOT NULL  |         | 댓글 |  
+| 5 |  R_REG_DATE     | DATE         | NOT NULL  |         | 작성 날짜 |
+| 6 |  R_UPDATE_DATE  | DATE         |     NULL  |         | 수정 날짜  |
+*SEQ_Reply
+
 - Cart
 
 | No|   FieldName   |  DataType    |   Null    |   Key   | Comment        |  
