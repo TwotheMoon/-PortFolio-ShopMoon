@@ -98,7 +98,10 @@
                 <div class="midiListSearch_box">
                 	<form id="midiListSearchForm" action="/shop/midiList" method="get">
                 		<div class="midiListSearch_input">
-                		<label>상품 이름</label>
+                			<select name="type" class="midiListSearch_select">
+								<option value="P">상품이름</option>
+								<option value="C">상품내용</option>
+							</select>
                 			<input class="midiListSearch_text" type="text" name="keyword" value='<c:out value="${pageMaker.cri.keyword}"></c:out>'>
                 			<input type="hidden" name="pageNum" value='<c:out value="${pageMaker.cri.pageNum }"></c:out>'>
                 			<input type="hidden" name="amount" value='${pageMaker.cri.amount}'>

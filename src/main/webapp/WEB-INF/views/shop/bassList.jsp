@@ -98,7 +98,10 @@
                 <div class="bassListSearch_box">
                 	<form id="bassListSearchForm" action="/shop/bassList" method="get">
                 		<div class="bassListSearch_input">
-                		<label>상품 이름</label>
+                			<select name="type" class="bassListSearch_select">
+								<option value="P">상품이름</option>
+								<option value="C">상품내용</option>
+							</select>
                 			<input class="bassListSearch_text" type="text" name="keyword" value='<c:out value="${pageMaker.cri.keyword}"></c:out>'>
                 			<input type="hidden" name="pageNum" value='<c:out value="${pageMaker.cri.pageNum }"></c:out>'>
                 			<input type="hidden" name="amount" value='${pageMaker.cri.amount}'>

@@ -18,6 +18,26 @@
 		)
 	</insert>
 	
+	<sql id="criteria">
+			<trim prefix="(" suffix=") AND " prefixOverrides="OR">
+				<foreach item='type' collection="typeArr">
+					<trim prefix="OR">
+						<choose>
+							<when test="type == 'W'.toString()">
+								M_ID like '%'||#{keyword}||'%'
+							</when>
+							<when test="type == 'T'.toString()">
+								CON_TITLE like '%'||#{keyword}||'%'
+							</when>
+							<when test="type == 'C'.toString()">
+								CON_CONTENTS like '%'||#{keyword}||'%'
+							</when>
+						</choose>
+					</trim>
+				</foreach>
+			</trim>
+		</sql>
+	
 	<!-- 모든 문의 글 조회 -->
 	<select id="contactGetList" resultType="org.shopmoon.domain.ContactVO">
 		<![CDATA[
@@ -35,9 +55,8 @@
 			 from contact c
 			where 
 	    ]]>
-		    <if test="keyword != null">
-				M_ID like '%' || #{keyword} || '%' and
-		    </if>
+		    
+		    <include refid="criteria"></include>
 		   
 	   <![CDATA[
 	   		rownum <= #{pageNum} * #{amount}
@@ -50,17 +69,17 @@
 	  <!-- 믄의 글 총 수 -->
       <select id="contactGetTotal" resultType="int">
       
-          select count(*) from contact
+          select count(*) from contact where
           
-          <if test="keyword != null">
-             where M_ID like '%' || #{keyword} || '%'
-          </if>
+          <include refid="criteria"></include>
+          
+          CON_NO > 0
       </select> 
       
       <!-- 문의 글 상세  -->
       <select id="contactGetDetail" resultType="org.shopmoon.domain.ContactVO">
       	
-      	select 	 CON_NO as contactNo
+      	select CON_NO as contactNo
 				, M_ID as memberId
 				, CON_CATEGORY as contactCategory
 				, CON_TITLE as contactTitle

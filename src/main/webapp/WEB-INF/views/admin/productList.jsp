@@ -119,7 +119,11 @@
                 <div class="productListSearch_box">
                 	<form id="productListSearchForm" action="/admin/productList" method="get">
                 		<div class="productListSearch_input">
-                		<label>상품 이름</label>
+                			<select name="type" class="productListSearch_select">
+								<option value="P">상품이름</option>
+								<option value="T">카테고리</option>
+								<option value="C">상품내용</option>
+							</select>
                 			<input class="contactListSearch_text" type="text" name="keyword" value='<c:out value="${pageMaker.cri.keyword}"></c:out>'>
                 			<input type="hidden" name="pageNum" value='<c:out value="${pageMaker.cri.pageNum }"></c:out>'>
                 			<input type="hidden" name="amount" value='${pageMaker.cri.amount}'>

@@ -111,6 +111,11 @@
 		border : 2px solid black;
 		font-weight:400;
 	}
+	.albumListSearch_select{
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		height: 40px;
+	}
 	.albumListSearch_text{
 		width: 100px;
 		height: 40px;

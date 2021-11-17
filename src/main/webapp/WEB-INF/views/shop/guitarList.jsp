@@ -98,7 +98,10 @@
                 <div class="guitarListSearch_box">
                 	<form id="guitarListSearchForm" action="/shop/guitarList" method="get">
                 		<div class="guitarListSearch_input">
-                		<label>상품 이름</label>
+                			<select name="type" class="guitarListSearch_select">
+								<option value="P">상품이름</option>
+								<option value="C">상품내용</option>
+							</select>
                 			<input class="guitarListSearch_text" type="text" name="keyword" value='<c:out value="${pageMaker.cri.keyword}"></c:out>'>
                 			<input type="hidden" name="pageNum" value='<c:out value="${pageMaker.cri.pageNum }"></c:out>'>
                 			<input type="hidden" name="amount" value='${pageMaker.cri.amount}'>

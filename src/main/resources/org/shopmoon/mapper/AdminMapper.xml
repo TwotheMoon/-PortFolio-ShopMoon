@@ -26,6 +26,26 @@
 		)
 	</insert>
 	
+		<sql id="criteria">
+			<trim prefix="(" suffix=") AND " prefixOverrides="OR">
+				<foreach item='type' collection="typeArr">
+					<trim prefix="OR">
+						<choose>
+							<when test="type == 'P'.toString()">
+								P_NAME like '%'||#{keyword}||'%'
+							</when>
+							<when test="type == 'T'.toString()">
+								P_CATEGORY like '%'||#{keyword}||'%'
+							</when>
+							<when test="type == 'C'.toString()">
+								P_CONTENTS like '%'||#{keyword}||'%'
+							</when>
+						</choose>
+					</trim>
+				</foreach>
+			</trim>
+		</sql>
+	
 	<!-- 모든 상품 리스트 조회 -->
 	<select id="productGetList" resultType="org.shopmoon.domain.ProductVO">
 		<![CDATA[
@@ -45,10 +65,9 @@
 			 from product p
 			where 
 	    ]]>
-		 	<if test="keyword != null">
-				P_NAME like '%' || #{keyword} || '%' and
-		    </if>
-		   
+			
+			<include refid="criteria"></include>
+			
 	   <![CDATA[
 	   		rownum <= #{pageNum} * #{amount}
 	   		)
@@ -61,11 +80,11 @@
   <!-- 상품 총 수 -->
     <select id="productGetTotal" resultType="int">
     
-        select count(*) from product
-        
-        <if test="keyword != null">
-           where P_NAME like '%' || #{keyword} || '%'
-        </if>
+        select count(*) from product where
+			
+		<include refid="criteria"></include>     
+		 
+		 P_NO > 0
     </select>
     
           <!-- 상품 조회 상세  -->

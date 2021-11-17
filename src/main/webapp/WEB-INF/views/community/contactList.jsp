@@ -119,7 +119,12 @@
                 <div class="contactListSearch_box">
                 	<form id="contactListSearchForm" action="/community/contactList" method="get">
                 		<div class="contactListSearch_input">
-                		<label>작성자</label>
+                			<select name="type" class="contactListSearch_select">
+								<option value="W">작성자</option>
+								<option value="T">제목</option>
+								<option value="C">내용</option>
+								<option value="TC">제목과 내용</option>
+							</select>
                 			<input class="contactListSearch_text" type="text" name="keyword" value='<c:out value="${pageMaker.cri.keyword}"></c:out>'>
                 			<input type="hidden" name="pageNum" value='<c:out value="${pageMaker.cri.pageNum }"></c:out>'>
                 			<input type="hidden" name="amount" value='${pageMaker.cri.amount}'>
