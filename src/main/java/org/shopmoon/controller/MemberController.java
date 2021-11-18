@@ -2,6 +2,7 @@ package org.shopmoon.controller;
 
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.shopmoon.domain.MemberVO;
@@ -220,6 +221,14 @@ public class MemberController {
 		return "./member/findIdView";
 	}
 	
+	// 회원 아이디 찾기 뷰 진입
+	@RequestMapping("/member/findPwView")
+	public String findPwView() {
+		
+		log.info("비밀번호 찾기 뷰 진입");
+		return "./member/findPwView";
+	}
+	
 	// 회원 아이디 찾기 메소드
 	@RequestMapping(value = "/findId", method = RequestMethod.POST)
 	public String findId(HttpServletRequest request, MemberVO member, RedirectAttributes rttr, Model model) throws Exception {
@@ -248,42 +257,14 @@ public class MemberController {
 
 	}
 	
-	// 회원 아이디 찾기 뷰 진입
-	@RequestMapping("/member/findPwView")
-	public String findPwView() {
-		
-		log.info("비밀번호 찾기 뷰 진입");
-		return "./member/findPwView";
-	}
 	
 	// 회원 비밀번호 찾기 메소드
-//	@RequestMapping(value = "/findPw", method = RequestMethod.POST)
-//	public String findPw(HttpServletRequest request, MemberVO member, RedirectAttributes rttr, Model model) throws Exception {
-//	
-//		String memberId = request.getParameter("memberId");
-//		String memberPhone = request.getParameter("memberPhone");
-//		String encodePw = "";
-//		MemberVO lvo = memberservice.memberLogin(member);
-//		
-//		if(lvo != null) {
-//			
-//			encodePw = lvo.getMemberPw(); // DB 인코딩된 비밀번호
-//		
-//			if(true == pwEncoder.matches(rawPw, encodePw)) {
-//				
-//				lvo.setMemberPw(""); // 인코딩된 비밀번호 정보 삭제
-//				return "redirect:/member/findPwView";
-//				
-//			} else {
-//				
-//				rttr.addFlashAttribute("result", 0);
-//				return "redirect:/member/login";
-//			}
-//		}
-//		
-//		MemberVO lvo = memberservice.memberFindPw(memberPw);
-//		
-//	}
+	@RequestMapping(value = "/findPw", method = RequestMethod.POST)
+	public void findPw(HttpServletResponse response, MemberVO member, RedirectAttributes rttr) throws Exception {
+		
+		// 인풋에서 가져온 아이디 + 임시 비밀번호 업데이트
+		memberservice.memberFindPw(response, member);
+	}
 	
 	
 }

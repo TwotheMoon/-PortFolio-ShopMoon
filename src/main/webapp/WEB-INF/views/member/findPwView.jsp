@@ -10,11 +10,6 @@
 </header>
 
 <body id="findPwBody">
-    <!-- css AOS 초기화 -->
-    <script>
-        AOS.init();
-    </script>
-
     
 	<!-- findPwView.jsp 컨텐츠 -->
 	<section class="findPwBox opacityBox">
@@ -22,13 +17,13 @@
 			<h1>비밀번호 찾기</h1>
 		</div>
 			<div class="findPwBox_subtitle">
-				<h1>아이디와 전화번호를 입력해주세요.</h1>
+				<h1>아이디와 이메일을 입력해주세요.</h1>
 			</div>
 		
 		
 		<form class="findPwBox_form"  method="post">
-			<input class="findPw" name="memberId" placeholder="아이디" required> <br>
-			<input class="findPw" name="memberPhone" placeholder="전화번호" required> <br>
+			<input class="findPw findPwId" name="memberId" placeholder="아이디" required> <br>
+			<input class="findPw findPwEmail" name="memberEmail" placeholder="이메일" required> <br>
 
 			<c:if test="${result == 0}">
 				<div class="LoginFail">아이디를 찾을 수 없어요.</div>

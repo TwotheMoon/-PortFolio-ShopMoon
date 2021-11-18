@@ -10,7 +10,7 @@ public interface ShopService {
 
 	// shop 관련 상품 상세 페이지
 	public ProductVO shopGetDetail(Long productNo) throws Exception;
-
+	
 	// 기타 리스트
 	public List<ProductVO> guitarGetList(Criteria cri) throws Exception;
 	

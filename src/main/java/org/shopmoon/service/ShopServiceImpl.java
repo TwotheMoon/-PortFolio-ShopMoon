@@ -32,8 +32,8 @@ public class ShopServiceImpl implements ShopService{
 
 			return shopmapper.shopGetDetail(productNo);
 		}
-	
-	
+		
+		
 	// 기타 리스트
 	@Override
 	public List<ProductVO> guitarGetList(Criteria cri) throws Exception {

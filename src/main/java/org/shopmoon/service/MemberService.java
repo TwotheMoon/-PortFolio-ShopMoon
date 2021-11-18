@@ -1,5 +1,7 @@
 package org.shopmoon.service;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.shopmoon.domain.MemberVO;
 
 public interface MemberService {
@@ -23,8 +25,11 @@ public interface MemberService {
 	// 회원 아이디 찾기
 	public MemberVO memberFindId(String memberEmail) throws Exception;
 	
+	// 이메일 찾기
+	public void sendEmail(MemberVO vo, String div) throws Exception;
+	
 	// 회원 비밀번호 찾기
-	//public MemberVO memberFindPw(String memberPhone) throws Exception;
+	public void memberFindPw(HttpServletResponse response, MemberVO member) throws Exception;
 	
 	
 }

@@ -13,5 +13,6 @@ public class CartVO {
 	private int productPrice;
 	private int cartQuantity;
 	private Date cartRegDate;
+	private Date cartUpdateDate;
 	
 }
