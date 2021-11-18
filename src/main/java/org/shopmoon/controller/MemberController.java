@@ -2,7 +2,6 @@ package org.shopmoon.controller;
 
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.shopmoon.domain.MemberVO;
@@ -67,6 +66,8 @@ public class MemberController {
 				lvo.setMemberPw(""); // 인코딩된 비밀번호 정보 삭제
 				session.setAttribute("member", lvo);
 				session.setAttribute("contact", lvo);
+				log.info(session.getId());
+				
 				return "redirect:/";
 				
 			} else {
@@ -256,15 +257,5 @@ public class MemberController {
 		}
 
 	}
-	
-	
-	// 회원 비밀번호 찾기 메소드
-	@RequestMapping(value = "/findPw", method = RequestMethod.POST)
-	public void findPw(HttpServletResponse response, MemberVO member, RedirectAttributes rttr) throws Exception {
-		
-		// 인풋에서 가져온 아이디 + 임시 비밀번호 업데이트
-		memberservice.memberFindPw(response, member);
-	}
-	
 	
 }

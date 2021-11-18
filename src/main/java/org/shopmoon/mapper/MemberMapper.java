@@ -22,6 +22,4 @@ public interface MemberMapper {
 	// 회원 아이디 찾기
 	public MemberVO memberFindId(String memberEmail);
 	
-	// 회원 비밀번호 찾기
-	public MemberVO memberFindPw(MemberVO member);
 }
